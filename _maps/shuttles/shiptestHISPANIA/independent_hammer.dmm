@@ -502,7 +502,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/trimline/opaque/blue,
-/obj/item/tank/internals/oxygen,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external/dark)
 "nN" = (
@@ -806,9 +805,6 @@
 	icon_state = "4-8"
 	},
 /obj/item/tank/internals/oxygen,
-/obj/item/tank/internals/oxygen{
-	pixel_x = 4
-	},
 /obj/structure/closet/emcloset/wall{
 	dir = 1;
 	pixel_y = -28;
@@ -1817,9 +1813,6 @@
 	pixel_y = 28;
 	pixel_x = 6
 	},
-/obj/item/tank/internals/oxygen{
-	pixel_x = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
@@ -1905,7 +1898,6 @@
 	},
 /obj/effect/turf_decal/siding/blue,
 /obj/effect/turf_decal/trimline/opaque/blue,
-/obj/item/tank/internals/oxygen,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external/dark)
 "Uy" = (
