@@ -1432,9 +1432,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/obj/machinery/holopad/emergency/bar,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/holopad/emergency/medical,
 /turf/open/floor/plasteel/mono,
 /area/ship/bridge)
 "GM" = (
@@ -2138,7 +2138,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/holopad/emergency/bar,
 /obj/effect/turf_decal/corner/opaque/grey/bordercorner{
 	dir = 8
 	},
@@ -2146,6 +2145,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/holopad/emergency/kitchen,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew)
 "ZP" = (
