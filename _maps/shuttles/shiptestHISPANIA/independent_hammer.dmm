@@ -49,8 +49,12 @@
 /obj/effect/turf_decal/spline/fancy/transparent/red{
 	dir = 9
 	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "ak" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -90,7 +94,7 @@
 	icon_state = "0-4"
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "cs" = (
 /obj/effect/turf_decal/corner/opaque/grey/half{
 	dir = 8
@@ -180,7 +184,7 @@
 	},
 /obj/structure/cable/yellow,
 /turf/open/floor/plasteel/tech/techmaint,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "fm" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -279,7 +283,7 @@
 	},
 /obj/effect/turf_decal/trimline/opaque/blue/arrow_ccw,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "gE" = (
 /obj/structure/toilet{
 	dir = 8;
@@ -303,7 +307,7 @@
 /area/ship/external/dark)
 "hG" = (
 /turf/closed/wall/mineral/plastitanium,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "hZ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -321,7 +325,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "is" = (
 /obj/item/mop,
 /obj/item/pushbroom{
@@ -377,7 +381,7 @@
 	},
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plasteel/tech/techmaint,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "ju" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -416,8 +420,11 @@
 	dir = 10
 	},
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/machinery/light_switch{
+	pixel_y = 36
+	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "lO" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/crew/cryo)
@@ -458,6 +465,15 @@
 	},
 /obj/item/wirecutters/syndie{
 	pixel_x = 8
+	},
+/obj/machinery/button/door{
+	id = "hammermain";
+	name = "Bridge Blast Control";
+	pixel_y = 34
+	},
+/obj/machinery/light_switch{
+	pixel_y = 33;
+	pixel_x = 10
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -516,7 +532,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "nU" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/industrial/outline/yellow,
@@ -605,7 +621,7 @@
 	pixel_y = -8
 	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "pp" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/turf_decal/industrial/outline/yellow,
@@ -734,7 +750,7 @@
 	},
 /obj/item/clothing/glasses/welding,
 /turf/open/floor/plasteel/tech/techmaint,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "qL" = (
 /obj/structure/railing{
 	dir = 5
@@ -892,15 +908,15 @@
 /turf/open/floor/engine/hull/interior,
 /area/ship/cargo)
 "tQ" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "cagemain";
-	dir = 4
-	},
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/docking_port/mobile{
 	dir = 8;
 	launch_status = 0;
 	preferred_direction = 4
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "hammermain";
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -924,7 +940,7 @@
 	icon_state = "0-4"
 	},
 /turf/open/floor/engine/hull/reinforced,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "uv" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -963,7 +979,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "wQ" = (
 /obj/effect/turf_decal/corner/opaque/grey/three_quarters{
 	dir = 1
@@ -1041,6 +1057,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	dir = 1;
+	pixel_y = -29
 	},
 /turf/open/floor/plasteel/stairs/left{
 	dir = 4
@@ -1178,7 +1199,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "BS" = (
 /obj/item/kirbyplants/fullysynthetic{
 	icon_state = "plant-22";
@@ -1237,7 +1258,7 @@
 	},
 /obj/structure/sign/poster/contraband/winchester,
 /turf/closed/wall/mineral/plastitanium,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "Dw" = (
 /obj/machinery/computer/cargo/express{
 	dir = 8;
@@ -1260,7 +1281,7 @@
 "Eq" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/mineral/plastitanium,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "Ez" = (
 /obj/effect/turf_decal/corner_techfloor_grid{
 	dir = 4
@@ -1291,7 +1312,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "ER" = (
 /obj/machinery/light/floor{
 	brightness = 2
@@ -1310,6 +1331,11 @@
 	dir = 4;
 	id = "hammerbathwindows";
 	pixel_x = -32
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_y = 12;
+	pixel_x = -20
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/toilet)
@@ -1502,6 +1528,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
+/obj/machinery/light_switch{
+	pixel_x = -20;
+	dir = 4;
+	pixel_y = -11
+	},
 /turf/open/floor/plasteel/mono,
 /area/ship/crew)
 "Jt" = (
@@ -1548,7 +1579,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "KK" = (
 /obj/machinery/light/floor{
 	brightness = 2
@@ -1566,6 +1597,11 @@
 	dir = 4;
 	id = "hammercryowindows";
 	pixel_x = -32
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_y = -12;
+	pixel_x = -20
 	},
 /turf/open/floor/plasteel/mono,
 /area/ship/crew/cryo)
@@ -1611,7 +1647,7 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "LG" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -1664,7 +1700,9 @@
 /turf/open/floor/carpet/nanoweave,
 /area/ship/crew/cryo)
 "No" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small/directional/north{
+	pixel_y = 23
+	},
 /obj/structure/table,
 /obj/item/spacecash/bundle/c100,
 /obj/item/spacecash/bundle/c1000{
@@ -1682,7 +1720,9 @@
 /obj/structure/sign/poster/contraband/shamblers_juice{
 	pixel_x = 32
 	},
-/obj/machinery/airalarm/directional/north,
+/obj/machinery/airalarm/directional/north{
+	pixel_y = 35
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "NI" = (
@@ -1716,11 +1756,11 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Qk" = (
+/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor/preopen{
-	id = "cagemain";
+	id = "hammermain";
 	dir = 4
 	},
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "QG" = (
@@ -2012,7 +2052,7 @@
 	id = "hammer_eng"
 	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "XH" = (
 /obj/effect/turf_decal/corner/opaque/grey/bordercorner{
 	dir = 4
@@ -2100,7 +2140,7 @@
 "ZI" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/nolight)
 "ZN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
