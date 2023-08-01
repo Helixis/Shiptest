@@ -1210,9 +1210,6 @@
 	name = "oxygen valve"
 	},
 /obj/structure/catwalk/over,
-/obj/effect/turf_decal/spline/fancy/opaque/neutral{
-	dir = 6
-	},
 /turf/open/floor/plating,
 /area/ship/crew)
 "Ck" = (
