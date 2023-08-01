@@ -19,6 +19,7 @@
 		},
 		"Left Hand": {
 			"outfit": "/datum/outfit/job/hammer_left",
+			"officer": true,
 			"slots": 1
 		}
 	},
