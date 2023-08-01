@@ -23,8 +23,6 @@ SUBSYSTEM_DEF(mapping)
 	var/list/shuttle_templates = list()
 	var/list/shelter_templates = list()
 	var/list/holodeck_templates = list()
-	// List mapping TYPES of outpost map templates to instances of their singletons.
-	var/list/outpost_templates = list()
 
 	var/list/areas_in_z = list()
 
@@ -83,17 +81,9 @@ SUBSYSTEM_DEF(mapping)
 /datum/controller/subsystem/mapping/Recover()
 	flags |= SS_NO_INIT
 	initialized = SSmapping.initialized
-
 	map_templates = SSmapping.map_templates
-
 	ruins_templates = SSmapping.ruins_templates
-	ruin_types_list = SSmapping.ruin_types_list
-
-	shuttle_templates = SSmapping.shuttle_templates
-	shelter_templates = SSmapping.shelter_templates
-	holodeck_templates = SSmapping.holodeck_templates
-
-	outpost_templates = SSmapping.outpost_templates
+	ruin_types_list = SSmapping.ruins_templates
 
 	z_list = SSmapping.z_list
 
@@ -115,7 +105,6 @@ SUBSYSTEM_DEF(mapping)
 	load_ship_templates()
 	preloadShelterTemplates()
 	preloadHolodeckTemplates()
-	preloadOutpostTemplates()
 
 /datum/controller/subsystem/mapping/proc/preloadRuinTemplates()
 	for(var/datum/planet_type/type as anything in subtypesof(/datum/planet_type))
@@ -253,76 +242,6 @@ SUBSYSTEM_DEF(mapping)
 	for(var/filename in filelist)
 		load_ship_template_individual(filename,"_maps/configs/")
 
-		var/list/data = json_decode(file)
-		if(!data)
-			log_world("map config is not json: [filename]")
-			continue
-
-		CHECK_STRING_EXISTS("map_name")
-		CHECK_STRING_EXISTS("map_path")
-		CHECK_LIST_EXISTS("job_slots")
-		var/datum/map_template/shuttle/S = new(data["map_path"], data["map_name"], TRUE)
-		S.file_name = data["map_path"]
-		S.category = "shiptest"
-
-		if(istext(data["map_short_name"]))
-			S.short_name = data["map_short_name"]
-		else
-			S.short_name = copytext(S.name, 1, 20)
-		if(istext(data["prefix"]))
-			S.prefix = data["prefix"]
-		if(islist(data["namelists"]))
-			S.name_categories = data["namelists"]
-		if ( isnum( data[ "unique_ship_access" ] && data["unique_ship_access"] ) )
-			S.unique_ship_access = data[ "unique_ship_access" ]
-		if(istext(data["description"]))
-			S.description = data["description"]
-		if(islist(data["tags"]))
-			S.tags = data["tags"]
-
-		S.job_slots = list()
-		var/list/job_slot_list = data["job_slots"]
-		for(var/job in job_slot_list)
-			var/datum/job/job_slot
-			var/value = job_slot_list[job]
-			var/slots
-			if(isnum(value))
-				job_slot = SSjob.GetJob(job)
-				slots = value
-			else if(islist(value))
-				var/datum/outfit/job_outfit = text2path(value["outfit"])
-				if(isnull(job_outfit))
-					stack_trace("Invalid job outfit! [value["outfit"]] on [S.name]'s config! Defaulting to assistant clothing.")
-					job_outfit = /datum/outfit/job/assistant
-				job_slot = new /datum/job(job, job_outfit)
-				job_slot.wiki_page = value["wiki_page"]
-				job_slot.officer = value["officer"]
-				slots = value["slots"]
-
-			if(!job_slot || !slots)
-				stack_trace("Invalid job slot entry! [job]: [value] on [S.name]'s config! Excluding job.")
-				continue
-
-			S.job_slots[job_slot] = slots
-		if(isnum(data["limit"]))
-			S.limit = data["limit"]
-		if(isnum(data["spawn_time_coeff"]))
-			S.spawn_time_coeff = data["spawn_time_coeff"]
-		if(isnum(data["officer_time_coeff"]))
-			S.officer_time_coeff = data["officer_time_coeff"]
-
-		if(isnum(data["starting_funds"]))
-			S.starting_funds = data["starting_funds"]
-
-		if(isnum(data["enabled"]) && data["enabled"])
-			S.enabled = TRUE
-			ship_purchase_list[S.name] = S
-		if(isnum(data["roundstart"]) && data["roundstart"])
-			maplist[S.name] = S
-		if(isnum(data["space_spawn"]) && data["space_spawn"])
-			S.space_spawn = TRUE
-
-		shuttle_templates[S.file_name] = S
 #undef CHECK_STRING_EXISTS
 #undef CHECK_LIST_EXISTS
 
@@ -364,12 +283,6 @@ SUBSYSTEM_DEF(mapping)
 
 		holodeck_templates[holo_template.template_id] = holo_template
 		map_templates[holo_template.template_id] = holo_template
-
-/datum/controller/subsystem/mapping/proc/preloadOutpostTemplates()
-	for(var/datum/map_template/outpost/outpost_type as anything in subtypesof(/datum/map_template/outpost))
-		var/datum/map_template/outpost/outpost_template = new outpost_type()
-		outpost_templates[outpost_template.type] = outpost_template
-		map_templates[outpost_template.name] = outpost_template
 
 //////////////////
 // RESERVATIONS //
