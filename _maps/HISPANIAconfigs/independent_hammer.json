@@ -1,0 +1,27 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Hammer-class Mercenary Ship",
+	"map_short_name": "Hammer-class",
+	"description": 	"A cheap mercenary duo-sized spacecraft offered by Miskilamo Spacefaring notorious for its characteristics as being an slow, extra-compact vessel made for bountys, lacking engineering and medical suplements, but finely armed. The Hammer-class just keeps on firin'!",
+	"tags": [
+		"Generalist"
+	],
+	"map_path": "_maps/shuttles/shiptestHISPANIA/independent_hammer.dmm",
+	"namelists": [
+		"PIRATES"
+	],
+	"prefix": "ISV",
+	"job_slots": {
+		"Right Hand": {
+			"outfit": "/datum/outfit/job/hammer_right",
+			"officer": true,
+			"slots": 1
+		},
+		"Left Hand": {
+			"outfit": "/datum/outfit/job/hammer_left",
+			"slots": 1
+		}
+	},
+	"enabled": true,
+	"limit": 2
+}
