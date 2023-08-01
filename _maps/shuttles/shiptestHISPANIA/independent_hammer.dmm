@@ -676,9 +676,6 @@
 	pixel_y = -24;
 	dir = 1
 	},
-/obj/structure/sign/poster/contraband/cardinal_port_starboard{
-	pixel_x = 30
-	},
 /obj/item/paper_bin{
 	pixel_x = -1;
 	pixel_y = 4
@@ -695,6 +692,7 @@
 	pixel_x = 9;
 	pixel_y = 6
 	},
+/obj/item/radio/intercom/wideband/directional/east,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "qg" = (
@@ -1714,11 +1712,11 @@
 	pixel_x = -15;
 	pixel_y = -3
 	},
-/obj/structure/sign/poster/contraband/shamblers_juice{
-	pixel_x = 32
-	},
 /obj/machinery/airalarm/directional/north{
 	pixel_y = 35
+	},
+/obj/structure/sign/poster/contraband/cardinal_port_starboard{
+	pixel_x = 30
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -2052,11 +2050,6 @@
 	},
 /obj/effect/turf_decal/corner/opaque/grey/bordercorner,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/radio/intercom/wideband/table{
-	dir = 4;
-	pixel_x = 7;
-	pixel_y = -2
-	},
 /turf/open/floor/carpet/nanoweave,
 /area/ship/bridge)
 "Yn" = (
