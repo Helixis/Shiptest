@@ -223,7 +223,7 @@
 /area/ship/cargo)
 "fp" = (
 /turf/closed/wall/mineral/plastitanium,
-/area/ship/crew/toilet)
+/area/ship/crew/toilet/nolight)
 "fS" = (
 /obj/structure/table,
 /obj/machinery/button/door{
@@ -299,7 +299,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/plasteel/tech,
-/area/ship/crew/toilet)
+/area/ship/crew/toilet/nolight)
 "gN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
@@ -354,7 +354,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/fancy/rollingpapers,
 /turf/open/floor/plasteel/tech,
-/area/ship/crew/toilet)
+/area/ship/crew/toilet/nolight)
 "iP" = (
 /obj/machinery/power/shieldwallgen/atmos/roundstart{
 	id = "hammerbay2";
@@ -1078,7 +1078,7 @@
 	name = "Blast Shutters"
 	},
 /turf/open/floor/plating,
-/area/ship/crew/toilet)
+/area/ship/crew/toilet/nolight)
 "yB" = (
 /obj/structure/chair/plastic,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1209,7 +1209,11 @@
 	dir = 8;
 	name = "oxygen valve"
 	},
-/turf/open/floor/plasteel/tech,
+/obj/structure/catwalk/over,
+/obj/effect/turf_decal/spline/fancy/opaque/neutral{
+	dir = 6
+	},
+/turf/open/floor/plating,
 /area/ship/crew)
 "Ck" = (
 /obj/structure/railing{
@@ -1334,7 +1338,7 @@
 	pixel_x = -20
 	},
 /turf/open/floor/plasteel/tech,
-/area/ship/crew/toilet)
+/area/ship/crew/toilet/nolight)
 "Fq" = (
 /obj/effect/turf_decal/borderfloorblack{
 	dir = 8

@@ -23,5 +23,6 @@
 		}
 	},
 	"enabled": true,
-	"limit": 2
+	"limit": 4,
+	"starting_funds": 0
 }
