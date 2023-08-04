@@ -403,7 +403,7 @@
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "dt" = (
 /obj/effect/turf_decal/corner/opaque/brown/border,
 /obj/structure/cable{
@@ -648,11 +648,10 @@
 "fa" = (
 /obj/machinery/door/poddoor/incinerator_atmos_aux{
 	dir = 4;
-	id_tag = "incinerator_blastdoor";
 	id = "incinerator_blastdoor"
 	},
 /turf/open/floor/engine,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "ff" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
@@ -736,9 +735,6 @@
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
 "fD" = (
-/obj/machinery/atmospherics/components/trinary/mixer/airmix{
-	dir = 10
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -747,6 +743,9 @@
 	dir = 1
 	},
 /obj/structure/catwalk/over,
+/obj/machinery/atmospherics/components/trinary/mixer/airmix/flipped/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "fI" = (
@@ -786,7 +785,7 @@
 	dir = 10
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "fT" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/carpet/nanoweave,
@@ -874,7 +873,7 @@
 "gM" = (
 /obj/machinery/computer/atmos_control/tank/air_tank,
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "gO" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -1074,7 +1073,7 @@
 "iz" = (
 /obj/machinery/computer/atmos_control/tank/nitrogen_tank,
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "iB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -1248,17 +1247,18 @@
 	dir = 1
 	},
 /turf/open/floor/engine,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "jy" = (
-/obj/machinery/air_sensor/atmos/incinerator_tank{
-	id = "corporate_incinerator_sensor";
-	id_tag = "corporate_incinerator_sensor"
-	},
-/obj/machinery/igniter/incinerator_atmos{
+/obj/machinery/igniter{
 	id = "incinerator_igniter"
 	},
+/obj/machinery/air_sensor/atmos/toxins_mixing_tank{
+	id_tag = "corporate_incinerator_sensor";
+	name = "ncinerator gas sensor";
+	id = "corporate_incinerator_sensor"
+	},
 /turf/open/floor/engine/vacuum,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "jC" = (
 /obj/machinery/recharge_station,
 /obj/effect/turf_decal/corner/opaque/mauve,
@@ -1540,6 +1540,9 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/storage)
+"ml" = (
+/turf/open/floor/plasteel/dark,
+/area/ship/engineering/atmospherics)
 "mm" = (
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 1
@@ -1582,7 +1585,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "mE" = (
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 1
@@ -2007,7 +2010,7 @@
 	dir = 8
 	},
 /turf/open/floor/engine/plasma,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "pG" = (
 /obj/machinery/computer/atmos_control/tank/toxin_tank,
 /obj/structure/railing{
@@ -2018,7 +2021,7 @@
 	},
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "pI" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -2344,6 +2347,11 @@
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/science/ai_chamber)
+"rV" = (
+/obj/machinery/atmospherics/pipe/simple/green/visible,
+/obj/structure/catwalk/over,
+/turf/open/floor/plating,
+/area/ship/engineering/engine)
 "sf" = (
 /obj/machinery/door/airlock{
 	dir = 4
@@ -2381,7 +2389,7 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "sh" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/machinery/camera/autoname{
@@ -2751,7 +2759,7 @@
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "up" = (
 /obj/effect/turf_decal/corner/opaque/yellow/border{
 	dir = 4
@@ -2797,7 +2805,7 @@
 	dir = 4
 	},
 /turf/open/floor/engine,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "uG" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2928,7 +2936,7 @@
 "vn" = (
 /obj/machinery/air_sensor/atmos/nitrous_tank,
 /turf/open/floor/engine/n2,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "vo" = (
 /obj/structure/table,
 /obj/item/toy/cards/deck/syndicate{
@@ -2981,7 +2989,7 @@
 "vA" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/layer2,
 /turf/open/floor/engine,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "vB" = (
 /obj/machinery/computer/mech_bay_power_console,
 /obj/effect/turf_decal/corner/opaque/mauve,
@@ -3017,7 +3025,7 @@
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "vL" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
@@ -3078,7 +3086,7 @@
 "wb" = (
 /obj/machinery/computer/atmos_control/tank/oxygen_tank,
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "wl" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
@@ -3098,7 +3106,7 @@
 	},
 /obj/machinery/rnd/production/techfab/department/engineering,
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "wp" = (
 /obj/machinery/cryopod{
 	dir = 4
@@ -3179,7 +3187,7 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "wJ" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /obj/structure/catwalk/over,
@@ -3188,13 +3196,13 @@
 	},
 /obj/machinery/computer/atmos_control/tank/toxin_tank{
 	dir = 4;
-	sensors = list(""corporate_incinerator_sensor"s" = "Incinerator Room");
+	sensors = list("corporate_incinerator_sensor" = "Incinerator Room");
 	name = "Incinerator Chmaber Control";
 	output_tag = "incinerator_out";
 	input_tag = "incinerator_in"
 	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "wK" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/carpet/stellar,
@@ -3223,7 +3231,7 @@
 	dir = 8
 	},
 /turf/open/floor/engine/o2,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "xj" = (
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 4
@@ -3257,7 +3265,7 @@
 "xw" = (
 /obj/effect/turf_decal/atmos/nitrogen,
 /turf/open/floor/engine/n2,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "xE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -3276,7 +3284,7 @@
 	dir = 8
 	},
 /turf/open/floor/engine/n2,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "xJ" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced{
@@ -3291,15 +3299,15 @@
 /area/ship/crew/office)
 "xQ" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
-/obj/machinery/atmospherics/pipe/layer_manifold{
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 4
 	},
 /turf/open/floor/engine,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "xV" = (
 /obj/effect/turf_decal/atmos/air,
 /turf/open/floor/engine/air,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "xX" = (
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 1
@@ -3514,7 +3522,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "yR" = (
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/mono/dark,
@@ -3631,7 +3639,7 @@
 	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "zM" = (
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 8
@@ -3681,7 +3689,7 @@
 "zW" = (
 /obj/machinery/porta_turret/ship/ballistic,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "zX" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -3690,7 +3698,7 @@
 	dir = 8
 	},
 /turf/open/floor/engine/o2,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "zZ" = (
 /obj/item/bedsheet/captain,
 /obj/structure/curtain/bounty,
@@ -3740,6 +3748,9 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/cryo)
+"As" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/engineering/atmospherics)
 "Au" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3832,7 +3843,7 @@
 	dir = 8
 	},
 /turf/open/floor/engine/air,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "AS" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -3863,13 +3874,13 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "Bm" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/toxin_input{
 	dir = 8
 	},
 /turf/open/floor/engine/plasma,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "Bo" = (
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/effect/turf_decal/corner/opaque/mauve{
@@ -3921,7 +3932,7 @@
 	dir = 9
 	},
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "BJ" = (
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 1
@@ -3952,6 +3963,13 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 1
+	},
+/obj/machinery/button/door{
+	dir = 4;
+	id = "incinerator_blastdoor";
+	name = "Incinerator Chamber Blastdoorl";
+	pixel_x = -24;
+	pixel_y = -5
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -4000,7 +4018,7 @@
 	dir = 5
 	},
 /turf/open/floor/engine,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "CL" = (
 /obj/structure/table,
 /obj/machinery/microwave,
@@ -4163,7 +4181,7 @@
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "Eq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -4184,16 +4202,17 @@
 /turf/open/floor/carpet/stellar,
 /area/ship/crew/office)
 "Et" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/incinerator_output{
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxin_output{
 	dir = 4;
-	id = "incinerator_out"
+	id_tag = "incinerator_out";
+	name = "incinerator output inlet"
 	},
 /turf/open/floor/engine/vacuum,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "Ev" = (
 /obj/machinery/air_sensor/atmos/air_tank,
 /turf/open/floor/engine/air,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "Ew" = (
 /obj/machinery/door/airlock/mining{
 	dir = 4
@@ -4327,10 +4346,10 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "Fs" = (
-/obj/machinery/atmospherics/components/binary/circulator/cold{
-	dir = 8
+/obj/machinery/atmospherics/components/binary/circulator/cold/flipped{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering)
@@ -4340,13 +4359,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/machinery/button/door{
-	dir = 4;
-	id = "incinerator_blastdoor";
-	name = "Incinerator Chamber Blastdoorl";
-	pixel_x = -24;
-	pixel_y = -5
-	},
 /obj/machinery/button/shieldwallgen{
 	dir = 4;
 	pixel_y = 6;
@@ -4354,8 +4366,15 @@
 	id = "incinerator_igniter";
 	name = "Incinerator Igniter"
 	},
+/obj/machinery/button/door{
+	id = "incinerator_blastdoor";
+	name = "Incinerator Chamber Blastdoorl";
+	pixel_x = -24;
+	dir = 4;
+	pixel_y = -5
+	},
 /turf/open/floor/plasteel/tech,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "FB" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 4
@@ -4481,7 +4500,7 @@
 /obj/machinery/vending/engivend,
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "GF" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 8
@@ -4517,7 +4536,7 @@
 	id_tag = "incinerator_in"
 	},
 /turf/open/floor/engine/vacuum,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "GU" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
@@ -4673,12 +4692,12 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/plasma{
-	dir = 10
-	},
 /obj/structure/catwalk/over,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
+	},
+/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/plasma{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -4693,7 +4712,7 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "Id" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
@@ -4728,6 +4747,13 @@
 "Iw" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/hallway/central)
+"Iy" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/atmospherics/pipe/layer_manifold{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ship/engineering/atmospherics)
 "Iz" = (
 /obj/machinery/door/window/northleft,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -4791,7 +4817,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "IO" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
@@ -4837,7 +4863,7 @@
 	pixel_y = 26
 	},
 /turf/open/floor/engine,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "IZ" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hos,
@@ -4862,7 +4888,7 @@
 "Jo" = (
 /obj/machinery/atmospherics/pipe/simple/orange/visible,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "Ju" = (
 /obj/machinery/door/airlock/command,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -5096,6 +5122,9 @@
 /obj/machinery/portable_atmospherics/pump,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage)
+"KN" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/engineering/engine)
 "KQ" = (
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/firealarm/directional/north,
@@ -5118,7 +5147,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "KV" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/cargo)
@@ -5185,7 +5214,7 @@
 "LG" = (
 /obj/effect/turf_decal/atmos/oxygen,
 /turf/open/floor/engine/o2,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "LK" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /obj/structure/cable{
@@ -5215,7 +5244,7 @@
 "LU" = (
 /obj/effect/turf_decal/atmos/plasma,
 /turf/open/floor/engine/plasma,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "Me" = (
 /obj/structure/closet/secure_closet/quartermaster,
 /obj/machinery/airalarm/directional/east,
@@ -5308,7 +5337,7 @@
 	dir = 8
 	},
 /turf/open/floor/engine/n2,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "MB" = (
 /turf/open/floor/carpet/nanoweave/orange,
 /area/ship/cargo/office)
@@ -5378,7 +5407,7 @@
 "Nk" = (
 /obj/machinery/air_sensor/atmos/toxin_tank,
 /turf/open/floor/engine/plasma,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "Nm" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -5387,7 +5416,7 @@
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "Np" = (
 /obj/machinery/mech_bay_recharge_port,
 /obj/effect/turf_decal/corner/opaque/mauve{
@@ -5712,16 +5741,16 @@
 /area/ship/crew/office)
 "Po" = (
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/o2{
-	dir = 10
+	dir = 1
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Pt" = (
-/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2{
-	dir = 10
-	},
 /obj/structure/catwalk/over,
+/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Pw" = (
@@ -5924,7 +5953,7 @@
 	dir = 8
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/engineering/engine)
 "Qy" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -6119,7 +6148,7 @@
 	dir = 4
 	},
 /turf/open/floor/engine,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "RH" = (
 /obj/structure/rack,
 /obj/machinery/light/directional/north,
@@ -6160,7 +6189,7 @@
 "RU" = (
 /obj/machinery/air_sensor/atmos/oxygen_tank,
 /turf/open/floor/engine/o2,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "RW" = (
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering)
@@ -6323,7 +6352,7 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/plasteel/dark,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "Tz" = (
 /turf/open/floor/plasteel/mono,
 /area/ship/hallway/aft)
@@ -6599,6 +6628,13 @@
 "VF" = (
 /turf/open/floor/plasteel/white,
 /area/ship/science)
+"VG" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ship/engineering/atmospherics)
 "VJ" = (
 /obj/machinery/atmospherics/pipe/simple/dark/visible{
 	dir = 1
@@ -7112,7 +7148,7 @@
 	dir = 8
 	},
 /turf/open/floor/engine/air,
-/area/ship/engineering)
+/area/ship/engineering/atmospherics)
 "ZP" = (
 /turf/open/floor/plasteel/white,
 /area/ship/science/robotics)
@@ -7149,9 +7185,9 @@ aa
 aa
 aa
 zW
-aa
+KN
 fa
-aa
+KN
 zW
 Ue
 aa
@@ -7199,11 +7235,11 @@ aa
 Kl
 za
 RW
-aa
+KN
 GS
 jy
 Et
-aa
+KN
 gM
 Tr
 GD
@@ -7257,7 +7293,7 @@ fS
 zK
 iz
 Fn
-RW
+ml
 lU
 Lw
 be
@@ -7301,7 +7337,7 @@ WY
 vU
 KT
 PX
-aa
+KN
 IU
 vA
 CJ
@@ -7405,7 +7441,7 @@ cq
 Xv
 Bh
 Fx
-cq
+rV
 wJ
 Bh
 Pt
@@ -7499,23 +7535,23 @@ mj
 hh
 wX
 YX
-aa
+As
+VG
 xQ
-xQ
-aa
-xQ
-xQ
-aa
+As
+Iy
+Iy
+As
 aa
 EQ
 aa
-aa
-xQ
+As
+VG
 RE
-aa
-xQ
+As
+VG
 RE
-aa
+As
 od
 hg
 aa
@@ -7550,23 +7586,23 @@ mj
 hh
 vL
 YX
-aa
+As
 Bm
 pD
-aa
+As
 AR
 ZE
-aa
+As
 Sq
 nK
 yC
-aa
+As
 Mx
 xI
-aa
+As
 xi
 zY
-aa
+As
 od
 Si
 aa
@@ -7601,23 +7637,23 @@ ns
 hh
 hg
 Vd
-aa
+As
 LU
 Nk
-aa
+As
 xV
 Ev
-aa
+As
 Qj
 Cc
 AE
-aa
+As
 xw
 vn
-aa
+As
 LG
 RU
-aa
+As
 od
 hg
 aa
@@ -7652,23 +7688,23 @@ AS
 hh
 tA
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+As
+As
+As
+As
+As
+As
+As
 aa
 jX
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+As
+As
+As
+As
+As
+As
+As
 aa
 tC
 aa
