@@ -71,14 +71,12 @@
 /obj/machinery/button/shieldwallgen{
 	id = "holo_south_hangar";
 	pixel_x = 10;
-	pixel_y = 22;
-	id_tag = "holo_south_hangar"
+	pixel_y = 22
 	},
 /obj/machinery/button/door{
 	id = "south_hangar";
 	name = "Cargo Bay Door Control";
-	pixel_y = 24;
-	id_tag = "south_hangar"
+	pixel_y = 24
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/aft)
@@ -198,8 +196,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_lockdown";
 	name = "Bridge Blastdoor";
-	dir = 4;
-	id_tag = "bridge_lockdown"
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -265,8 +262,7 @@
 /obj/item/folder/blue,
 /obj/machinery/door/firedoor/heavy,
 /obj/machinery/door/poddoor/shutters{
-	id = "shop_shutters";
-	id_tag = "shop_shutters"
+	id = "shop_shutters"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
@@ -296,6 +292,17 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
+"cL" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "bridge_shutters";
+	id_tag = "bridge_shutters"
+	},
+/obj/machinery/door/poddoor{
+	id = "bridge_shutters"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ship/crew/canteen)
 "cN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -340,6 +347,9 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "shop_shutters";
 	id_tag = "shop_shutters"
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "shop_shutters"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
@@ -562,8 +572,7 @@
 /area/ship/science/robotics)
 "el" = (
 /obj/machinery/door/poddoor{
-	id = "south_hangar";
-	id_tag = "south_hangar"
+	id = "south_hangar"
 	},
 /obj/machinery/power/shieldwallgen/atmos/roundstart{
 	dir = 4;
@@ -584,8 +593,7 @@
 	id = "propulsor_blastdoor";
 	name = "Propulsor Blastdoors";
 	pixel_x = -25;
-	dir = 4;
-	id_tag = "propulsor_blastdoor"
+	dir = 4
 	},
 /turf/open/floor/plasteel/stairs,
 /area/ship/engineering)
@@ -769,8 +777,7 @@
 "fP" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
-	id = "bridge_shutters";
-	id_tag = "bridge_shutters"
+	id = "bridge_shutters"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/canteen)
@@ -917,6 +924,19 @@
 "hh" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/storage)
+"hm" = (
+/obj/machinery/door/poddoor{
+	id = "south_hangar";
+	id_tag = "south_hangar"
+	},
+/obj/machinery/door/poddoor{
+	id = "south_hangar"
+	},
+/obj/machinery/door/poddoor{
+	id = "south_hangar"
+	},
+/turf/open/floor/plasteel/tech/grid,
+/area/ship/hallway/aft)
 "hn" = (
 /obj/machinery/computer/operating{
 	dir = 1
@@ -1095,15 +1115,13 @@
 	dir = 1;
 	id = "north_hangar";
 	name = "Cargo Bay Door Control";
-	pixel_y = -23;
-	id_tag = "north_hangar"
+	pixel_y = -23
 	},
 /obj/machinery/button/shieldwallgen{
 	dir = 1;
 	id = "holo_north_hangar";
 	pixel_x = -10;
-	pixel_y = -22;
-	id_tag = "holo_north_hangar"
+	pixel_y = -22
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
@@ -1237,7 +1255,7 @@
 	id_tag = "corporate_incinerator_sensor"
 	},
 /obj/machinery/igniter/incinerator_atmos{
-	id_tag = "incinerator_igniter"
+	id = "incinerator_igniter"
 	},
 /turf/open/floor/engine/vacuum,
 /area/ship/engineering)
@@ -1482,8 +1500,7 @@
 	name = "Propulsor Blastdoors";
 	pixel_x = -25;
 	pixel_y = null;
-	dir = 4;
-	id_tag = "propulsor_blastdoor"
+	dir = 4
 	},
 /turf/open/floor/plasteel/stairs{
 	dir = 1
@@ -1623,6 +1640,9 @@
 	id = "shop_shutters";
 	id_tag = "shop_shutters"
 	},
+/obj/machinery/door/poddoor/shutters{
+	id = "shop_shutters"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
 "mS" = (
@@ -1687,6 +1707,9 @@
 /obj/machinery/door/poddoor{
 	id = "south_hangar";
 	id_tag = "south_hangar"
+	},
+/obj/machinery/door/poddoor{
+	id = "south_hangar"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/aft)
@@ -1869,8 +1892,7 @@
 /obj/machinery/button/door{
 	id = "shop_shutters";
 	name = "Shop Shutters";
-	pixel_y = 24;
-	id_tag = "shop_shutters"
+	pixel_y = 24
 	},
 /turf/open/floor/carpet/stellar,
 /area/ship/crew/office)
@@ -1895,8 +1917,7 @@
 	},
 /obj/machinery/door/poddoor{
 	dir = 4;
-	id = "propulsor_blastdoor";
-	id_tag = "propulsor_blastdoor"
+	id = "propulsor_blastdoor"
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -2408,8 +2429,7 @@
 	},
 /obj/machinery/door/poddoor{
 	dir = 4;
-	id = "propulsor_blastdoor";
-	id_tag = "propulsor_blastdoor"
+	id = "propulsor_blastdoor"
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -2949,6 +2969,13 @@
 /area/ship/hallway/central)
 "vw" = (
 /obj/structure/closet/secure_closet/head_of_personnel,
+/obj/machinery/button/door{
+	dir = 4;
+	id = "hop_office";
+	name = "Shutter Control";
+	pixel_x = -25;
+	pixel_y = -5
+	},
 /turf/open/floor/carpet/royalblue,
 /area/ship/crew/office)
 "vA" = (
@@ -3159,9 +3186,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/obj/machinery/computer/atmos_control/incinerator{
+/obj/machinery/computer/atmos_control/tank/toxin_tank{
 	dir = 4;
-	sensors = list("corporate_incinerator_sensor"="Incinerator Chamber");
+	sensors = list(""corporate_incinerator_sensor"s" = "Incinerator Room");
+	name = "Incinerator Chmaber Control";
 	output_tag = "incinerator_out";
 	input_tag = "incinerator_in"
 	},
@@ -3316,8 +3344,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_lockdown";
 	name = "Bridge Blastdoor";
-	dir = 4;
-	id_tag = "bridge_lockdown"
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -3405,8 +3432,7 @@
 "yz" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
-	id = "bridge_shutters";
-	id_tag = "bridge_shutters"
+	id = "bridge_shutters"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
@@ -4215,6 +4241,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "ES" = (
@@ -4283,8 +4310,7 @@
 /area/ship/bridge)
 "Fj" = (
 /obj/machinery/door/poddoor{
-	id = s;
-	id_tag = "north_hangar"
+	id = "north_hangar"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
@@ -4319,16 +4345,14 @@
 	id = "incinerator_blastdoor";
 	name = "Incinerator Chamber Blastdoorl";
 	pixel_x = -24;
-	pixel_y = -5;
-	id_tag = "incinerator_blastdoor"
+	pixel_y = -5
 	},
 /obj/machinery/button/shieldwallgen{
 	dir = 4;
 	pixel_y = 6;
 	pixel_x = -22;
-	id = "kiloshield";
-	name = "Incinerator Igniter";
-	id_tag = ss
+	id = "incinerator_igniter";
+	name = "Incinerator Igniter"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -4923,6 +4947,17 @@
 "JS" = (
 /turf/open/floor/plasteel/tech,
 /area/ship/storage)
+"JW" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "bridge_shutters";
+	id_tag = "bridge_shutters"
+	},
+/obj/machinery/door/poddoor{
+	id = "bridge_shutters"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ship/hallway/central)
 "JX" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -4975,6 +5010,17 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
+"Kh" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/northleft{
+	req_access_txt = "61"
+	},
+/obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters{
+	id = "shop_shutters"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ship/crew/office)
 "Kl" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/dark,
@@ -5601,6 +5647,30 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
+"OV" = (
+/obj/machinery/power/smes/shuttle/precharged{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/door/window/eastleft{
+	name = "Engine Access"
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "propulsor_blastdoor";
+	id_tag = "propulsor_blastdoor"
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "propulsor_blastdoor"
+	},
+/turf/open/floor/plating,
+/area/ship/engineering)
 "OZ" = (
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 1
@@ -5828,10 +5898,6 @@
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "Qp" = (
-/obj/machinery/door/poddoor{
-	id = "north_hangar";
-	id_tag = "north_hangar"
-	},
 /obj/machinery/power/shieldwallgen/atmos/roundstart{
 	dir = 4;
 	id = "holo_north_hangar";
@@ -5840,6 +5906,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-1"
+	},
+/obj/machinery/door/poddoor{
+	id = "north_hangar"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
@@ -5886,6 +5955,12 @@
 /obj/machinery/door/poddoor{
 	id = "north_hangar";
 	id_tag = "north_hangar"
+	},
+/obj/machinery/door/poddoor{
+	id = "north_hangar"
+	},
+/obj/machinery/door/poddoor{
+	id = "north_hangar"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
@@ -5990,16 +6065,20 @@
 /area/ship/hallway/central)
 "Rp" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
-/obj/machinery/door/poddoor/shutters/preopen,
+/obj/machinery/door/poddoor/shutters{
+	id = "hop_office"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
 "Rr" = (
 /obj/machinery/door/poddoor{
-	id = "north_hangar";
-	id_tag = "north_hangar"
+	id = "south_hangar"
+	},
+/obj/machinery/door/poddoor{
+	id = "south_hangar"
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ship/cargo)
+/area/ship/hallway/aft)
 "Rt" = (
 /obj/docking_port/mobile{
 	port_direction = 8;
@@ -6827,8 +6906,7 @@
 /area/ship/crew/cryo)
 "Yk" = (
 /obj/machinery/door/poddoor{
-	id = "south_hangar";
-	id_tag = "south_hangar"
+	id = "south_hangar"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/aft)
@@ -6857,8 +6935,7 @@
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
 	dir = 4;
-	id = "bridge_shutters";
-	id_tag = "bridge_shutters"
+	id = "bridge_shutters"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -6932,8 +7009,10 @@
 /obj/item/folder/red,
 /obj/machinery/door/firedoor/heavy,
 /obj/machinery/door/poddoor/shutters{
-	id = "shop_shutters";
-	id_tag = "shop_shutters"
+	id = "shop_shutters"
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "shop_shutters"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
@@ -7114,7 +7193,7 @@ zo
 ut
 sp
 sp
-sp
+OV
 oO
 aa
 Kl
@@ -8319,7 +8398,7 @@ vO
 cV
 XJ
 EP
-fP
+cL
 "}
 (26,1,1) = {"
 Pw
@@ -8386,7 +8465,7 @@ rE
 TF
 Os
 cr
-yz
+JW
 bc
 bc
 bc
@@ -9023,7 +9102,7 @@ gB
 gB
 gB
 eu
-cX
+Kh
 PV
 Ll
 pb
@@ -9104,7 +9183,7 @@ lQ
 vr
 ol
 dt
-Rr
+Fj
 jl
 bc
 bc
@@ -9155,7 +9234,7 @@ ZW
 ZW
 HS
 lj
-Rr
+Fj
 jl
 bc
 bc
@@ -9206,7 +9285,7 @@ OF
 vr
 qX
 dt
-Rr
+Fj
 jl
 bc
 bc
@@ -9257,21 +9336,21 @@ qG
 vr
 qX
 dt
+Fj
+jl
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+jl
 Rr
-jl
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-jl
-Yk
 Mh
 Nd
 Tz
@@ -9308,21 +9387,21 @@ lQ
 vr
 br
 dt
+Fj
+jl
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+jl
 Rr
-jl
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-bc
-jl
-Yk
 Mh
 Nd
 Tz
@@ -9359,7 +9438,7 @@ vr
 vr
 vr
 dt
-Rr
+Fj
 jl
 bc
 bc
@@ -9373,7 +9452,7 @@ bc
 bc
 bc
 jl
-Yk
+hm
 Mh
 Nd
 Tz
