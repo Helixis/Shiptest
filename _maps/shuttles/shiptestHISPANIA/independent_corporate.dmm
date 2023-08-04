@@ -1664,8 +1664,7 @@
 	},
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "science_input";
-	id_tag = "input_conveyor"
+	id = "input_conveyor"
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/dark,
@@ -2316,7 +2315,7 @@
 /area/ship/crew/office)
 "rP" = (
 /obj/machinery/conveyor_switch/oneway{
-	id = "shop_corporate";
+	id = "out_conveyor";
 	name = "Off Ramp";
 	pixel_y = 9;
 	pixel_x = -8;
@@ -3713,8 +3712,7 @@
 	},
 /obj/machinery/conveyor{
 	dir = 4;
-	id = "shop_corporate";
-	id_tag = "out_conveyor"
+	id = "out_conveyor"
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/camera/autoname{
@@ -4566,8 +4564,7 @@
 "GZ" = (
 /obj/machinery/conveyor{
 	dir = 4;
-	id = "shop_corporate";
-	id_tag = "out_conveyor"
+	id = "out_conveyor"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -5434,8 +5431,7 @@
 	},
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "science_input";
-	id_tag = "input_conveyor"
+	id = "input_conveyor"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
@@ -5996,8 +5992,7 @@
 "QI" = (
 /obj/machinery/conveyor{
 	dir = 4;
-	id = "shop_corporate";
-	id_tag = "out_conveyor"
+	id = "out_conveyor"
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/window/eastleft,
@@ -6568,8 +6563,7 @@
 	},
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "science_input";
-	id_tag = "input_conveyor"
+	id = "input_conveyor"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
@@ -6881,8 +6875,7 @@
 /area/ship/crew/canteen)
 "XK" = (
 /obj/machinery/conveyor_switch/oneway{
-	id = "science_input";
-	id_tag = "input_conveyor"
+	id = "input_conveyor"
 	},
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 8
