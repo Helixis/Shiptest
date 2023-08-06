@@ -1,0 +1,26 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Mothership-class abductor cruiser",
+	"map_short_name": "Mothership-class",
+	"description": 	"An old can of steel made in simpler times for the gathering of 'space trash' coming back in new style, say welcome to the Mantarraya-class! Now with its own tools for scavenging and mining tools, as well as a mini-bar and entertainment equipment. For extra fun! Recommended for space crew that like trash as much as themselves.",
+	"tags": ["Junker"],
+	"map_path": "_maps/shuttles/shiptestHISPANIA/independent_mantarraya.dmm",
+	"namelists": [
+		"SCIENCE",
+		"ABDUCTION",
+		"RP FOCUS"
+	],
+	"prefix": "UNKNOW",
+	"job_slots": {
+		"Leader": {
+			"outfit": "/datum/outfit/job/mantarrayaleader",
+			"officer": true,
+			"slots": 1
+		},
+		"Assistant": {
+			"outfit": "/datum/outfit/job/mantassistant",
+			"slots": 3
+		}
+	},
+	"enabled": true
+}
