@@ -109,6 +109,15 @@
 /obj/item/mmi,
 /turf/open/floor/plasteel/tech,
 /area/ship/science/robotics)
+"aM" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/door/poddoor/shutters{
+	id = "rd_shutters";
+	id_tag = "rd_shutters";
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ship/science)
 "aN" = (
 /obj/structure/chair{
 	dir = 8
@@ -170,9 +179,7 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "bu" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 4
-	},
+/obj/machinery/holopad/emergency/command,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/science/ai_chamber)
 "bz" = (
@@ -223,6 +230,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
 "cf" = (
@@ -292,6 +300,10 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
+"cG" = (
+/obj/machinery/holopad/emergency/command,
+/turf/open/floor/carpet/black,
+/area/ship/bridge)
 "cL" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
@@ -1249,14 +1261,12 @@
 /turf/open/floor/engine,
 /area/ship/engineering/engine)
 "jy" = (
-/obj/machinery/igniter{
-	id = "incinerator_igniter"
-	},
 /obj/machinery/air_sensor/atmos/toxins_mixing_tank{
 	id_tag = "corporate_incinerator_sensor";
-	name = "ncinerator gas sensor";
+	name = "incinerator gas sensor";
 	id = "corporate_incinerator_sensor"
 	},
+/obj/machinery/igniter/incinerator_atmos,
 /turf/open/floor/engine/vacuum,
 /area/ship/engineering/engine)
 "jC" = (
@@ -1407,6 +1417,9 @@
 "kU" = (
 /obj/machinery/porta_turret/ai,
 /obj/machinery/airalarm/directional/south,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1
+	},
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
 "kW" = (
@@ -2008,7 +2021,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxin_output{
 	dir = 8
 	},
-/turf/open/floor/engine/plasma,
+/turf/open/floor/engine/fuel,
 /area/ship/engineering/atmospherics)
 "pG" = (
 /obj/machinery/computer/atmos_control/tank/toxin_tank,
@@ -2159,10 +2172,10 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 8
+	dir = 5
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 6
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/science/ai_chamber)
@@ -2512,7 +2525,7 @@
 	dir = 10
 	},
 /obj/structure/cable{
-	icon_state = "2-4"
+	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/science)
@@ -2803,6 +2816,7 @@
 /obj/machinery/door/airlock/public/glass/incinerator/atmos_exterior{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/engine,
 /area/ship/engineering/engine)
 "uG" = (
@@ -2924,6 +2938,9 @@
 	dir = 5
 	},
 /obj/machinery/light/directional/west,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
 "vl" = (
@@ -3877,7 +3894,7 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/toxin_input{
 	dir = 8
 	},
-/turf/open/floor/engine/plasma,
+/turf/open/floor/engine/fuel,
 /area/ship/engineering/atmospherics)
 "Bo" = (
 /obj/effect/turf_decal/industrial/outline/yellow,
@@ -4357,19 +4374,17 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/machinery/button/shieldwallgen{
-	dir = 4;
-	pixel_y = 6;
-	pixel_x = -22;
-	id = "incinerator_igniter";
-	name = "Incinerator Igniter"
-	},
 /obj/machinery/button/door{
 	id = "incinerator_blastdoor";
 	name = "Incinerator Chamber Blastdoorl";
 	pixel_x = -24;
 	dir = 4;
 	pixel_y = -5
+	},
+/obj/machinery/button/ignition/incinerator/atmos{
+	dir = 4;
+	pixel_x = -23;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engine)
@@ -4404,6 +4419,13 @@
 	},
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
+"FR" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/door/poddoor/shutters{
+	id = "qm_shutters"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ship/cargo/office)
 "FU" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -4559,6 +4581,10 @@
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 4
 	},
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "GZ" = (
@@ -4618,6 +4644,18 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plasteel/grimy,
 /area/ship/hallway/central)
+"HG" = (
+/obj/machinery/holopad/emergency/command,
+/obj/machinery/button/door{
+	dir = 4;
+	id = "qm_shutters";
+	name = "Shutter Control";
+	pixel_x = -22;
+	pixel_y = -2;
+	id_tag = "qm_shutters"
+	},
+/turf/open/floor/carpet/nanoweave/orange,
+/area/ship/cargo/office)
 "HK" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/cargo/office)
@@ -4693,7 +4731,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/plasma{
+/obj/machinery/atmospherics/components/trinary/filter/atmos/plasma{
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -5240,7 +5278,7 @@
 /area/ship/bridge)
 "LU" = (
 /obj/effect/turf_decal/atmos/plasma,
-/turf/open/floor/engine/plasma,
+/turf/open/floor/engine/fuel,
 /area/ship/engineering/atmospherics)
 "Me" = (
 /obj/structure/closet/secure_closet/quartermaster,
@@ -5255,6 +5293,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/holopad/emergency/command,
 /turf/open/floor/carpet/royalblue,
 /area/ship/crew/office)
 "Mh" = (
@@ -5403,7 +5442,7 @@
 /area/ship/bridge)
 "Nk" = (
 /obj/machinery/air_sensor/atmos/toxin_tank,
-/turf/open/floor/engine/plasma,
+/turf/open/floor/engine/fuel,
 /area/ship/engineering/atmospherics)
 "Nm" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -5736,15 +5775,15 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/crew/office)
 "Po" = (
-/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/o2{
+/obj/structure/catwalk/over,
+/obj/machinery/atmospherics/components/trinary/filter/atmos/o2{
 	dir = 1
 	},
-/obj/structure/catwalk/over,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Pt" = (
 /obj/structure/catwalk/over,
-/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2{
+/obj/machinery/atmospherics/components/trinary/filter/atmos/n2{
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -5916,10 +5955,13 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "0-8"
+/obj/machinery/button/door{
+	dir = 8;
+	id = "rd_shutters";
+	name = "Shutter Control";
+	pixel_x = 25;
+	pixel_y = -4
 	},
-/obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "Qp" = (
@@ -6711,6 +6753,14 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
+"Wt" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/door/poddoor/shutters{
+	id = "rd_shutters";
+	id_tag = "rd_shutters"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ship/science)
 "Wx" = (
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 4
@@ -6844,6 +6894,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
+"XE" = (
+/obj/machinery/holopad/emergency/command,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
 "XG" = (
 /obj/effect/turf_decal/corner/opaque/mauve,
 /obj/effect/turf_decal/corner/opaque/mauve{
@@ -7079,6 +7133,9 @@
 /obj/item/aicard,
 /obj/machinery/door/window/brigdoor/southleft,
 /obj/machinery/light/directional/west,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
 "Zr" = (
@@ -8216,7 +8273,7 @@ JB
 DQ
 tx
 Cl
-tx
+XE
 gS
 tx
 Ld
@@ -8635,10 +8692,10 @@ hh
 "}
 (30,1,1) = {"
 Pw
-vT
-vT
-vT
-vT
+aM
+aM
+aM
+aM
 Pw
 TC
 ah
@@ -8690,7 +8747,7 @@ UO
 EA
 yM
 NI
-vT
+Wt
 HL
 ah
 ah
@@ -8709,7 +8766,7 @@ ND
 KJ
 LB
 xu
-LB
+cG
 xu
 LB
 Zg
@@ -8792,7 +8849,7 @@ Gi
 Qo
 mr
 qc
-vT
+Wt
 Wx
 JM
 SI
@@ -8892,9 +8949,9 @@ Pm
 jf
 mL
 MB
-MB
+HG
 aj
-ga
+FR
 vh
 wC
 iX
@@ -8996,7 +9053,7 @@ nk
 uZ
 jp
 AP
-ga
+FR
 Uk
 EW
 me
@@ -9047,7 +9104,7 @@ jf
 HK
 YO
 Ny
-ga
+FR
 wW
 Id
 me
