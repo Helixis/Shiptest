@@ -68,6 +68,7 @@
 /obj/machinery/mineral/ore_redemption{
 	dir = 8
 	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/plating/abductor2,
 /area/template_noop)
 "bt" = (
@@ -191,6 +192,10 @@
 	},
 /turf/open/floor/plating/abductor2,
 /area/template_noop)
+"eh" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/plasteel/tech,
+/area/template_noop)
 "es" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
@@ -256,6 +261,7 @@
 /obj/machinery/computer/operating{
 	dir = 1
 	},
+/obj/machinery/light/directional/south,
 /turf/open/floor/mineral/abductor,
 /area/template_noop)
 "gq" = (
@@ -273,6 +279,11 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel/tech,
+/area/template_noop)
+"gH" = (
+/obj/machinery/suit_storage_unit/independent/mining/eva,
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating/abductor2,
 /area/template_noop)
 "gI" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
@@ -480,6 +491,10 @@
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
 /area/template_noop)
+"mF" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/plasteel/tech,
+/area/template_noop)
 "mL" = (
 /obj/effect/turf_decal/atmos/nitrogen,
 /turf/open/floor/engine/n2,
@@ -512,7 +527,19 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/vending/tool,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech,
+/area/template_noop)
+"nq" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/mineral/abductor,
+/area/template_noop)
+"nM" = (
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/obj/machinery/light/directional/west,
+/turf/open/floor/mineral/abductor,
 /area/template_noop)
 "nS" = (
 /obj/structure/bed/pod,
@@ -542,6 +569,7 @@
 /area/template_noop)
 "oZ" = (
 /obj/structure/reagent_dispensers/fueltank,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/template_noop)
 "pj" = (
@@ -604,6 +632,10 @@
 	},
 /turf/open/floor/mineral/abductor,
 /area/template_noop)
+"qH" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/mineral/abductor,
+/area/template_noop)
 "qZ" = (
 /obj/structure/closet/abductor,
 /obj/item/storage/firstaid/fire,
@@ -646,6 +678,7 @@
 /obj/item/hemostat/alien,
 /obj/item/cautery/alien,
 /obj/item/circular_saw/alien,
+/obj/machinery/light/directional/south,
 /turf/open/floor/mineral/abductor,
 /area/template_noop)
 "rH" = (
@@ -672,10 +705,12 @@
 /obj/machinery/advanced_airlock_controller{
 	pixel_y = 25
 	},
+/obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/tech/grid,
 /area/template_noop)
 "sa" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/machinery/light/directional/north,
 /turf/open/floor/mineral/abductor,
 /area/template_noop)
 "sK" = (
@@ -685,6 +720,14 @@
 "sS" = (
 /obj/machinery/suit_storage_unit/independent/engineering,
 /turf/open/floor/plasteel/tech,
+/area/template_noop)
+"sY" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 1;
+	filter_types = list("n2")
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/mineral/abductor,
 /area/template_noop)
 "th" = (
 /obj/structure/table/abductor,
@@ -758,6 +801,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/mineral/abductor,
 /area/template_noop)
+"vi" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/mineral/abductor,
+/area/template_noop)
 "vl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -797,6 +844,7 @@
 /area/template_noop)
 "wV" = (
 /obj/structure/extinguisher_cabinet/directional/south,
+/obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/tech,
 /area/template_noop)
 "xf" = (
@@ -850,6 +898,13 @@
 	},
 /turf/open/floor/plating,
 /area/template_noop)
+"xC" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/mineral/abductor,
+/area/template_noop)
 "xN" = (
 /obj/machinery/abductor/console,
 /turf/open/floor/mineral/abductor,
@@ -862,6 +917,7 @@
 /obj/item/implant/abductor,
 /obj/item/abductor/gizmo,
 /obj/item/abductor/gizmo,
+/obj/machinery/light/directional/north,
 /turf/open/floor/mineral/abductor,
 /area/template_noop)
 "xS" = (
@@ -917,6 +973,13 @@
 	filter_types = list("n2")
 	},
 /turf/open/floor/engine/hull/reinforced,
+/area/template_noop)
+"yQ" = (
+/obj/machinery/cryopod{
+	dir = 8
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/mineral/abductor,
 /area/template_noop)
 "zc" = (
 /obj/structure/ore_box,
@@ -1027,6 +1090,7 @@
 "AH" = (
 /obj/structure/table/abductor,
 /obj/machinery/recharger,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plating/abductor2,
 /area/template_noop)
 "Be" = (
@@ -1243,6 +1307,11 @@
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/template_noop)
+"GT" = (
+/obj/structure/ore_box,
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating/abductor2,
+/area/template_noop)
 "Hc" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
@@ -1253,6 +1322,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
+/obj/machinery/light/directional/south,
 /turf/open/floor/plating/abductor2,
 /area/template_noop)
 "Hx" = (
@@ -1309,6 +1379,11 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/mineral/abductor,
+/area/template_noop)
+"Ip" = (
+/obj/machinery/suit_storage_unit/independent/mining/eva,
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating/abductor2,
 /area/template_noop)
 "II" = (
 /obj/structure/chair,
@@ -1485,6 +1560,7 @@
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 4
 	},
+/obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/template_noop)
 "ME" = (
@@ -1602,12 +1678,14 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/tech,
 /area/template_noop)
 "Pz" = (
 /obj/structure/rack,
 /obj/machinery/door/window/northleft,
 /obj/item/gun/energy/alien,
+/obj/machinery/light/directional/south,
 /turf/open/floor/plating/abductor2,
 /area/template_noop)
 "PG" = (
@@ -1620,6 +1698,7 @@
 /obj/machinery/door/window/westleft,
 /obj/structure/window/plasma/reinforced/spawner,
 /obj/item/melee/baton/abductor,
+/obj/machinery/light/directional/south,
 /turf/open/floor/plating/abductor2,
 /area/template_noop)
 "PW" = (
@@ -1652,6 +1731,10 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/stairs,
+/area/template_noop)
+"Qn" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/mineral/abductor,
 /area/template_noop)
 "QF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -1909,6 +1992,11 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/template_noop)
+"Xw" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/obj/machinery/light/directional/west,
+/turf/open/floor/plasteel/tech,
+/area/template_noop)
 "Xz" = (
 /obj/structure/table/abductor,
 /obj/item/crowbar/abductor,
@@ -1947,6 +2035,7 @@
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 4
 	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/plasteel/tech,
 /area/template_noop)
 "Yh" = (
@@ -2163,7 +2252,7 @@ dA
 Lm
 gt
 PW
-Lm
+mF
 Ue
 ik
 ik
@@ -2317,7 +2406,7 @@ eE
 ik
 ik
 ik
-sK
+Xw
 yk
 yk
 UW
@@ -2333,7 +2422,7 @@ dm
 tP
 MM
 ik
-Lm
+eh
 UW
 yk
 yk
@@ -2414,10 +2503,10 @@ eE
 eE
 oN
 zc
-zc
+GT
 zc
 GF
-GF
+Ip
 Zu
 tD
 Jd
@@ -2431,7 +2520,7 @@ LJ
 ik
 LJ
 LJ
-LJ
+qH
 LJ
 es
 YP
@@ -2462,7 +2551,7 @@ LJ
 jF
 LJ
 ik
-LJ
+vi
 xS
 LJ
 xS
@@ -2472,7 +2561,7 @@ Zz
 LJ
 LJ
 LJ
-LJ
+Qn
 oN
 eE
 "}
@@ -2522,11 +2611,11 @@ tD
 Jd
 EW
 LJ
-LJ
+Qn
 oN
 sa
 YC
-pw
+sY
 oN
 LJ
 Rw
@@ -2594,7 +2683,7 @@ Ac
 aV
 LJ
 oN
-LJ
+vi
 fv
 Zz
 fv
@@ -2604,7 +2693,7 @@ LJ
 Sa
 LJ
 EB
-LJ
+Qn
 oN
 eE
 "}
@@ -2615,7 +2704,7 @@ Ai
 bq
 VJ
 GF
-GF
+gH
 bh
 Kd
 iD
@@ -2679,7 +2768,7 @@ eE
 eE
 oN
 au
-au
+nM
 au
 vF
 oN
@@ -2687,11 +2776,11 @@ II
 Vp
 xf
 hd
-TQ
+xC
 oN
-LJ
+vi
 aV
-LJ
+Qn
 oN
 Jg
 gI
@@ -2745,13 +2834,13 @@ eE
 eE
 oN
 Jm
-Jm
+yQ
 Jm
 yc
 oN
 Ur
 aV
-LJ
+nq
 LJ
 LJ
 oN
@@ -2858,7 +2947,7 @@ LJ
 aV
 na
 VQ
-LJ
+Qn
 oN
 bT
 Go
@@ -2924,7 +3013,7 @@ uV
 pW
 Ls
 TQ
-LJ
+Qn
 ik
 bt
 TJ
