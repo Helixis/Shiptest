@@ -1,6 +1,6 @@
 /obj/machinery/interdiction_harblun
 	name = "Interdiction HARBLUN"
-	desc = "A bluespace cosmic 'harpoon' useful for forceful dockings."
+	desc = "A bluespace cosmic 'harpoon' useful for forceful dockings. (BEWARE) Drains power at high speeds while tethering a ship. (WARNING) Any kind of disruption while working can lead to severe consequences."
 	icon = 'icons/hispania/obj/machines/artillery.dmi'
 	icon_state = "harblun"
 	density = TRUE
@@ -138,7 +138,7 @@
 
 /obj/machinery/interdiction_harblun/military
 	name = "Interdiction Military-Gamma HARBLUN"
-	desc = "A military-gamma bluespace cosmic 'harpoon' useful for forceful dockings."
+	desc = "A military-gamma bluespace cosmic 'harpoon' useful for forceful dockings. Extended-range and safer locking system (BEWARE) Drains power at really high speeds while tethering a ship. (WARNING) Any kind of disruption while working can lead to severe consequences."
 	icon_state = "harblunmg"
 	circuit = /obj/item/circuitboard/machine/interdictor/mg
 	active_power_usage = 125000 // 10% fuera de cell upgraded
@@ -149,7 +149,7 @@
 
 /obj/machinery/interdiction_harblun/lg
 	name = "Interdiction Low-Gamma HARBLUN"
-	desc = "A low-gamma bluespace cosmic 'harpoon' useful for forceful dockings."
+	desc = "A low-gamma bluespace cosmic 'harpoon' useful for forceful dockings. Close-range and badly optimized (BEWARE) Drains power at really high speeds while tethering a ship. (WARNING) Any kind of disruption while working can lead to severe consequences."
 	icon_state = "harblunlg"
 	circuit = /obj/item/circuitboard/machine/interdictor/lg
 	active_power_usage = 40000  // 3-4% fuera de cell upgraded
