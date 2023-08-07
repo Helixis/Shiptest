@@ -397,6 +397,7 @@
 		/obj/effect/spawner/lootdrop/maintenance/three = 10,
 		/obj/effect/spawner/lootdrop/maintenance/four = 20,
 		/obj/effect/spawner/lootdrop/waste/salvageable = 40,
+		/obj/effect/spawner/lootdrop/waste/artillery = 15 // hispania
 	)
 	mob_spawn_list = list( //nor organics, more biased towards hivebots though
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/strong = 80,
@@ -427,7 +428,8 @@
 		/obj/effect/spawner/lootdrop/maintenance/three = 10,
 		/obj/effect/spawner/lootdrop/maintenance/four = 20,
 		/obj/effect/spawner/lootdrop/waste/salvageable = 40,
-		/obj/structure/foamedmetal = 100
+		/obj/structure/foamedmetal = 100,
+		/obj/effect/spawner/lootdrop/waste/artillery = 20 // hispania
 	)
 	mob_spawn_list = list( //Whoops! All hivebots!
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/strong = 80,

@@ -211,6 +211,17 @@
 	.["aiControls"] = allow_ai_control
 	.["burnDirection"] = current_ship.burn_direction
 	.["burnPercentage"] = current_ship.burn_percentage
+
+	if(current_ship.interdictor && !current_ship.interdictor_victim)
+		var/datum/overmap/ship/controlled/interdicting = current_ship.interdictor
+		.["interdicting"] = 1
+		.["interdictingspeed"] = interdicting.get_speed()
+		.["interdictingdiff"] = abs(current_ship.get_speed() - interdicting.get_speed())
+	else
+		.["interdicting"] = 0
+		.["interdictingspeed"] = 0
+		.["interdictingdiff"] = 0
+
 	for(var/obj/machinery/power/shuttle/engine/E as anything in current_ship.shuttle_port.engine_list)
 		var/list/engine_data
 		if(!E.thruster_active)
@@ -293,6 +304,9 @@
 	if(!current_ship.docked_to && !current_ship.docking)
 		switch(action)
 			if("act_overmap")
+				if(current_ship.interdictor)
+					say("Cannot dock due to an active Interdiction Tether!")
+					return
 				if(SSshuttle.jump_mode > BS_JUMP_CALLED)
 					to_chat(usr, "<span class='warning'>Cannot dock due to bluespace jump preperations!</span>")
 					return
@@ -323,6 +337,9 @@
 				current_ship.change_heading(BURN_NONE)
 				return
 			if("bluespace_jump")
+				if(current_ship.interdictor)
+					say("Cannot jump due to an active Interdiction Tether!")
+					return
 				if(calibrating)
 					cancel_jump()
 					return
@@ -332,10 +349,16 @@
 					calibrate_jump()
 					return
 			if("dock_empty")
+				if(current_ship.interdictor)
+					say("Cannot dock due to an active Interdiction Tether!")
+					return
 				current_ship.dock_in_empty_space(usr)
 				return
 	else if(current_ship.docked_to)
 		if(action == "undock")
+			if(current_ship.interdictor)
+				say("Cannot undock due to an active Interdiction Tether!")
+				return
 			current_ship.calculate_avg_fuel()
 			if(current_ship.avg_fuel_amnt < 25 && tgui_alert(usr, "Ship only has ~[round(current_ship.avg_fuel_amnt)]% fuel remaining! Are you sure you want to undock?", name, list("Yes", "No")) != "Yes")
 				return

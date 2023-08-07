@@ -138,6 +138,9 @@ const ShipContent = (_props, context) => {
     eta,
     x,
     y,
+    interdicting,
+    interdictingspeed,
+    interdictingdiff,
   } = data;
   return (
     <>
@@ -174,6 +177,46 @@ const ShipContent = (_props, context) => {
           </LabeledList.Item>
         </LabeledList>
       </Section>
+      {interdicting === 1 && (
+        <Section title="Interdiction ">
+          <LabeledList>
+            <LabeledList.Item label="Target Speed">
+              <ProgressBar
+                ranges={{
+                  good: [0, 4],
+                  average: [4, 7],
+                  bad: [7, Infinity],
+                }}
+                maxValue={10}
+                value={interdictingspeed}
+              >
+                <AnimatedNumber
+                  value={interdictingspeed}
+                  format={(value) => value.toFixed(1)}
+                />
+                Gm/s
+              </ProgressBar>
+            </LabeledList.Item>
+            <LabeledList.Item label="Speed Difference">
+              <ProgressBar
+                  ranges={{
+                  good: [0, 2],
+                  average: [2, 6],
+                  bad: [6, Infinity],
+                }}
+                maxValue={10}
+                value={interdictingdiff}
+              >
+                <AnimatedNumber
+                  value={interdictingdiff}
+                  format={(value) => value.toFixed(1)}
+                />
+                Gm/s
+              </ProgressBar>
+            </LabeledList.Item>
+          </LabeledList>
+        </Section>
+      )}
       <Section
         title="Engines"
         buttons={

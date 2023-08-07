@@ -1173,10 +1173,46 @@
 	id = "basic_shuttle"
 	display_name = "Basic Shuttle Research"
 	description = "Research the technology required to create and use basic shuttles."
-	prereq_ids = list("bluespace_travel", "adv_engi")
-	design_ids = list("engine_plasma", "engine_ion", "engine_heater", "engine_smes", "shuttle_helm", "rapid_shuttle_designator")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
+	prereq_ids = list("adv_engi")
+	design_ids = list("engine_plasma", "engine_ion", "engine_heater", "engine_smes")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 500
+
+/datum/techweb_node/artillery_shuttle_tech
+	id = "artillery_shuttle"
+	display_name = "Artillery Shuttle Research"
+	description = "Research the technology required to create basic combat tech for shuttles."
+	prereq_ids = list("basic_shuttle")
+	design_ids = list("harblun_lg", "interd")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1250)
+	export_price = 250
+
+/datum/techweb_node/interdiction_shuttle_tech
+	id = "interdiction_shuttle"
+	display_name = "Interdiction Shuttle Research"
+	description = "Research the technology required to create proper interdiction machines."
+	prereq_ids = list("artillery_shuttle")
+	design_ids = list("harblun")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 12500)
 	export_price = 5000
+
+/datum/techweb_node/adv_interdiction_shuttle_tech
+	id = "adv_interdiction_shuttle"
+	display_name = "Advanced Interdiction Shuttle Research"
+	description = "Research the technology required to create high-gamma interdiction machines."
+	prereq_ids = list("interdiction_shuttle", "bluespace_travel")
+	design_ids = list("harblun_mg")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
+	export_price = 5000
+
+/datum/techweb_node/independent_shuttle_tech
+	id = "intermediate_shuttle"
+	display_name = "Independent Shuttle Research"
+	description = "Research the technology required to create new basic shuttles."
+	prereq_ids = list("basic_shuttle", "bluespace_travel")
+	design_ids = list("shuttle_helm", "rapid_shuttle_designator")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
+	export_price = 1000 // Nah
 
 /datum/techweb_node/exp_shuttle_tech
 	id = "exp_shuttle"
