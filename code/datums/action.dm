@@ -358,6 +358,9 @@
 	name = "Toggle [target.name]"
 	button.name = name
 
+/datum/action/item_action/halt
+	name = "HALT!"
+
 /datum/action/item_action/toggle_voice_box
 	name = "Toggle Voice Box"
 
