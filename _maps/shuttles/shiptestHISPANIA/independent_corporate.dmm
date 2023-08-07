@@ -1761,6 +1761,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/science)
+"nD" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 8
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/engineering)
 "nK" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2136,6 +2142,21 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/science)
+"qd" = (
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/structure/catwalk/over,
+/turf/open/floor/plating,
+/area/ship/engineering)
 "qh" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4556,21 +4577,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
-"GM" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/cyan/visible,
-/obj/structure/catwalk/over,
-/turf/open/floor/plating,
-/area/ship/engineering)
 "GP" = (
 /obj/machinery/photocopier,
 /obj/machinery/camera/autoname{
@@ -5181,6 +5187,11 @@
 /obj/structure/table/reinforced,
 /obj/machinery/photocopier/faxmachine,
 /obj/machinery/light/directional/east,
+/obj/item/megaphone/command{
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/item/pen,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "KK" = (
@@ -5725,10 +5736,10 @@
 /area/ship/cargo)
 "OK" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 8
+	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
+/area/ship/crew/cryo)
 "OU" = (
 /obj/machinery/door/airlock/research{
 	name = "Robotics"
@@ -6548,12 +6559,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/storage)
-"Up" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 9
-	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/crew/cryo)
 "Uy" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/maintenance/two,
@@ -7158,13 +7163,35 @@
 /area/ship/cargo)
 "Zg" = (
 /obj/structure/table/reinforced,
-/obj/item/paper_bin,
-/obj/item/pen,
-/obj/item/megaphone/command{
-	pixel_x = 1;
-	pixel_y = 1
-	},
 /obj/machinery/light/directional/east,
+/obj/machinery/button/door{
+	id = "south_hangar";
+	name = "South Hangar Door";
+	dir = 8;
+	pixel_x = -8;
+	pixel_y = -5
+	},
+/obj/machinery/button/shieldwallgen{
+	id = "holo_south_hangar";
+	pixel_x = 5;
+	pixel_y = -5;
+	dir = 8;
+	name = "South Hangar Holofield"
+	},
+/obj/machinery/button/door{
+	dir = 8;
+	id = "north_hangar";
+	name = "North Hangar Door";
+	pixel_y = 7;
+	pixel_x = -8
+	},
+/obj/machinery/button/shieldwallgen{
+	dir = 8;
+	id = "holo_north_hangar";
+	pixel_x = 5;
+	pixel_y = 8;
+	name = "North Hangar Holofield"
+	},
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "Zq" = (
@@ -7444,7 +7471,7 @@ Pa
 gj
 QN
 hz
-Up
+OK
 OA
 bc
 bc
@@ -7494,7 +7521,7 @@ hg
 hg
 ru
 Xf
-OK
+nD
 Yw
 OA
 OA
@@ -7588,7 +7615,7 @@ BH
 sg
 HY
 KU
-GM
+qd
 fD
 LK
 yH
