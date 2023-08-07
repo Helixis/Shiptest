@@ -154,7 +154,7 @@
 	start_interdiction_callback()
 
 
-/obj/machinery/computer/interdiction/proc/interdiction_failureapc(var/quitaporcentajes)
+/obj/machinery/computer/interdiction/proc/interdiction_failureapc(quitaporcentajes)
 	if(!machinelinked) return
 	var/turf/turfapc = machinelinked.loc
 	var/area/machineapc = turfapc.loc
