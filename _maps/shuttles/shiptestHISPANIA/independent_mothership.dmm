@@ -8,26 +8,29 @@
 	},
 /obj/machinery/door/window/westleft,
 /turf/open/floor/plasteel/tech/grid,
-/area/template_noop)
+/area/ship/engineering)
 "ap" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "au" = (
 /obj/machinery/cryopod{
 	dir = 4
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
 "aN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/oxygen_output{
 	dir = 1
 	},
 /turf/open/floor/engine/o2,
-/area/template_noop)
+/area/ship/engineering)
+"aO" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/hallway/central)
 "aV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -39,7 +42,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "bd" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4;
@@ -47,7 +50,7 @@
 	},
 /obj/item/radio/intercom/wideband/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "bh" = (
 /obj/structure/railing{
 	dir = 9;
@@ -55,22 +58,22 @@
 	},
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/cargo)
 "bk" = (
 /obj/structure/closet/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "bo" = (
 /obj/machinery/abductor/pad,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "bq" = (
 /obj/machinery/mineral/ore_redemption{
 	dir = 8
 	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "bt" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -83,7 +86,7 @@
 /obj/item/clothing/under/abductor,
 /obj/item/clothing/head/helmet/abductor,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "bw" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -96,12 +99,12 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/engineering)
 "bx" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/maintenance/central)
 "by" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
@@ -117,10 +120,16 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/cargo)
+"bz" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/crew/cryo)
 "bT" = (
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
+"bX" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/hallway/aft)
 "cl" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4;
@@ -128,7 +137,7 @@
 	},
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "cG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
@@ -137,13 +146,13 @@
 	dir = 5
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "cQ" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/template_noop)
+/area/ship/hallway/central)
 "cU" = (
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 9
@@ -152,15 +161,15 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "cW" = (
 /obj/machinery/vending/snack/random,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "dk" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "dm" = (
 /obj/machinery/atmospherics/components/trinary/filter/atmos/o2{
 	dir = 4
@@ -170,14 +179,14 @@
 	},
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/engineering)
 "dr" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
 	id = "ship_shutters"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "dt" = (
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 6
@@ -187,20 +196,20 @@
 	filter_types = list("n2")
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "dA" = (
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "dO" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "es" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
@@ -212,31 +221,35 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "eB" = (
 /obj/machinery/door/poddoor{
 	id = "mothership_cargo";
 	name = "Cargo Bay Blast Door"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "eD" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "eE" = (
 /turf/template_noop,
 /area/template_noop)
+"eI" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/central)
 "fe" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "fv" = (
 /obj/structure/table/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "fE" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/door/firedoor/border_only{
@@ -246,7 +259,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/hallway/aft)
 "fI" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
@@ -254,7 +267,7 @@
 /obj/structure/closet/abductor,
 /obj/item/storage/firstaid/brute,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
 "gc" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1;
@@ -262,25 +275,25 @@
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "gd" = (
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "gn" = (
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
 "go" = (
 /obj/machinery/computer/operating{
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "gq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 1
@@ -290,24 +303,24 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "gt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "gI" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
 /obj/structure/fluff/empty_cryostasis_sleeper,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
 "gN" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/maintenance/central)
 "hd" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 1
@@ -319,7 +332,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "hn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 1
@@ -329,7 +342,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "hN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
@@ -346,21 +359,24 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
+"hW" = (
+/turf/open/floor/mineral/abductor,
+/area/ship/bridge)
 "ia" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/maintenance/central)
 "ik" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/template_noop)
+/area/ship/engineering)
 "in" = (
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "it" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer2,
@@ -374,18 +390,25 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "iD" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
 	},
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/cargo)
+"iL" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/mineral/abductor,
+/area/ship/cargo)
 "iN" = (
 /obj/machinery/vending/clothing,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "iW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -394,7 +417,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "iZ" = (
 /obj/machinery/door/airlock/external{
 	dir = 8
@@ -403,7 +426,22 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/template_noop)
+/area/ship/engineering)
+"ja" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/central)
 "jd" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
@@ -411,23 +449,23 @@
 	id = "ship_shutters"
 	},
 /turf/open/space/basic,
-/area/template_noop)
+/area/ship/bridge)
 "jk" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
 	},
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "jt" = (
 /obj/machinery/suit_storage_unit/independent/mining/eva,
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "jz" = (
 /obj/machinery/rnd/production/protolathe/department/science,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "jF" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -439,7 +477,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "jN" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
@@ -447,7 +485,7 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "jV" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -456,16 +494,16 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "jX" = (
 /obj/structure/ore_box,
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "jY" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/template_noop)
+/area/ship/engineering)
 "ki" = (
 /obj/machinery/door/airlock/engineering{
 	dir = 4;
@@ -490,17 +528,20 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "kq" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 10
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/template_noop)
+/area/ship/hallway/central)
 "kU" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
+"lf" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/security/armory)
 "mt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
@@ -516,11 +557,11 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "mL" = (
 /obj/effect/turf_decal/atmos/nitrogen,
 /turf/open/floor/engine/n2,
-/area/template_noop)
+/area/ship/engineering)
 "mN" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -535,14 +576,14 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "na" = (
 /obj/structure/table/abductor,
 /obj/item/storage/firstaid/regular{
 	pixel_x = 5
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "ne" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/cable{
@@ -551,14 +592,14 @@
 /obj/machinery/vending/tool,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "nS" = (
 /obj/structure/bed/pod,
 /obj/structure/curtain/bounty,
 /obj/item/bedsheet/purple,
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "ob" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -570,19 +611,31 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
+"ov" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/central)
 "oN" = (
 /turf/closed/wall/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "oP" = (
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
+"oR" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/aft)
 "oZ" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "pj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -595,7 +648,7 @@
 	},
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "pv" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 1
@@ -605,14 +658,14 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "pw" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1;
 	filter_types = list("n2")
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "py" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
@@ -624,7 +677,7 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "pB" = (
 /obj/item/melee/baton/abductor,
 /obj/structure/rack,
@@ -633,11 +686,11 @@
 	dir = 1
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "pC" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "pW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 9
@@ -646,12 +699,20 @@
 	dir = 10
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
+"qa" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/mineral/abductor,
+/area/ship/bridge)
+"qO" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
+/turf/open/floor/mineral/abductor,
+/area/ship/crew/cryo)
 "qZ" = (
 /obj/structure/closet/abductor,
 /obj/item/storage/firstaid/fire,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
 "rl" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -664,7 +725,14 @@
 	dir = 4
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
+"rr" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 1;
+	filter_types = list("n2")
+	},
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/aft)
 "rB" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 4
@@ -679,7 +747,7 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "rD" = (
 /obj/structure/table/abductor,
 /obj/item/paper/guides/antag/abductor,
@@ -691,7 +759,7 @@
 /obj/item/circular_saw/alien,
 /obj/machinery/light/directional/south,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "rH" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -708,7 +776,7 @@
 /obj/item/stack/sheet/mineral/uranium/twenty,
 /obj/item/stack/sheet/mineral/uranium/twenty,
 /turf/open/floor/plasteel/tech/grid,
-/area/template_noop)
+/area/ship/engineering)
 "rT" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/layer4{
 	dir = 8
@@ -718,20 +786,20 @@
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/tech/grid,
-/area/template_noop)
+/area/ship/engineering)
 "sa" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/machinery/light/directional/north,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "sK" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "sS" = (
 /obj/machinery/suit_storage_unit/independent/engineering,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "th" = (
 /obj/structure/table/abductor,
 /obj/machinery/button/door{
@@ -746,7 +814,7 @@
 	id = "ship_shutters"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "tB" = (
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4
@@ -762,7 +830,7 @@
 	id = "mothership_thursters_1"
 	},
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "tD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -771,23 +839,23 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/cargo)
 "tP" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/oxygen_input{
 	dir = 1
 	},
 /turf/open/floor/engine/o2,
-/area/template_noop)
+/area/ship/engineering)
 "tR" = (
 /obj/structure/frame/machine,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "tX" = (
 /obj/machinery/computer/cargo/express{
 	dir = 8
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "ua" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
@@ -795,39 +863,49 @@
 /obj/machinery/atmospherics/pipe/simple/orange/visible,
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/engineering)
 "uf" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
+"uz" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/crew)
 "uV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "vl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "vo" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/nitrogen_input{
 	dir = 1
 	},
 /turf/open/floor/engine/n2,
-/area/template_noop)
+/area/ship/engineering)
 "vF" = (
 /obj/structure/table/abductor,
 /obj/machinery/microwave,
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
+"vG" = (
+/turf/open/floor/plasteel/tech,
+/area/ship/engineering)
 "wj" = (
 /obj/structure/closet/abductor,
 /obj/item/storage/firstaid/advanced,
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
+"wk" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/mineral/abductor,
+/area/ship/bridge)
 "wx" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -840,32 +918,35 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
+"wM" = (
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/central)
 "wV" = (
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/maintenance/central)
 "xf" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "xh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "xu" = (
 /obj/structure/table/abductor,
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high/plus,
 /obj/item/stock_parts/cell/high/plus,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "xv" = (
 /obj/machinery/power/shieldwallgen/atmos/roundstart{
 	dir = 4;
@@ -880,7 +961,7 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "xx" = (
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4
@@ -896,11 +977,14 @@
 	id = "mothership_thursters_2"
 	},
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
+"xE" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "xN" = (
 /obj/machinery/abductor/console,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "xQ" = (
 /obj/structure/table/abductor,
 /obj/item/implant/abductor,
@@ -911,17 +995,17 @@
 /obj/item/abductor/gizmo,
 /obj/machinery/light/directional/north,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "xS" = (
 /obj/structure/chair{
 	dir = 4
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "xZ" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "yc" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -933,7 +1017,7 @@
 /obj/item/storage/box/donkpockets/donkpocketteriyaki,
 /obj/item/storage/box/donkpockets/donkpocketteriyaki,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
 "ye" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
@@ -946,7 +1030,7 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/engineering)
 "yk" = (
 /obj/machinery/power/terminal{
 	dir = 8
@@ -958,25 +1042,25 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/maintenance/central)
 "yN" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1;
 	filter_types = list("n2")
 	},
 /turf/open/floor/engine/hull/reinforced,
-/area/template_noop)
+/area/ship/external)
 "zc" = (
 /obj/structure/ore_box,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "zd" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4;
 	name = "Helm"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "zh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -988,7 +1072,7 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "zx" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 8
@@ -1003,17 +1087,20 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "zF" = (
 /obj/machinery/computer/helm{
 	dir = 8
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
+"zG" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/cargo)
 "zJ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "zR" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 1
@@ -1022,7 +1109,7 @@
 	dir = 5
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "zT" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -1030,17 +1117,17 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
 "zW" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "Ac" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "Ai" = (
 /obj/machinery/button/door{
 	id = "mothership_cargo";
@@ -1055,7 +1142,7 @@
 	},
 /obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "Aj" = (
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4
@@ -1071,23 +1158,27 @@
 	id = "mothership_thursters_1"
 	},
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "AH" = (
 /obj/structure/table/abductor,
 /obj/machinery/recharger,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "Be" = (
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "Bp" = (
 /obj/machinery/power/shuttle/engine/electric{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/external)
+"Bt" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/turf/open/floor/plasteel/tech,
+/area/ship/maintenance/central)
 "BJ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1098,14 +1189,14 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "BQ" = (
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "BW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
@@ -1118,27 +1209,30 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "Co" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Cp" = (
 /obj/machinery/abductor/experiment,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Cw" = (
 /obj/machinery/computer/camera_advanced/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
+"CA" = (
+/turf/open/floor/plating/abductor2,
+/area/ship/crew)
 "CE" = (
 /obj/structure/table/abductor,
 /obj/machinery/recharger,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "CJ" = (
 /obj/structure/closet/abductor,
 /obj/item/clothing/under/abductor,
@@ -1147,14 +1241,17 @@
 /obj/item/radio/headset/abductor,
 /obj/item/clothing/head/helmet/abductor,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
+"CT" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/hallway/aft)
 "De" = (
 /obj/machinery/autolathe,
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "Dn" = (
 /obj/structure/cable/yellow,
 /obj/structure/window/plasma/reinforced/spawner,
@@ -1163,46 +1260,52 @@
 	},
 /obj/machinery/power/port_gen/pacman/super,
 /turf/open/floor/plasteel/tech/grid,
-/area/template_noop)
+/area/ship/engineering)
 "Do" = (
 /turf/open/floor/plasteel/stairs,
-/area/template_noop)
+/area/ship/cargo)
+"Dt" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/mineral/abductor,
+/area/ship/science)
 "DB" = (
 /obj/machinery/abductor/gland_dispenser,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "DE" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
 /obj/structure/closet/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "DG" = (
 /obj/machinery/cryopod{
 	dir = 8
 	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
 "DJ" = (
 /obj/machinery/modular_computer/console/preset/command{
 	dir = 8
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "DO" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "Ep" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4,
 /turf/open/floor/engine/hull/reinforced,
-/area/template_noop)
+/area/ship/external)
 "EB" = (
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "EK" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1217,36 +1320,47 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
+"EM" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/aft)
 "EO" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/template_noop)
+/area/ship/hallway/central)
 "EW" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
+"EY" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "ship_shutters"
+	},
+/turf/open/floor/mineral/abductor,
+/area/ship/crew/cryo)
 "Fv" = (
 /obj/machinery/air_sensor/atmos/nitrogen_tank,
 /turf/open/floor/engine/n2,
-/area/template_noop)
+/area/ship/engineering)
 "FG" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "FP" = (
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "FU" = (
 /obj/structure/chair{
 	dir = 8
 	},
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "FV" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
@@ -1254,30 +1368,30 @@
 	id = "ship_shutters"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Gi" = (
 /obj/structure/bed/pod,
 /obj/structure/curtain/bounty,
 /obj/item/bedsheet/purple,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "Gm" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/template_noop)
+/area/ship/engineering)
 "Go" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "Gr" = (
 /obj/structure/table/abductor,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "Gs" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
@@ -1287,11 +1401,11 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "GF" = (
 /obj/machinery/suit_storage_unit/independent/mining/eva,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "GS" = (
 /obj/structure/table/abductor,
 /obj/item/crowbar/abductor,
@@ -1302,24 +1416,24 @@
 /obj/item/weldingtool/abductor,
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "Hc" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Hm" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "Hw" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "Hx" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer2,
@@ -1333,15 +1447,18 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "HB" = (
 /obj/machinery/chem_dispenser/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
+"HO" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/security/armory)
 "HW" = (
 /obj/machinery/rnd/destructive_analyzer,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "HX" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
@@ -1353,7 +1470,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "HY" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
@@ -1366,7 +1483,7 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "Ib" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
@@ -1374,18 +1491,18 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "ID" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "II" = (
 /obj/structure/chair,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "Jb" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -1394,37 +1511,37 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "Jd" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/cargo)
 "Jg" = (
 /obj/structure/fluff/empty_cryostasis_sleeper,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
 "Jm" = (
 /obj/machinery/cryopod{
 	dir = 8
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
 "Ju" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "Jw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "Jx" = (
 /obj/machinery/vending/cola/black,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "JH" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 8
@@ -1442,22 +1559,22 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "JO" = (
 /obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "Kd" = (
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "Kg" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "Kv" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1471,29 +1588,44 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/engineering)
 "KW" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
+"La" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/medical)
 "Lm" = (
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/maintenance/central)
 "Ls" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Lu" = (
 /obj/structure/cable/yellow,
 /obj/structure/window/plasma/reinforced/spawner,
 /obj/machinery/power/port_gen/pacman/super,
 /turf/open/floor/plasteel/tech/grid,
-/area/template_noop)
+/area/ship/engineering)
+"LI" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/aft)
 "LJ" = (
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
 "LL" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1506,7 +1638,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
 "LS" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
@@ -1515,7 +1647,7 @@
 	dir = 9
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/crew)
 "LY" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 1
@@ -1528,7 +1660,7 @@
 	},
 /obj/machinery/holopad,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Mk" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1547,19 +1679,19 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Mx" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "My" = (
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 4
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "ME" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1572,24 +1704,24 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "MM" = (
 /obj/effect/turf_decal/atmos/oxygen,
 /turf/open/floor/engine/o2,
-/area/template_noop)
+/area/ship/engineering)
 "MR" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 1
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/engineering)
 "Nd" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "Nl" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1605,14 +1737,17 @@
 	dir = 4
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "Ny" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
+"NH" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/crew)
 "Of" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1631,20 +1766,20 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "Oq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "OS" = (
 /obj/structure/closet/abductor,
 /obj/item/storage/box/alienhandcuffs,
 /obj/item/defibrillator,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "OU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -1654,11 +1789,11 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/engineering)
 "OZ" = (
 /obj/machinery/door/airlock/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
 "Pl" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 8
@@ -1670,26 +1805,26 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/cargo)
 "Pn" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/maintenance/central)
 "Pz" = (
 /obj/structure/rack,
 /obj/machinery/door/window/northleft,
 /obj/item/gun/energy/alien,
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "PG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
 "PU" = (
 /obj/structure/rack,
 /obj/machinery/door/window/westleft,
@@ -1697,7 +1832,7 @@
 /obj/item/melee/baton/abductor,
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "PW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
@@ -1707,7 +1842,7 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/engineering)
 "PY" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1715,20 +1850,26 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
 "Qd" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "Qi" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/stairs,
-/area/template_noop)
+/area/ship/cargo)
+"Qk" = (
+/turf/open/floor/mineral/abductor,
+/area/ship/science)
+"QD" = (
+/turf/open/floor/plating/abductor2,
+/area/ship/cargo)
 "QF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1739,7 +1880,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "QN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
@@ -1751,13 +1892,13 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/medical)
 "Rb" = (
 /obj/machinery/atmospherics/components/trinary/mixer/airmix{
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "Rh" = (
 /obj/machinery/power/shieldwallgen/atmos/roundstart{
 	dir = 8;
@@ -1772,11 +1913,17 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "Rj" = (
 /obj/machinery/air_sensor/atmos/oxygen_tank,
 /turf/open/floor/engine/o2,
-/area/template_noop)
+/area/ship/engineering)
+"Rn" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/mineral/abductor,
+/area/ship/cargo)
 "Rq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -1791,19 +1938,19 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Rs" = (
 /obj/structure/rack,
 /obj/machinery/door/window/northright,
 /obj/item/gun/energy/alien,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "Rw" = (
 /obj/structure/chair{
 	dir = 8
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "RG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -1812,7 +1959,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "RT" = (
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4
@@ -1828,15 +1975,18 @@
 	id = "mothership_thursters_2"
 	},
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "Sa" = (
 /obj/machinery/rnd/server,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "Sm" = (
 /obj/structure/table/optable/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
+"Sy" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/maintenance/central)
 "SK" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
@@ -1845,7 +1995,11 @@
 	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/template_noop)
+/area/ship/engineering)
+"SY" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/turf/open/floor/mineral/abductor,
+/area/ship/medical/surgery)
 "TJ" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
@@ -1857,26 +2011,47 @@
 /obj/item/clothing/under/abductor,
 /obj/item/clothing/head/helmet/abductor,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/security/armory)
 "TL" = (
+/obj/structure/marker_beacon{
+	picked_color = "Yellow"
+	},
 /turf/open/floor/engine/hull/reinforced,
-/area/template_noop)
+/area/ship/external)
 "TQ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Ue" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/template_noop)
+/area/ship/engineering)
 "Ur" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
+"UF" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/mineral/abductor,
+/area/ship/bridge)
+"UI" = (
+/turf/open/floor/mineral/abductor,
+/area/ship/medical/surgery)
+"UJ" = (
+/turf/open/floor/mineral/abductor,
+/area/ship/hallway/aft)
 "UK" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1884,14 +2059,14 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "UW" = (
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/maintenance/central)
 "Vp" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -1899,7 +2074,7 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/table/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "Vt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
@@ -1910,7 +2085,7 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/maintenance/central)
 "Vw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 1
@@ -1925,7 +2100,10 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/medical/surgery)
+"VF" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/medical/surgery)
 "VJ" = (
 /obj/structure/table/abductor,
 /obj/item/pickaxe,
@@ -1935,12 +2113,12 @@
 /obj/item/radio/intercom/directional/east,
 /obj/machinery/recharger,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "VQ" = (
 /obj/structure/table/abductor,
 /obj/item/restraints/handcuffs/alien,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/bridge)
 "Wc" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -1952,7 +2130,13 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
+"Wq" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/hallway/central)
+"Wv" = (
+/turf/closed/wall/mineral/abductor,
+/area/ship/bridge)
 "WC" = (
 /obj/machinery/door/airlock/abductor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1971,11 +2155,11 @@
 	dir = 4
 	},
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/hallway/aft)
 "Xr" = (
 /obj/machinery/computer/rdconsole/core,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "Xu" = (
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 4
@@ -1984,7 +2168,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "Xz" = (
 /obj/structure/table/abductor,
 /obj/item/crowbar/abductor,
@@ -1995,7 +2179,7 @@
 /obj/item/weldingtool/abductor,
 /obj/item/disk/design_disk/limbs/abductor,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "XK" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/window/plasma/reinforced/spawner{
@@ -2008,21 +2192,21 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/template_noop)
+/area/ship/engineering)
 "XP" = (
 /obj/machinery/cryopod{
 	dir = 4
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/crew/cryo)
 "XQ" = (
 /obj/machinery/atmospherics/components/trinary/filter/atmos/n2{
 	dir = 4
 	},
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/engineering)
 "XR" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
@@ -2032,13 +2216,13 @@
 	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "Yh" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/nitrogen_output{
 	dir = 1
 	},
 /turf/open/floor/engine/n2,
-/area/template_noop)
+/area/ship/engineering)
 "YC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -2051,23 +2235,23 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/central)
 "YL" = (
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "YO" = (
 /obj/machinery/suit_storage_unit/independent/mining/eva,
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/abductor2,
-/area/template_noop)
+/area/ship/cargo)
 "YP" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
 	},
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/science)
 "YS" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -2077,11 +2261,11 @@
 	},
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
-/area/template_noop)
+/area/ship/engineering)
 "Zr" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /turf/open/floor/plasteel/tech,
-/area/template_noop)
+/area/ship/engineering)
 "Zu" = (
 /obj/structure/railing{
 	dir = 5;
@@ -2089,19 +2273,19 @@
 	},
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/cargo)
 "Zz" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/hallway/aft)
 "ZQ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
 /turf/open/floor/mineral/abductor,
-/area/template_noop)
+/area/ship/cargo)
 
 (1,1,1) = {"
 eE
@@ -2216,7 +2400,7 @@ eE
 TL
 ik
 sK
-Lm
+vG
 gd
 YS
 Zr
@@ -2249,7 +2433,7 @@ eE
 ik
 ik
 dA
-Lm
+vG
 gt
 PW
 pC
@@ -2372,12 +2556,12 @@ eE
 eE
 eE
 eE
-ik
-ik
+Sy
+Sy
 tB
 Aj
-ik
-ik
+Sy
+Sy
 ik
 XK
 an
@@ -2389,12 +2573,12 @@ ua
 aN
 Rj
 ik
-ik
-ik
+Sy
+Sy
 RT
 xx
-ik
-ik
+Sy
+Sy
 eE
 eE
 eE
@@ -2403,9 +2587,9 @@ eE
 (10,1,1) = {"
 eE
 eE
-ik
-ik
-ik
+Sy
+Sy
+Sy
 bx
 yk
 yk
@@ -2427,34 +2611,34 @@ UW
 yk
 yk
 wV
-ik
-ik
-ik
+Sy
+Sy
+Sy
 eE
 eE
 "}
 (11,1,1) = {"
 eE
 eE
-ik
+Sy
 gN
 Lm
-zJ
+Bt
 jN
 Vt
 BW
 Oq
-ik
-ik
-ik
-ik
+CT
+CT
+CT
+CT
 kq
 ki
 EO
 cQ
-ik
-ik
-ik
+CT
+CT
+CT
 Mx
 mt
 HY
@@ -2462,32 +2646,32 @@ Qd
 Lm
 Lm
 gN
-ik
+Sy
 eE
 eE
 "}
 (12,1,1) = {"
 eE
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+zG
+zG
+zG
+zG
+zG
+zG
+zG
 Nl
 rl
-oN
-LJ
-LJ
-ik
-LJ
+bX
+UJ
+UJ
+CT
+wM
 aV
-LJ
-ik
+wM
+Wq
 cW
 Jx
-oN
+bX
 fE
 WC
 oN
@@ -2501,7 +2685,7 @@ eE
 "}
 (13,1,1) = {"
 eE
-oN
+zG
 zc
 jX
 zc
@@ -2511,17 +2695,17 @@ Zu
 tD
 Jd
 EW
-LJ
-LJ
-ik
-LJ
+UJ
+UJ
+CT
+wM
 jF
-LJ
-ik
-LJ
-LJ
+wM
+Wq
+UJ
+UJ
 DO
-LJ
+UJ
 es
 YP
 Ib
@@ -2536,31 +2720,31 @@ eE
 eE
 xv
 Nd
-bT
-bT
-bT
-bT
+QD
+QD
+QD
+QD
 Do
 tD
 Jd
 EW
-LJ
-LJ
-oN
-LJ
+UJ
+UJ
+bX
+wM
 jF
-LJ
-ik
+wM
+Wq
 Hw
 xS
-LJ
+UJ
 xS
 es
 xh
-Zz
-LJ
-LJ
-LJ
+Dt
+Qk
+Qk
+Qk
 dk
 oN
 eE
@@ -2569,30 +2753,30 @@ eE
 eE
 eB
 vl
-bT
-bT
-bT
-bT
+QD
+QD
+QD
+QD
 Do
 tD
 Jd
 EW
-LJ
-LJ
-oN
-LJ
+UJ
+UJ
+bX
+wM
 jF
-LJ
-ik
-LJ
+wM
+Wq
+UJ
 fv
-LJ
+UJ
 fv
 es
 xh
-Zz
+Dt
 jz
-LJ
+Qk
 tR
 YL
 oN
@@ -2602,30 +2786,30 @@ eE
 eE
 eB
 vl
-bT
-bT
-bT
-bT
+QD
+QD
+QD
+QD
 Do
 tD
 Jd
 EW
-LJ
-dk
-oN
+UJ
+EM
+bX
 sa
 YC
 gc
-oN
-LJ
+aO
+UJ
 Rw
-LJ
+UJ
 Rw
 es
 xh
-Zz
+Dt
 Xr
-LJ
+Qk
 HW
 Be
 oN
@@ -2644,13 +2828,13 @@ by
 Pl
 wx
 zx
-UK
+oR
 wx
 UK
 it
 UK
 ME
-UK
+oR
 BJ
 QF
 BJ
@@ -2658,9 +2842,9 @@ Hx
 hN
 KW
 xu
-LJ
+Qk
 Xz
-LJ
+Qk
 oN
 eE
 "}
@@ -2668,30 +2852,30 @@ eE
 eE
 Rh
 dO
-bT
-bT
-bT
-bT
+QD
+QD
+QD
+QD
 Do
-Zz
+Rn
 ZQ
 EW
 ob
-pw
-oN
+rr
+bX
 Ac
 aV
-LJ
-oN
+wM
+aO
 Hw
 fv
 Zz
 fv
 Wc
 Ny
-LJ
+Qk
 Sa
-LJ
+Qk
 EB
 dk
 oN
@@ -2699,24 +2883,24 @@ eE
 "}
 (19,1,1) = {"
 eE
-oN
+zG
 Ai
 bq
 VJ
 GF
 jt
 bh
-Kd
+iL
 iD
 EW
-aV
-LJ
-oN
+LI
+UJ
+bX
 FP
-Rq
-LJ
-oN
-LJ
+ja
+wM
+aO
+UJ
 FU
 Kd
 Rw
@@ -2724,97 +2908,97 @@ Wc
 jk
 uV
 pw
-LJ
-LJ
-LJ
+Qk
+Qk
+Qk
 oN
 eE
 "}
 (20,1,1) = {"
 eE
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+zG
+zG
+zG
+zG
+zG
+zG
+bX
+bX
+bX
+bX
 pj
-LJ
-oN
-LJ
+UJ
+bX
+wM
 aV
-LJ
-oN
-oN
-oN
-oN
-oN
+wM
+aO
+La
+La
+La
+La
 Wc
-oN
-EW
+VF
+SY
 OZ
-EW
-EW
-oN
+SY
+SY
+VF
 oN
 eE
 "}
 (21,1,1) = {"
 eE
 eE
-oN
+bz
 au
 XP
 au
 vF
-oN
+bX
 II
 Vp
 xf
 hd
 ID
-oN
-Hw
+bX
+eI
 aV
-dk
-oN
+ov
+aO
 Jg
 gI
 Jg
-oN
+La
 Wc
-oN
-LJ
-LJ
+VF
+UI
+UI
 DB
 rD
-oN
+VF
 eE
 eE
 "}
 (22,1,1) = {"
 eE
 eE
-dr
+EY
 LJ
-xZ
+qO
 PG
 PY
 wx
-UK
+oR
 JH
-UK
+oR
 py
-LJ
-oN
-LJ
+UJ
+bX
+wM
 mN
-LJ
-oN
+wM
+aO
 gn
 QN
 zT
@@ -2832,66 +3016,66 @@ eE
 (23,1,1) = {"
 eE
 eE
-oN
+bz
 Jm
 DG
 Jm
 yc
-oN
+bX
 Ur
-aV
+LI
 eD
-LJ
-LJ
-oN
-LJ
+UJ
+UJ
+bX
+wM
 aV
-LJ
-oN
+wM
+aO
 qZ
 fI
 wj
-oN
-LJ
-oN
+La
+UJ
+VF
 HB
 OS
 Gs
 go
-oN
+VF
 eE
 eE
 "}
 (24,1,1) = {"
 eE
 eE
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+bz
+bz
+bz
+bz
+bz
+bX
+bX
 Of
-oN
-oN
-oN
-oN
-oN
+bX
+Wv
+Wv
+Wv
+Wv
 Mk
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+Wv
+La
+La
+La
+La
+La
+bX
+VF
+VF
+VF
+VF
+VF
+VF
 eE
 eE
 "}
@@ -2899,31 +3083,31 @@ eE
 eE
 eE
 eE
-oN
-oN
-oN
-oN
+NH
+NH
+NH
+NH
 Gi
 BQ
 zh
 nS
-oN
+Wv
 Cw
 Co
 in
 Rq
 cl
 bd
-LJ
-oN
+hW
+Wv
 CJ
 CJ
 bT
 bT
 Pz
-oN
-oN
-oN
+lf
+lf
+lf
 eE
 eE
 eE
@@ -2933,29 +3117,29 @@ eE
 eE
 eE
 eE
-oN
-oN
-oN
+NH
+NH
+NH
 AH
 FG
 LS
 Hm
-oN
+Wv
 bo
-LJ
-LJ
-aV
+hW
+hW
+UF
 na
 VQ
-dk
-oN
+qa
+Wv
 bT
 Go
 bT
 bT
 Rs
-oN
-oN
+lf
+lf
 eE
 eE
 eE
@@ -2967,16 +3151,16 @@ eE
 eE
 eE
 eE
-oN
-oN
+NH
+NH
 Gi
 oP
-bT
+CA
 Gr
-oN
+Wv
 xQ
-LJ
-LJ
+hW
+hW
 LY
 gq
 gq
@@ -2986,8 +3170,8 @@ hn
 cG
 pB
 PU
-oN
-oN
+lf
+lf
 eE
 eE
 eE
@@ -3001,25 +3185,25 @@ eE
 eE
 eE
 eE
-oN
-oN
-oN
+NH
+NH
+NH
 Gi
 iN
-ik
+xE
 Cp
 xZ
-uV
+wk
 pW
 Ls
 TQ
-dk
-ik
+qa
+xE
 bt
 TJ
-oN
-oN
-oN
+lf
+lf
+lf
 eE
 eE
 eE
@@ -3036,21 +3220,21 @@ eE
 eE
 eE
 eE
-oN
-ik
-ik
-ik
+NH
+uz
+uz
+xE
 xN
 Hc
-LJ
+hW
 zd
-LJ
+hW
 th
 CE
-ik
-ik
-ik
-oN
+xE
+HO
+HO
+lf
 eE
 eE
 eE
@@ -3072,7 +3256,7 @@ eE
 eE
 eE
 eE
-ik
+xE
 FV
 FV
 tX
@@ -3080,7 +3264,7 @@ zF
 DJ
 FV
 FV
-ik
+xE
 eE
 eE
 eE
