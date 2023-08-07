@@ -349,6 +349,10 @@
 	},
 /turf/open/floor/plasteel/mono/white,
 /area/ship/crew/canteen)
+"cX" = (
+/obj/structure/extinguisher_cabinet/directional/south,
+/turf/open/floor/plasteel/mono/dark,
+/area/ship/cargo/office)
 "db" = (
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 1
@@ -563,6 +567,19 @@
 	},
 /turf/open/floor/carpet,
 /area/ship/cargo/office)
+"ei" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/carpet/black,
+/area/ship/bridge)
 "el" = (
 /obj/machinery/door/poddoor{
 	id = "south_hangar"
@@ -1517,7 +1534,8 @@
 "mh" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor/shutters{
-	id = "rd_shutters"
+	id = "rd_shutters";
+	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/science)
@@ -2216,9 +2234,9 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "qL" = (
-/obj/structure/extinguisher_cabinet/directional/south,
-/turf/open/floor/plasteel/mono/dark,
-/area/ship/cargo/office)
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
 "qV" = (
 /obj/structure/rack,
 /obj/item/mmi/posibrain,
@@ -2288,13 +2306,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
-"rI" = (
-/obj/structure/window/plasma/reinforced/plastitanium,
-/obj/machinery/door/poddoor/shutters{
-	id = "med_shutters"
-	},
-/turf/open/floor/plasteel/white,
-/area/ship/medical)
 "rO" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/firealarm/directional/west,
@@ -2951,6 +2962,13 @@
 "vr" = (
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
+"vu" = (
+/obj/structure/window/plasma/reinforced/plastitanium,
+/obj/machinery/door/poddoor/shutters{
+	id = "med_shutters"
+	},
+/turf/open/floor/plasteel/white,
+/area/ship/medical)
 "vv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
@@ -6463,10 +6481,6 @@
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo/office)
-"Ue" = (
-/obj/structure/extinguisher_cabinet/directional/north,
-/turf/open/floor/plasteel/grimy,
-/area/ship/crew)
 "Uh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
@@ -6746,8 +6760,7 @@
 "Wt" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor/shutters{
-	id = "rd_shutters";
-	dir = 1
+	id = "rd_shutters"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/science)
@@ -6845,19 +6858,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
-"Xu" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/extinguisher_cabinet/directional/north,
-/turf/open/floor/carpet/black,
-/area/ship/bridge)
 "Xv" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -8020,7 +8020,7 @@ vl
 vl
 MK
 JC
-rI
+vu
 XW
 nU
 hA
@@ -8117,12 +8117,12 @@ IA
 NO
 tD
 IA
-Ue
+qL
 Dv
 vo
 sv
 tx
-rI
+vu
 DJ
 ea
 hn
@@ -8405,7 +8405,7 @@ ND
 IC
 dU
 ND
-Xu
+ei
 yZ
 yZ
 yZ
@@ -8746,7 +8746,7 @@ UO
 EA
 yM
 NI
-Wt
+mh
 HL
 ah
 ah
@@ -8848,7 +8848,7 @@ Gi
 Qo
 mr
 qc
-mh
+Wt
 Wx
 JM
 SI
@@ -9056,7 +9056,7 @@ FR
 Uk
 EW
 me
-qL
+cX
 KV
 dG
 vr
