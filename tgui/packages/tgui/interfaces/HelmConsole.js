@@ -199,7 +199,7 @@ const ShipContent = (_props, context) => {
             </LabeledList.Item>
             <LabeledList.Item label="Speed Difference">
               <ProgressBar
-                  ranges={{
+                ranges={{
                   good: [0, 2],
                   average: [2, 6],
                   bad: [6, Infinity],
