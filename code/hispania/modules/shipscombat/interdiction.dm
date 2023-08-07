@@ -13,7 +13,6 @@
 	icon_keyboard = "interdiction_key"
 	circuit = /obj/item/circuitboard/computer/interdiction
 	light_color = LIGHT_COLOR_FLARE
-	clicksound = null
 
 	var/datum/overmap/ship/controlled/current_ship
 	var/datum/overmap/ship/controlled/interdicting
