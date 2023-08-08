@@ -43,3 +43,26 @@
 	icon_state = "nato_admirant"
 	item_state = "nato_admirant"
 	can_adjust = FALSE
+
+
+// NATO Hardsuit
+/obj/item/clothing/head/helmet/space/hardsuit/natonavy
+	name = "NATO Navy hardsuit helmet"
+	desc = "An advanced helmet designed for combat in a hazardous, low pressure environment. Shines with a high polish."
+	icon_state = "hardsuit0-navy"
+	item_state = "ce_helm"
+	hardsuit_type = "nato"
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
+	heat_protection = HEAD
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+
+/obj/item/clothing/suit/space/hardsuit/natonavy
+	icon_state = "hardsuit-white"
+	name = "advanced hardsuit"
+	desc = "An advanced suit that protects against hazardous, low pressure environments. Shines with a high polish."
+	item_state = "ce_hardsuit"
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/engine/elite
+	jetpack = /obj/item/tank/jetpack/suit
