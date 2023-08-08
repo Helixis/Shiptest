@@ -1455,6 +1455,7 @@
 #include "code\game\turfs\open\space\space.dm"
 #include "code\game\turfs\open\space\transit.dm"
 #include "code\hispania\game\area\ship_areas.dm"
+#include "code\hispania\modules\clothing\natonavy.dm"
 #include "code\hispania\modules\jobs\job_types\mantarraya.dm"
 #include "code\modules\admin\admin.dm"
 #include "code\modules\admin\admin_investigate.dm"
