@@ -33,8 +33,8 @@
 /obj/item/clothing/under/natonavy/officer_higher
 	name = "\improper NATO Navy Officer Fatigue"
 	desc = "Specialized combat uniform utilized by the NATO Navy higher ranking Officers serving the Galactic Federation. This one has additional insignia on its shoulders and cuffs."
-	icon_state = "nato_higherofficer"
-	item_state = "nato_higherofficer"
+	icon_state = "nato_higher_officer"
+	item_state = "nato_higher_officer"
 	can_adjust = FALSE
 
 /obj/item/clothing/under/natonavy/admirant
