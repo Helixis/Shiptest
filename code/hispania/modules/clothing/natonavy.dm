@@ -1,8 +1,8 @@
 /obj/item/clothing/under/natonavy
 	name = "\improper NATO Navy Recruit Fatigues"
 	desc = "Specialized combat uniform utilized by the NATO Navy serving the Galactic Federation. This uniform is usually used by joined forces aboard a NATO ship"
-	icon = 'icons/hispania/obj/clothing/natonavy.dmi'
-	mob_overlay_icon = 'icons/hispania/mob/clothing/natonavy.dmi'
+	icon = 'icons/hispania/obj/clothing/under/natonavy.dmi'
+	mob_overlay_icon = 'icons/hispania/mob/clothing/under/natonavy.dmi'
 	icon_state = "nato_fatigues"
 	item_state = "nato_fatigues"
 	armor = list("melee" = 15, "fire" = 30, "acid" = 30)
@@ -46,9 +46,9 @@
 
 
 // NATO Hardsuit
-/obj/item/clothing/suit/space/hardsuit/syndi/natonavy
-	mob_overlay_icon = 'icons/hispania/mob/clothing/natonavy.dmi'
-	icon = 'icons/hispania/obj/clothing/hardsuits/natonavy.dmi'
+/obj/item/clothing/head/helmet/space/hardsuit/syndi/natonavy
+	mob_overlay_icon = 'icons/hispania/mob/clothing/hats/helmets.dmi'
+	icon = 'icons/hispania/obj/clothing/hats/helmets.dmi'
 	icon_state = "hardsuit0-nato"
 	item_state = "hardsuit0-nato"
 	name = "NATO Navy Hardsuit Helmet"
@@ -60,12 +60,12 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 
 /obj/item/clothing/suit/space/hardsuit/syndi/natonavy
-	mob_overlay_icon = 'icons/hispania/mob/clothing/natonavy.dmi'
-	icon = 'icons/hispania/obj/clothing/natonavy.dmi'
+	mob_overlay_icon = 'icons/hispania/mob/clothing/suits/hardsuits.dmi'
+	icon = 'icons/hispania/obj/clothing/suits/hardsuits.dmi'
 	icon_state = "hardsuit0-nato"
 	item_state = "hardsuit0-nato"
 	name = "NATO Navy Hardsuit"
 	desc = "An advanced suit designed for combat in a hazardous, low pressure environments. Shines with a high polish."
 	hardsuit_type = "nato"
 	armor = list("melee" = 35, "bullet" = 45, "laser" = 25, "energy" = 35, "bomb" = 35, "bio" = 100, "rad" = 65, "fire" = 65, "acid" = 90)
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/natonavy
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/natonavy

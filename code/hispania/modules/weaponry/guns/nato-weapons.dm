@@ -49,79 +49,35 @@
 /obj/item/ammo_box/magazine/multi_sprite/g17
 	name = "\improper NATO SMG magazine"
 	desc = "A magazine for the GK-17 handgun, chambered for 9x25mm ammo."
-	icon = 'modular_skyrat/modules/sec_haul/icons/guns/mags.dmi'
+	icon = 'icons/hispania/obj/projectiles/guns/magazines/mags.dmi'
 	icon_state = "g17"
-	ammo_type = /obj/item/ammo_casing/c45
+	ammo_type = /obj/item/ammo_box/magazine/m45/nato
 	max_ammo = 20
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
-/obj/item/ammo_box/magazine/multi_sprite/g17/hp
-	ammo_type = /obj/item/ammo_casing/c9mm/hp
+/obj/item/ammo_box/magazine/m45/nato
+	name = "NATO SMG Magazine (.45)"
+	desc = "A single stack M1911 reproduction magazine, faithfully designed to chamber .45."
+	icon_state = "45-8"
+	ammo_type = /obj/item/ammo_casing/c45
+	max_ammo = 24
 
-/obj/item/ammo_box/magazine/multi_sprite/g17/ihdf
-	ammo_type = /obj/item/ammo_casing/c9mm/ihdf
+/obj/item/ammo_box/magazine/m45/nato/fire
+	name = "NATO SMG Magazine (.45 incendiary)"
+	desc = "A single stack M1911 reproduction magazine, faithfully designed to chamber .45. Loaded with rounds which ignite the target."
+	ammo_type = /obj/item/ammo_casing/c45/fire
 
-/obj/item/ammo_box/magazine/multi_sprite/g17/rubber
-	ammo_type = /obj/item/ammo_casing/c9mm/rubber
+/obj/item/ammo_box/magazine/m45/nato/hp
+	name = "NATO SMG Magazine (.45 HP)"
+	desc= "A single stack M1911 reproduction magazine, faithfully designed to chamber .45. Loaded with rounds which deal more damage, but are completely ineffective against armor."
+	ammo_type = /obj/item/ammo_casing/c45/hp
 
-// SMART Rifle
-/obj/item/gun/ballistic/automatic/smartgun
-	name = "\improper NATO 'S.M.A.R.T.' Rifle"
-	desc = "Suppressive Manual Action Reciprocating Taser rifle. A modified version of an Armadyne heavy machine gun fitted to fire miniature shock-bolts. Used by the NATO Navy"
-	icon = 'icons/hispania/obj/projectiles/guns/smartgun/smartgun.dmi'
-	righthand_file = 'icons/hispania/obj/projectiles/guns/smartgun/inhands/righthand40x32.dmi'
-	lefthand_file = 'icons/hispania/obj/projectiles/guns/smartgun/inhands/lefthand40x32.dmi'
-	icon_state = "smartgun"
-	w_class = WEIGHT_CLASS_HUGE
-	weapon_weight = WEAPON_MEDIUM
-	slot_flags = ITEM_SLOT_BACK
-	actions_types = null
-	can_suppress = FALSE
-	can_bayonet = FALSE
-	mag_display = TRUE
-	mag_display_ammo = TRUE
-	ammo_type = /obj/item/ammo_box/magazine/smartgun
-	empty_alarm = TRUE
-	tac_reloads = FALSE
-	bolt_type = BOLT_TYPE_STANDARD
-	semi_auto = FALSE
-	fire_sound = 'sound/hispania/weaponry/chaingun_fire.ogg'
-	rack_sound = 'sound/hispania/weaponry/chaingun_cock.ogg'
-	lock_back_sound = 'sound/hispania/weaponry/chaingun_open.ogg'
-	bolt_drop_sound = 'sound/hispania/weaponry/chaingun_cock.ogg'
-	load_sound = 'sound/hispania/weaponry/chaingun_magin.ogg'
-	load_empty_sound = 'sound/hispania/weaponry/chaingun_magin.ogg'
-	eject_sound = 'sound/hispania/weaponry/chaingun_magout.ogg'
-	load_empty_sound = 'sound/hispania/weaponry/chaingun_magout.ogg'
-	var/recharge_time = 5 SECONDS
-	var/recharging = FALSE
+/obj/item/ammo_box/magazine/m45/nato/ap
+	name = "NATO SMG Magazine (.45 AP)"
+	desc= "A single stack M1911 reproduction magazine, faithfully designed to chamber .45. Loaded with rounds which penetrate armour, but are less effective against normal targets."
+	ammo_type = /obj/item/ammo_casing/c45/ap
 
-/obj/item/gun/ballistic/automatic/smartgun/process_chamber()
-	. = ..()
-	recharging = TRUE
-	addtimer(CALLBACK(src, PROC_REF(recharge)), recharge_time)
-
-/obj/item/gun/ballistic/automatic/smartgun/proc/recharge()
-	recharging = FALSE
-	playsound(src, 'sound/weapons/kenetic_reload.ogg', 60, 1)
-
-/obj/item/gun/ballistic/automatic/smartgun/can_shoot()
-	. = ..()
-	if(recharging)
-		return FALSE
-
-/obj/item/gun/ballistic/automatic/smartgun/update_icon()
-	. = ..()
-	if(!magazine)
-		icon_state = "smartgun_open"
-	else
-		icon_state = "smartgun_closed"
-
-/obj/item/ammo_box/magazine/smartgun
-	name = "\improper SMART-Rifle magazine"
-	icon = 'modular_skyrat/modules/sec_haul/icons/guns/mags.dmi'
-	icon_state = "smartgun"
-	ammo_type = /obj/item/ammo_casing/smartgun
-	caliber = "smartgun"
-	max_ammo = 5
-	multiple_sprites = AMMO_BOX_PER_BULLET
+/obj/item/ammo_box/magazine/m45/nato/rubbershot
+	name = "NATO SMG Magazine (.45 rubbershot)"
+	desc = "A single stack M1911 reproduction magazine, faithfully designed to chamber .45. Loaded with less-lethal rubber rounds which disable targets without causing serious damage."
+	ammo_type = /obj/item/ammo_casing/c45/rubbershot
