@@ -48,6 +48,7 @@
 	name = "NATO Tactical Armor Vest"
 	icon_state = "marine_medium"
 
+/*
 /obj/item/clothing/mask/gas/sechailer/cloaker
 	name = "\improper NATO Tactical Mask"
 	desc = "A close-fitting tactical mask with an especially aggressive Cloaker-o-nator 420-69."
@@ -111,7 +112,7 @@
 		usr.visible_message("[usr]'s Cloaker-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
 		playsound(src.loc, "modular_hispania/sound/voice/hailer/cloaker/[key].ogg", 100, 0, 4)
 		cooldown = world.time
-
+*/
 // NATO Hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/natonavy
 	mob_overlay_icon = 'icons/hispania/mob/clothing/hats/helmets.dmi'

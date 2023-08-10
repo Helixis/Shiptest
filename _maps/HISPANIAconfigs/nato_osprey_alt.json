@@ -14,59 +14,41 @@
 	"limit": 1,
 	"starting_funds": 6000,
 	"job_slots": {
-		"Captain": {
+		"Admiral": {
 			"outfit": "/datum/outfit/job/captain/nt",
 			"officer": true,
 			"slots": 1
 		},
-		"First Officer": {
+		"Captain": {
 			"outfit": "/datum/outfit/job/head_of_personnel/nt",
 			"officer": true,
 			"slots": 1
 		},
-		"Scientist": {
+		"Commanding Lieutenant": {
 			"outfit": "/datum/outfit/job/scientist",
+			"officer": true,
+			"slots": 1
+		},
+		"Lieutenant": {
+			"outfit": "/datum/outfit/job/doctor",
+			"officer": true,
 			"slots": 2
 		},
-		"Medical Doctor": {
-			"outfit": "/datum/outfit/job/doctor",
-			"slots": 1
-		},
-		"Paramedic": {
+		"Sargeant": {
 			"outfit": "/datum/outfit/job/paramedic",
-			"slots": 1
+			"slots": 4
 		},
-		"Engineer": {
+		"MP": {
 			"outfit": "/datum/outfit/job/engineer/nt",
-			"slots": 1
-		},
-		"Atmospheric Technician": {
-			"outfit": "/datum/outfit/job/atmos",
-			"slots": 1
-		},
-		"Quartermaster": {
-			"outfit": "/datum/outfit/job/quartermaster",
-			"slots": 1
-		},
-		"Cargo Technician": {
-			"outfit": "/datum/outfit/job/cargo_tech",
-			"slots": 1
-		},
-		"Shaft Miner": {
-			"outfit": "/datum/outfit/job/miner/classic",
-			"slots": 1
-		},
-		"Cook": {
-			"outfit": "/datum/outfit/job/cook",
-			"slots": 1
-		},
-		"Janitor": {
-			"outfit": "/datum/outfit/job/janitor",
-			"slots": 1
-		},
-		"Assistant": {
-			"outfit": "/datum/outfit/job/assistant",
 			"slots": 3
+		},
+		"Enlisted Soldier": {
+			"outfit": "/datum/outfit/job/atmos",
+			"slots": 6
+		},
+		"Recruit": {
+			"outfit": "/datum/outfit/job/quartermaster",
+			"slots": 6
 		}
 	},
 	"enabled": true

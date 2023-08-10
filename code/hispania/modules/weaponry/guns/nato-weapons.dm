@@ -24,6 +24,7 @@
 	fire_sound_volume = 25
 	can_suppress = FALSE
 	can_bayonet = FALSE
+	fire_delay = 3
 
 // SMG
 /obj/item/gun/ballistic/automatic/m6pdw
