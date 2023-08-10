@@ -112,19 +112,6 @@
 		playsound(src.loc, "modular_hispania/sound/voice/hailer/cloaker/[key].ogg", 100, 0, 4)
 		cooldown = world.time
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // NATO Hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/natonavy
 	mob_overlay_icon = 'icons/hispania/mob/clothing/hats/helmets.dmi'
