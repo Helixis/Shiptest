@@ -44,6 +44,86 @@
 	item_state = "nato_admiral"
 	can_adjust = FALSE
 
+/obj/item/clothing/suit/armor/vest/marine/nato
+	name = "NATO Tactical Armor Vest"
+	icon_state = "marine_medium"
+
+/obj/item/clothing/mask/gas/sechailer/cloaker
+	name = "\improper NATO Tactical Mask"
+	desc = "A close-fitting tactical mask with an especially aggressive Cloaker-o-nator 420-69."
+	var/cooldown = 0
+	var/phrase = 1
+	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/selectphrase)
+	var/phrase_list = list(
+
+								"forums" 		= "NOW GO TO THE FORUMS AND CRY LIKE THE LITTLE BITCH YOU ARE!",
+								"beep" 		= "WULULULULULULU!",
+								"difficulty-tweak"			= "WE CALL THIS A DIFFICULTY TWEAK!",
+								"celilitis"			= "I'M GONNA BEAT THE CELILITIS OUT OF YOU!",
+								"corners"			= "NEXT TIME CHECK YOUR CORNERS!",
+								"beated"			= "I BET YOU LET YOURSELF GET BEAT UP JUST TO HEAR WHAT I HAVE TO SAY",
+								"pants"			= "YOU WEAR THIS SHIT IN YOUR PANTS PROUDLY LIKE A BADGE OF HONOR",
+								"resisting"			= "YOU CALL THIS RESISTING ARREST? YOU ASKED FOR IT!",
+								"cry"			= "NOW CRY FOR MOM TO CHANGE YOUR DIAPERS!",
+								"expected"			= "I EXPECTED BETTER",
+								"hitting-yourself"			= "STOP HITTING YOURSELF! STOP HITTING YOURSELF!",
+								"im-late"			= "I know I know, I'm late",
+								"meeting"			= "We gotta stop meeting like this you know?",
+								"missed"			= "MISSED ME, DIDN'T YA?",
+								"no-return"			= "THIS IS THE POINT OF NO RETURN!",
+								"not-tough"			= "NOT SO TOUGH NOW, HUH?!",
+								"speak-up"			= "SPEAK UP, I CANT HEAR YOU!",
+								"s-word"			= "ALRIGHT, THE SAFE WORD IS 'POLICE BRUTALITY'",
+								"wish-true"			= "SOMETIMES, WISHES DO COME TRUE",
+								"work-smarter"			= "WORK SMARTER, NOT HARDER!"
+								)
+	icon_state = "cloaker"
+	icon_state = "cloaker"
+
+/datum/action/item_action/selectphrase
+	name = "Change Phrase"
+
+/obj/item/clothing/mask/gas/sechailer/cloaker/ui_action_click(mob/user, actiontype)
+    if(actiontype == /datum/action/item_action/halt)
+        halt()
+    else if(actiontype == /datum/action/item_action/selectphrase)
+        var/key = phrase_list[phrase]
+        var/message = phrase_list[key]
+
+        phrase = (phrase < 20) ? (phrase + 1) : 1
+        key = phrase_list[phrase]
+        message = phrase_list[key]
+        to_chat(user,"<span class='notice'>You set the restrictor to: [message]</span>")
+
+
+/obj/item/clothing/mask/gas/sechailer/cloaker/verb/halt()
+	set category = "Object"
+	set name = "HALT"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr))
+		return
+
+	// select phrase to play
+	//play_phrase(usr, GLOB.hailer_phrases[select_phrase()])
+	if(cooldown < world.time - 35)
+		var/key = phrase_list[phrase]
+		var/message = phrase_list[key]
+		usr.visible_message("[usr]'s Cloaker-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
+		playsound(src.loc, "modular_hispania/sound/voice/hailer/cloaker/[key].ogg", 100, 0, 4)
+		cooldown = world.time
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // NATO Hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/natonavy
