@@ -46,7 +46,7 @@
 			"outfit": "/datum/outfit/job/atmos",
 			"slots": 6
 		},
-		"Recruit": {
+		"Non-Enlisted Recruit": {
 			"outfit": "/datum/outfit/job/quartermaster",
 			"slots": 6
 		}
