@@ -88,6 +88,9 @@
 /obj/effect/turf_decal/corner/opaque/syndiered{
 	dir = 8
 	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "aE" = (
@@ -466,9 +469,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
 /obj/effect/turf_decal/corner/opaque/syndiered{
 	dir = 4
 	},
@@ -477,6 +477,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
@@ -681,6 +684,12 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "eq" = (
@@ -694,6 +703,18 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/turf/open/floor/plasteel/dark,
+/area/ship/security)
+"ew" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "ez" = (
@@ -887,6 +908,9 @@
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/corner/opaque/solgovgold{
 	dir = 5
+	},
+/obj/machinery/camera/autoname{
+	dir = 6
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/construction)
@@ -1867,6 +1891,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
+/obj/machinery/door/airlock/engineering/glass,
 /turf/open/floor/plasteel/dark,
 /area/ship/construction)
 "kZ" = (
@@ -2098,9 +2123,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
@@ -4306,6 +4328,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
+"yN" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/door/airlock/security/brig,
+/turf/open/floor/plasteel/dark,
+/area/ship/security)
 "yP" = (
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
@@ -4845,6 +4877,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/construction)
 "Cn" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "Cp" = (
@@ -5189,6 +5224,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/cargo/office)
+"El" = (
+/obj/machinery/power/apc/highcap{
+	dir = 1
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/security)
 "Em" = (
 /obj/machinery/door/window/eastright{
 	dir = 2;
@@ -5217,6 +5258,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
@@ -5250,6 +5297,9 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/maintenance/six,
 /obj/effect/spawner/lootdrop/maintenance/six,
+/obj/machinery/camera/autoname{
+	dir = 6
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/construction)
 "EN" = (
@@ -5313,10 +5363,6 @@
 /turf/open/floor/plasteel,
 /area/ship/cargo)
 "Fe" = (
-/obj/machinery/door/airlock/highsecurity{
-	name = "AI Chamber";
-	req_access_txt = "10"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2
 	},
@@ -5330,6 +5376,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/orange/hidden,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/highsecurity{
+	name = "NATO Armory";
+	req_access_txt = "19";
+	req_ship_access = s
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "Ff" = (
@@ -5537,6 +5588,9 @@
 /obj/effect/turf_decal/corner/opaque/syndiered{
 	dir = 10
 	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "Gt" = (
@@ -5605,6 +5659,19 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen)
+"GE" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/security/brig,
+/turf/open/floor/plasteel/dark,
+/area/ship/security)
 "GG" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -6381,6 +6448,9 @@
 /obj/effect/turf_decal/corner/opaque/syndiered{
 	dir = 10
 	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "LV" = (
@@ -6518,9 +6588,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7373,10 +7440,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/construction)
 "RD" = (
-/obj/machinery/door/airlock/highsecurity{
-	name = s;
-	req_access_txt = "24"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2
 	},
@@ -7390,6 +7453,11 @@
 /obj/machinery/atmospherics/pipe/simple/orange/hidden,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/green/hidden/layer1,
+/obj/machinery/door/airlock/highsecurity{
+	name = "NATO Armory";
+	req_access_txt = "19";
+	req_ship_access = s
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "RE" = (
@@ -8703,6 +8771,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
+/obj/machinery/door/airlock/engineering/glass,
 /turf/open/floor/plasteel/dark,
 /area/ship/construction)
 "Za" = (
@@ -9629,7 +9698,7 @@ YI
 Rq
 IL
 IL
-su
+GE
 IL
 AB
 zJ
@@ -9662,9 +9731,9 @@ li
 li
 li
 li
-IL
+El
 aC
-su
+ew
 IL
 cq
 cq
@@ -9944,7 +10013,7 @@ li
 li
 Wt
 IL
-su
+yN
 IL
 Zr
 Zr
