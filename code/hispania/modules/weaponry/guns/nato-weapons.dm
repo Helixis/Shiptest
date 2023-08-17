@@ -31,7 +31,7 @@
 	item_state = "nato-p16"
 	weapon_weight = WEAPON_LIGHT
 
-// SMG (TERMINADO)
+// SMG (Aun no enlazado al nuevo sprite)
 /obj/item/gun/ballistic/automatic/smg/vector/nato-vector
 	name = "\improper NATO Vector carbine"
 	desc = "A military police carbine based off of an SMG design, with most of the complex workings removed for reliability. Chambered in 9mm."
@@ -39,7 +39,7 @@
 	item_state = "vector"
 	fire_sound_volume = 25
 
-// Marksman Rifle
+// Marksman Rifle (Aun no enlazado al nuevo sprite)
 /obj/item/gun/ballistic/automatic/assualt/p16/nato-cm16
 	name = "\improper CM-16"
 	desc = "Standard issue rifle of the Colonial Minutemen. A heavily modified version of the P-16 designed to fit the standards of operative warfare."
