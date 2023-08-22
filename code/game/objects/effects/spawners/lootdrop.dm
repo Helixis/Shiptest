@@ -1120,6 +1120,13 @@
 		/obj/structure/salvageable/server = 8
 	)
 
+// HISPANIA ARTILLERY
+/obj/effect/spawner/lootdrop/waste/artillery
+	loot = list(
+		/obj/structure/salvageable/interdiction = 70,
+		/obj/structure/salvageable/harblun = 30
+	)
+
 /obj/effect/spawner/lootdrop/waste/girder
 	loot = list(
 		/obj/structure/girder,
