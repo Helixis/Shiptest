@@ -141,7 +141,6 @@
 	pixel_x = 18;
 	pixel_y = 2
 	},
-/obj/machinery/photocopier/faxmachine,
 /obj/structure/extinguisher_cabinet/directional/south{
 	pixel_x = 8
 	},

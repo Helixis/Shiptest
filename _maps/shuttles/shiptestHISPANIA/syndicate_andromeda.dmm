@@ -2123,7 +2123,6 @@
 /area/ship/medical)
 "uJ" = (
 /obj/structure/table/reinforced,
-/obj/machinery/photocopier/faxmachine/longrange,
 /obj/item/toy/figure/syndie{
 	pixel_x = -4;
 	pixel_y = 5
@@ -5074,7 +5073,6 @@
 /area/ship/cargo)
 "Ur" = (
 /obj/structure/table/reinforced,
-/obj/machinery/photocopier/faxmachine,
 /obj/item/clothing/glasses/hud/security/night{
 	pixel_x = -4;
 	pixel_y = -6

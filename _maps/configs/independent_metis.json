@@ -22,24 +22,24 @@
 			"slots": 1
 		},
 		"Invertebrate Xenofauna Morphology Analyst": {
-			"outfit": "/datum/outfit/job/scientist/xenobiologist",
+			"outfit": "/datum/outfit/job/scientist",
 			"slots": 1
 		},
 		"Hostile Planetary Exobiologist": {
-			"outfit": "/datum/outfit/job/scientist/xenobiologist/fauna",
+			"outfit": "/datum/outfit/job/scientist",
 			"slots": 1
 		},
 
 		"Mechatronic Hydraulics Calibration Engineer": {
-			"outfit": "/datum/outfit/job/roboticist/mechatronicengineer",
+			"outfit": "/datum/outfit/job/roboticist",
 			"slots": 1
 		},
 		"Positronic Reliability Technician": {
-			"outfit": "/datum/outfit/job/roboticist/biomechanicalengineer",
+			"outfit": "/datum/outfit/job/roboticist",
 			"slots": 1
 		},
 		"Ionic Dynamo Engineer": {
-			"outfit": "/datum/outfit/job/roboticist/engineer",
+			"outfit": "/datum/outfit/job/roboticist",
 			"slots": 1
 		},
 		"Percussive Acquisitions-Focused Minerologist": {
@@ -47,23 +47,23 @@
 			"slots": 1
 		},
 		"Mechanosynthesis Specialist": {
-			"outfit": "/datum/outfit/job/scientist/naniteresearcher",
+			"outfit": "/datum/outfit/job/scientist",
 			"slots": 1
 		},
 		"Plasmic Pyrolysis Researcher": {
-			"outfit": "/datum/outfit/job/scientist/seniorscientist",
+			"outfit": "/datum/outfit/job/scientist",
 			"slots": 1
 		},
 		"Fiberboard Containment Inspector": {
-			"outfit": "/datum/outfit/job/scientist/juniorscientist",
+			"outfit": "/datum/outfit/job/scientist",
 			"slots": 1
 		},
 		"Hyphenated-Specialist": {
-			"outfit": "/datum/outfit/job/scientist/juniorscientist",
+			"outfit": "/datum/outfit/job/scientist",
 			"slots": 1
 		},
 		"Cantilevered Tool Containment Technician": {
-			"outfit": "/datum/outfit/job/scientist/juniorscientist",
+			"outfit": "/datum/outfit/job/scientist",
 			"slots": 1
 		}
 	},
