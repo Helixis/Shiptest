@@ -144,8 +144,16 @@
 	active_power_usage = 125000 // 10% fuera de cell upgraded
 	largeharblun = "mg"
 	range = 3
-
 	diffdamage = FALSE
+
+/obj/machinery/interdiction_harblun/military/admin
+	name = "Interdiction CSS-Gamma HARBLUN"
+	desc = "An extremely rare military-gamma bluespace cosmic 'harpoon' useful for forceful dockings. Extreme range and quick locking effect on the target ship. Drains low power from your APCs. (WARNING) Any kind of disruption while working can lead to severe consequences."
+	active_power_usage = 1000 //Admeme
+	range = 4
+	tether_multiplier = 0.5
+	interdic_multiplier = 3
+	max_integrity = 5000 //admeme
 
 /obj/machinery/interdiction_harblun/lg
 	name = "Interdiction Low-Gamma HARBLUN"

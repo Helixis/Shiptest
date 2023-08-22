@@ -1184,7 +1184,7 @@
 	description = "Research the technology required to create basic combat tech for shuttles."
 	prereq_ids = list("basic_shuttle")
 	design_ids = list("harblun_lg", "interd")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1250)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	export_price = 250
 
 /datum/techweb_node/interdiction_shuttle_tech
@@ -1193,7 +1193,7 @@
 	description = "Research the technology required to create proper interdiction machines."
 	prereq_ids = list("artillery_shuttle")
 	design_ids = list("harblun")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 12500)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
 	export_price = 5000
 
 /datum/techweb_node/adv_interdiction_shuttle_tech
@@ -1202,7 +1202,7 @@
 	description = "Research the technology required to create high-gamma interdiction machines."
 	prereq_ids = list("interdiction_shuttle", "bluespace_travel")
 	design_ids = list("harblun_mg")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 50000)
 	export_price = 5000
 
 /datum/techweb_node/independent_shuttle_tech

@@ -200,14 +200,14 @@
 		interdiction_failureapc(0.5) // 50% de energia de cell
 		announce_to_ships("HARBLUN EXTREMELY SEVERE disruption, Interdiction Tether dissipating.")
 		current_ship.flicker_lights()
-		throw_ship_contents(current_ship, current_ship.get_heading(), 3)
+		//throw_ship_contents(current_ship, current_ship.get_heading(), 3) //Rompe todo
 		return end_interdiction()
 
 	if(machinelinked.machine_stat & (NOPOWER|BROKEN))
 		interdiction_failureapc(0.25) // 25% de energia de cell
 		announce_to_ships("HARBLUN SEVERE disruption, Interdiction Tether dissipating.")
 		current_ship.flicker_lights()
-		throw_ship_contents(current_ship, current_ship.get_heading(), 1)
+		//throw_ship_contents(current_ship, current_ship.get_heading(), 1) //Rompe todo
 		return end_interdiction()
 
 	machinelinked.use_power = ACTIVE_POWER_USE
