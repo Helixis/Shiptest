@@ -1463,6 +1463,8 @@
 #include "code\hispania\modules\research\designs\artillery_designs.dm"
 #include "code\hispania\modules\shipscombat\interdiction.dm"
 #include "code\hispania\modules\shipscombat\interdiction_machine.dm"
+#include "code\hispania\modules\jobs\job_types\hammer.dm"
+#include "code\hispania\modules\recycling\disposal\bin.dm"
 #include "code\modules\admin\admin.dm"
 #include "code\modules\admin\admin_investigate.dm"
 #include "code\modules\admin\admin_ranks.dm"
