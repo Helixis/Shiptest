@@ -295,10 +295,10 @@
 
 		if(our_strength * our_speedunit > 0 && their_strength * their_speedunit > 0)
 			current_ship.announce_to_helms("Interdiction locking roughly by a [our_strength] coefficient.")
-			throw_ship_contents(current_ship, current_ship.get_heading(), our_strength)
+		//	throw_ship_contents(current_ship, current_ship.get_heading(), our_strength)
 		if(their_strength * their_speedunit > 0)
 			interdicting.announce_to_helms("Interdiction locking roughly by a [their_strength] coefficient.")
-			throw_ship_contents(interdicting, interdicting.get_heading(), their_strength)
+		//	throw_ship_contents(interdicting, interdicting.get_heading(), their_strength)
 
 	if(tether)
 		QDEL_NULL(tether)
