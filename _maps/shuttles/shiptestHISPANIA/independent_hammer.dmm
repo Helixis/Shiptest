@@ -141,7 +141,6 @@
 	pixel_x = 18;
 	pixel_y = 2
 	},
-/obj/machinery/photocopier/faxmachine,
 /obj/structure/extinguisher_cabinet/directional/south{
 	pixel_x = 8
 	},
@@ -1008,11 +1007,6 @@
 	req_access_txt = "613";
 	req_access = null
 	},
-/obj/item/ammo_box/c38_box/hunting{
-	pixel_x = 6;
-	pixel_y = 9
-	},
-/obj/item/gun/ballistic/shotgun/winchester/lethal,
 /obj/item/clothing/glasses/meson,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
@@ -1170,11 +1164,6 @@
 	req_access_txt = "612";
 	req_access = null
 	},
-/obj/item/ammo_box/c38_box/hunting{
-	pixel_x = 6;
-	pixel_y = 9
-	},
-/obj/item/gun/ballistic/shotgun/winchester/lethal,
 /obj/item/clothing/glasses/meson,
 /turf/open/floor/plasteel/mono,
 /area/ship/crew)
@@ -1565,6 +1554,9 @@
 /obj/structure/extinguisher_cabinet/directional/north{
 	pixel_x = 10
 	},
+/obj/item/gun/ballistic/shotgun/winchester,
+/obj/item/ammo_box/c38_box,
+/obj/item/ammo_box/c38_box,
 /turf/open/floor/carpet/nanoweave,
 /area/ship/crew/cryo)
 "Km" = (
@@ -1994,27 +1986,10 @@
 	pixel_x = 12;
 	pixel_y = -2
 	},
-/obj/item/ammo_box/c38_box/hunting,
-/obj/item/ammo_box/c38_box/hunting{
-	pixel_x = -2
-	},
-/obj/item/ammo_box/c38_box/hunting{
-	pixel_x = -5
-	},
 /obj/item/gun/ballistic/shotgun/doublebarrel/improvised{
 	pixel_y = -11;
 	pixel_x = 3
 	},
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
-/obj/item/ammo_casing/c38/hunting,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Wt" = (
