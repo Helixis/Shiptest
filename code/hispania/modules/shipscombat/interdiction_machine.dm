@@ -152,7 +152,7 @@
 	active_power_usage = 1000 //Admeme
 	range = 4
 	tether_multiplier = 0.5
-	interdic_multiplier = 3
+	interdic_multiplier = 2.5
 	max_integrity = 5000 //admeme
 
 /obj/machinery/interdiction_harblun/lg
