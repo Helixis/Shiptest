@@ -71,6 +71,7 @@
 	update_icon()
 
 /obj/machinery/interdiction_harblun/update_icon_state()
+	. = ..()
 	if(machine_stat & BROKEN)
 		icon_state = "[initial(icon_state)]_broke"
 	else if(machine_stat & NOPOWER)
