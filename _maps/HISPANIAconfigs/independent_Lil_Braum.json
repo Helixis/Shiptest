@@ -1,0 +1,25 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Lil Braum Xeno class Ship",
+	"map_short_name": "Lil Braum",
+	"description": 	"A colonial ship rehabilitated for the use of science and Xenobiology.",
+	"tags": ["Xenobiology"],
+	"map_path": "_maps/shuttles/shiptestHISPANIA/Lil_Braum.dmm",
+	"namelists": [
+		"Slime Rancher",
+		"Science"
+	],
+	"prefix": "ISV",
+	"job_slots": {
+		"Research Director": {
+			"outfit": "/datum/outfit/job/ResearchDirector",
+			"officer": true,
+			"slots": 1
+		},
+		"Scientist": {
+			"outfit": "/datum/outfit/job/scientist",
+			"slots": 3
+		}
+	},
+	"enabled": true
+}
