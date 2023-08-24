@@ -37,9 +37,9 @@
 	item_state = "nato_higher_officer"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/natonavy/admirant
-	name = "\improper NATO Navy Admirant Uniform"
-	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Admirant\". Worn exclusively by the NATO Navy Admiralty. It's got exotic materials for protection."
+/obj/item/clothing/under/natonavy/admiral
+	name = "\improper NATO Navy Admiral Uniform"
+	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Admiral\". Worn exclusively by the NATO Navy Admiralty. It's got exotic materials for protection."
 	icon_state = "nato_admiral"
 	item_state = "nato_admiral"
 	can_adjust = FALSE

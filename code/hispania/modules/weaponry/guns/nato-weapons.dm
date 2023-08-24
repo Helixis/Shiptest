@@ -1,7 +1,7 @@
 // Pistolita (Falta añadir su cargador custom y que se aplique el sprite de cuando se queda sin balas)
 /obj/item/gun/ballistic/automatic/pistol/m1911/enforcer
 	name = "\improper NATO Enforcer"
-	desc = "A modern .45 handgun with a small magazine capacity used by the NATO Navy."
+	desc = "A modern .45 handgun with a small magazine capacity used by the NATO Navy. Modified to fit M1911 Magazines"
 	icon = 'icons/hispania/obj/projectiles/projectile.dmi'
 	icon_state = "enforcer_black"
 	item_state = "enforcer_black"
@@ -9,20 +9,18 @@
 	can_suppress = FALSE
 	can_bayonet = FALSE
 
-// Sniper (Falta ponerle su munición propia)
+// Sniper
 /obj/item/gun/ballistic/automatic/sniper_rifle/ekho
 	name = "NATO Sniper Rifle"
-	desc = "An old and reliable sniper design based on the Intervention, called Ekho, with suppression compatibility. Quickscoping still doesn't work."
+	desc = "An old and reliable sniper design based on the Intervention, called Ekho, with suppression integrated. Quickscoping still doesn't work."
 	fire_sound_volume = 25
 	icon = 'icons/hispania/obj/projectiles/48x32guns.dmi'
 	icon_state = "sniper"
 	item_state = "sniper"
 	zoom_amt = 15
-	mag_type = /obj/item/ammo_box/magazine/sniper_rounds
+	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/nato_ekho
 
-
-
-// Rifle de asalto (TERMINADO)
+// Rifle de asalto
 /obj/item/gun/ballistic/automatic/assualt/p16/nato_p16
 	name = "\improper NATO P-16"
 	desc = "An ancient rifle used by professional NATO soldiers. It is said that the P-16 and AK-47 were destined to be in combat against each other. Chambered in 5.56mm. Designed to be lighter"
@@ -32,21 +30,22 @@
 	item_state = "nato-p16"
 	weapon_weight = WEAPON_LIGHT
 
-// SMG (Aun no enlazado al nuevo sprite)
+// SMG
 /obj/item/gun/ballistic/automatic/smg/vector/nato_vector
 	name = "\improper NATO Vector carbine"
 	desc = "A military police carbine based off of an SMG design, with most of the complex workings removed for reliability. Chambered in 9mm."
-	icon_state = "vector"
-	item_state = "vector"
+	icon_state = "nato-vector"
+	item_state = "nato-vector"
 	fire_sound_volume = 25
 
-// Marksman Rifle (Aun no enlazado al nuevo sprite)
+// Marksman Rifle
 /obj/item/gun/ballistic/automatic/assualt/p16/nato_cm16
 	name = "\improper CM-16"
-	desc = "Standard issue rifle of the Colonial Minutemen. A heavily modified version of the P-16 designed to fit the standards of operative warfare."
-	icon_state = "cm16"
-	item_state = "cm16"
+	desc = "A NATO manufactured rifle, heavily modified version of the P16 used in Marksman roles. It fires slower and has more zoom"
+	icon_state = "nato-cm16"
+	item_state = "nato-cm16"
 	zoomable = TRUE
 	zoom_amt = 10 //Long range, enough to see in front of you, but no tiles behind you.
 	zoom_out_amt = 5
+	fire_delay = 5
 
