@@ -767,6 +767,7 @@
 "bW" = (
 /obj/structure/rack,
 /obj/machinery/light/directional/north,
+/obj/item/gun/ballistic/automatic/assualt/p16/nato_p16,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/ancientstation/sec)
 "bX" = (
@@ -5907,6 +5908,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/ancientstation/sec)
+"tv" = (
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/smg/vector/nato_vector,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/ancientstation/sec)
 "tF" = (
 /obj/machinery/atmospherics/pipe/simple/purple/visible{
 	dir = 4
@@ -6827,6 +6833,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/ancientstation/mining)
+"Hy" = (
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/assualt/p16/nato_cm16,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/ancientstation/sec)
 "HA" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor{
@@ -7896,7 +7907,6 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/ancientstation/sec)
 "Xh" = (
-/obj/machinery/suit_storage_unit/ert/medical,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/ancientstation/medbay)
 "Xr" = (
@@ -8059,7 +8069,6 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/ancientstation)
 "ZU" = (
-/obj/machinery/suit_storage_unit/ert/medical,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
 	},
@@ -10657,7 +10666,7 @@ wM
 wM
 aa
 bg
-xP
+Hy
 cO
 xR
 bg
@@ -10824,7 +10833,7 @@ aa
 bg
 oB
 bI
-xP
+tv
 bg
 aa
 aa
