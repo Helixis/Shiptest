@@ -7,7 +7,8 @@
 /obj/machinery/computer/helm/natonavy/Initialize()
 	. = ..()
 	var/cooldown = 0
-	while TRUE
-	addtimer(CALLBACK(src, .turn_off), rand(15 SECOND)
+	addtimer(CALLBACK(src, /obj/machinery/computer/helm/natonavy/proc/atc), rand(15 SECOND, 20 SECOND) )
 
-	)
+/obj/machinery/computer/helm/natonavy/proc/atc
+	var/chatter_key = rand(1,44)
+	playsound(src.loc, "modular_hispania/sound/voice/nato-atc/Chatter[chatter_key].ogg", 100, 0, 4)
