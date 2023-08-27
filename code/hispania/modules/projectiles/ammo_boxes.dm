@@ -30,3 +30,16 @@
 		icon_state = "enforcer-8"
 	else
 		icon_state = "enforcer-[ammo_count()]"
+
+/obj/item/ammo_box/magazine/sniper_rounds/nato_ekho
+	name = "Ekho rounds (.50)"
+	icon_state = "ekho_mag"
+	icon = 'icons/hispania/obj/projectiles/ammo.dmi'
+
+
+/obj/item/ammo_box/magazine/sniper_rounds/nato_ekho/update_icon()
+	..()
+	if(ammo_count())
+		icon_state = "[initial(icon_state)]_mag"
+	else
+		icon_state = "[initial(icon_state)]"

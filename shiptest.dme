@@ -1459,6 +1459,7 @@
 #include "code\hispania\modules\jobs\job_types\mantarraya.dm"
 #include "code\hispania\modules\jobs\job_types\natonavy.dm"
 #include "code\hispania\modules\projectiles\ammo_boxes.dm"
+#include "code\hispania\modules\research\techweb\nato_tech.dm"
 #include "code\hispania\modules\weaponry\guns\nato-weapons.dm"
 #include "code\modules\admin\admin.dm"
 #include "code\modules\admin\admin_investigate.dm"

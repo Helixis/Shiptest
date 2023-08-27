@@ -81,7 +81,7 @@
 				to_chat(spawnee, "<span class='danger'>You do not have enough playtime to spawn this ship!</span>")
 				return
 			if(template.name == "Osprey-class NATO MotherShip")
-				var nato_members = list("AsrielFBI", "Chekolotof", "Agus")
+				var nato_members = list("Asriel_FBI", "Chekolotof", "Agus")
 				if (spawnee.ckey in nato_members)
 					to_chat(spawnee, "<span class='danger'>You have been authorized to use this ship!</span>")
 				else
