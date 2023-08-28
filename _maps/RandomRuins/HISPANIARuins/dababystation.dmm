@@ -7291,9 +7291,6 @@
 /area/ruin/space/has_grav/ancientstation/betastorage)
 "OU" = (
 /obj/structure/table,
-/obj/machinery/photocopier/faxmachine/longrange{
-	department = "Bridge"
-	},
 /turf/open/floor/carpet/royalblue,
 /area/ruin/space/has_grav/ancientstation/comm)
 "OV" = (
