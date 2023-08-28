@@ -146,7 +146,7 @@
 		to_chat(admin, "<span class='danger'>Repairing flash failed!</span>")
 	else
 		flash.burnt_out = FALSE
-		flash.update_appearance()
+		flash.update_icon()
 
 /datum/antagonist/rev/head/proc/admin_demote(datum/mind/target,mob/user)
 	message_admins("[key_name_admin(user)] has demoted [key_name_admin(owner)] from head revolutionary.")

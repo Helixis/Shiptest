@@ -8,7 +8,6 @@
 	icon_state = "none"
 
 /datum/sprite_accessory/ears/cat
-	icon = 'icons/mob/species/misc/cat.dmi'
 	name = "Cat"
 	icon_state = "cat"
 	hasinner = 1
@@ -27,9 +26,3 @@
 	icon_state = "fox"
 	hasinner = 1
 	color_src = HAIR
-
-/datum/sprite_accessory/ears/elf
-	name = "Elf"
-	icon_state = "elf"
-	hasinner = FALSE
-	color_src = SKINCOLORS

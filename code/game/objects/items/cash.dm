@@ -20,7 +20,7 @@
 	..()
 	if(amount)
 		value = amount
-	update_appearance()
+	update_icon()
 
 /obj/item/spacecash/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/spacecash))
@@ -35,7 +35,7 @@
 			qdel(cash)
 
 		bundle.value += value
-		bundle.update_appearance()
+		bundle.update_icon()
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			H.dropItemToGround(src)
@@ -53,9 +53,9 @@
 
 /obj/item/spacecash/bundle/Initialize()
 	. = ..()
-	update_appearance()
+	update_icon()
 
-/obj/item/spacecash/bundle/update_appearance()
+/obj/item/spacecash/bundle/update_icon()
 	icon_state = "nothing"
 	cut_overlays()
 	var/remaining_value = value
@@ -110,7 +110,6 @@
 			desc = "That's a lot of dosh."
 			drop_sound = 'sound/items/handling/dosh_drop.ogg'
 			pickup_sound =  'sound/items/handling/dosh_pickup.ogg'
-	return ..()
 
 /obj/item/spacecash/bundle/attack_self()
 	var/cashamount = input(usr, "How many credits do you want to take? (0 to [value])", "Take Money", 20) as num
@@ -129,9 +128,9 @@
 
 	var/obj/item/spacecash/bundle/bundle = new (usr.loc)
 	bundle.value = cashamount
-	bundle.update_appearance()
+	bundle.update_icon()
 	usr.put_in_hands(bundle)
-	update_appearance()
+	update_icon()
 
 /obj/item/spacecash/bundle/AltClick(mob/living/user)
 	var/cashamount = input(usr, "How many credits do you want to take? (0 to [value])", "Take Money", 20) as num
@@ -150,9 +149,9 @@
 
 	var/obj/item/spacecash/bundle/bundle = new (usr.loc)
 	bundle.value = cashamount
-	bundle.update_appearance()
+	bundle.update_icon()
 	usr.put_in_hands(bundle)
-	update_appearance()
+	update_icon()
 
 /obj/item/spacecash/bundle/attack_hand(mob/user)
 	if(user.get_inactive_held_item() == src)
@@ -162,7 +161,7 @@
 		var/nuvalue = value - 1
 		value = nuvalue
 		user.put_in_hands(new /obj/item/spacecash/bundle(loc, 1))
-		update_appearance()
+		update_icon()
 	else
 		. = ..()
 

@@ -38,7 +38,7 @@
 			"slots": 1
 		},
 		"Ship Engineer": {
-			"outfit": "/datum/outfit/job/engineer",
+			"outfit": "/datum/outfit/job/engineer/maintenancetechnician",
 			"slots": 1
 		},
 		"Atmospheric Technician": {

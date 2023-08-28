@@ -36,6 +36,11 @@
 	. = ..()
 	. += "<span class='notice'>Its buffer [buffer ? "contains [buffer]." : "is empty."]</span>"
 
+/obj/item/multitool/suicide_act(mob/living/carbon/user)
+	user.visible_message("<span class='suicide'>[user] puts the [src] to [user.p_their()] chest. It looks like [user.p_theyre()] trying to pulse [user.p_their()] heart off!</span>")
+	return OXYLOSS//theres a reason it wasnt recommended by doctors
+
+
 // Syndicate device disguised as a multitool; it will turn red when an AI camera is nearby.
 
 /obj/item/multitool/ai_detect
@@ -83,7 +88,7 @@
 	if(eye.eye_user)
 		eye.setLoc(get_turf(src))
 	multitool_detect()
-	update_appearance()
+	update_icon()
 	track_cooldown = world.time + track_delay
 
 /obj/item/multitool/ai_detect/proc/toggle_hud(mob/user)

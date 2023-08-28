@@ -11,9 +11,6 @@
 
 /mob/camera/aiEye/remote/holo
 	use_static = USE_STATIC_NONE
-	acceleration = FALSE
-	max_sprint = 10
-	sprint = 5
 
 /mob/camera/aiEye/remote/holo/update_remote_sight(mob/living/user)
 	user.sight = NONE

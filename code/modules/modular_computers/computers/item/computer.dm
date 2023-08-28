@@ -55,7 +55,7 @@
 		physical = src
 	comp_light_color = "#FFFFFF"
 	idle_threads = list()
-	update_appearance()
+	update_icon()
 
 
 /obj/item/modular_computer/Destroy()
@@ -157,15 +157,20 @@
 	. += get_modular_computer_parts_examine(user)
 
 /obj/item/modular_computer/update_icon_state()
-	icon_state = enabled ? icon_state_powered : icon_state_unpowered
-	return ..()
+	if(!enabled)
+		icon_state = icon_state_unpowered
+	else
+		icon_state = icon_state_powered
 
 /obj/item/modular_computer/update_overlays()
 	. = ..()
 	if(!display_overlays)
 		return
 	if(enabled)
-		. += active_program?.program_icon_state || icon_state_menu
+		if(active_program)
+			. += active_program.program_icon_state ? active_program.program_icon_state : icon_state_menu
+		else
+			. += icon_state_menu
 
 	if(obj_integrity <= integrity_failure * max_integrity)
 		. += "bsod"
@@ -199,7 +204,7 @@
 		else
 			to_chat(user, "<span class='notice'>You press the power button and start up \the [src].</span>")
 		enabled = 1
-		update_appearance()
+		update_icon()
 		ui_interact(user)
 	else // Unpowered
 		if(issynth)
@@ -333,7 +338,7 @@
 	var/mob/user = usr
 	if(user && istype(user))
 		ui_interact(user) // Re-open the UI on this computer. It should show the main screen now.
-	update_appearance()
+	update_icon()
 
 // Returns 0 for No Signal, 1 for Low Signal and 2 for Good Signal. 3 is for wired connection (always-on)
 /obj/item/modular_computer/proc/get_ntnet_status(specific_action = 0)
@@ -357,7 +362,7 @@
 	if(loud)
 		physical.visible_message("<span class='notice'>\The [src] shuts down.</span>")
 	enabled = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/modular_computer/screwdriver_act(mob/user, obj/item/tool)
 	if(!all_components.len)

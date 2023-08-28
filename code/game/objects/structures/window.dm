@@ -32,8 +32,6 @@
 
 /obj/structure/window/examine(mob/user)
 	. = ..()
-	if(flags_1 & NODECONSTRUCT_1)
-		return
 	if(reinf)
 		if(anchored && state == WINDOW_SCREWED_TO_FRAME)
 			. += "<span class='notice'>The window is <b>screwed</b> to the frame.</span>"
@@ -322,26 +320,28 @@
 
 //This proc is used to update the icons of nearby windows.
 /obj/structure/window/proc/update_nearby_icons()
-	update_appearance()
+	update_icon()
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
 
 //merges adjacent full-tile windows into one
 /obj/structure/window/update_overlays()
 	. = ..()
-	if(QDELETED(src) || !fulltile)
-		return
+	if(!QDELETED(src))
+		if(!fulltile)
+			return
 
-	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
-		QUEUE_SMOOTH(src)
+		var/ratio = obj_integrity / max_integrity
+		ratio = CEILING(ratio*4, 1) * 25
 
-	var/ratio = obj_integrity / max_integrity
-	ratio = CEILING(ratio*4, 1) * 25
-	cut_overlay(crack_overlay)
-	if(ratio > 75)
-		return
-	crack_overlay = mutable_appearance('icons/obj/structures.dmi', "damage[ratio]", -(layer+0.1))
-	. += crack_overlay
+		if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
+			QUEUE_SMOOTH(src)
+
+		cut_overlay(crack_overlay)
+		if(ratio > 75)
+			return
+		crack_overlay = mutable_appearance('icons/obj/structures.dmi', "damage[ratio]", -(layer+0.1))
+		. += crack_overlay
 
 /obj/structure/window/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 
@@ -392,9 +392,6 @@
 //this is shitcode but all of construction is shitcode and needs a refactor, it works for now
 //If you find this like 4 years later and construction still hasn't been refactored, I'm so sorry for this
 /obj/structure/window/reinforced/attackby(obj/item/I, mob/living/user, params)
-	if(flags_1 & NODECONSTRUCT_1)
-		return ..()
-
 	switch(state)
 		if(RWINDOW_SECURE)
 			if(I.tool_behaviour == TOOL_WELDER && user.a_intent == INTENT_HARM)
@@ -438,7 +435,6 @@
 					state = WINDOW_OUT_OF_FRAME
 					set_anchored(FALSE)
 				return
-
 	return ..()
 
 /obj/structure/window/proc/cool_bolts()
@@ -448,9 +444,6 @@
 
 /obj/structure/window/reinforced/examine(mob/user)
 	. = ..()
-	if(flags_1 & NODECONSTRUCT_1)
-		return
-
 	switch(state)
 		if(RWINDOW_SECURE)
 			. += "<span class='notice'>It's been screwed in with one way screws, you'd need to <b>heat them</b> to have any chance of backing them out.</span>"
@@ -767,7 +760,7 @@
 
 /obj/structure/window/paperframe/Initialize()
 	. = ..()
-	update_appearance()
+	update_icon()
 
 /obj/structure/window/paperframe/examine(mob/user)
 	. = ..()
@@ -789,25 +782,24 @@
 		user.visible_message("<span class='notice'>[user] knocks on [src].</span>")
 		playsound(src, "pageturn", 50, TRUE)
 	else
-		take_damage(4, BRUTE, "melee", 0)
+		take_damage(4,BRUTE,"melee", 0)
 		playsound(src, hitsound, 50, TRUE)
 		if(!QDELETED(src))
 			user.visible_message("<span class='danger'>[user] tears a hole in [src].</span>")
-			update_appearance()
-
-/obj/structure/window/paperframe/update_appearance(updates)
-	. = ..()
-	set_opacity(obj_integrity >= max_integrity)
-
+			update_icon()
 
 /obj/structure/window/paperframe/update_icon()
-	. = ..()
+	if(obj_integrity < max_integrity)
+		cut_overlay(paper)
+		add_overlay(torn)
+		set_opacity(FALSE)
+	else
+		cut_overlay(torn)
+		add_overlay(paper)
+		set_opacity(TRUE)
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH(src)
 
-/obj/structure/window/paperframe/update_overlays()
-	. = ..()
-	. += (obj_integrity < max_integrity) ? torn : paper
 
 /obj/structure/window/paperframe/attackby(obj/item/W, mob/user)
 	if(W.get_temperature())
@@ -822,10 +814,10 @@
 			qdel(W)
 			user.visible_message("<span class='notice'>[user] patches some of the holes in \the [src].</span>")
 			if(obj_integrity == max_integrity)
-				update_appearance()
+				update_icon()
 			return
 	..()
-	update_appearance()
+	update_icon()
 
 /obj/structure/window/bronze
 	name = "brass window"

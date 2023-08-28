@@ -49,7 +49,7 @@
 			var/obj/structure/particle_accelerator/part = CP
 			part.strength = null
 			part.powered = FALSE
-			part.update_appearance()
+			part.update_icon()
 		connected_parts.Cut()
 		return
 	if(!part_scan())
@@ -74,13 +74,12 @@
 					icon_state = "control_boxw"
 				else
 					icon_state = "control_boxc"
-	return ..()
 
 /obj/machinery/particle_accelerator/control_box/proc/strength_change()
 	for(var/CP in connected_parts)
 		var/obj/structure/particle_accelerator/part = CP
 		part.strength = strength
-		part.update_appearance()
+		part.update_icon()
 
 /obj/machinery/particle_accelerator/control_box/proc/add_strength(s)
 	if(assembled && (strength < strength_upper_limit))
@@ -114,7 +113,7 @@
 		if(connected_parts.len < 6)
 			investigate_log("lost a connected part; It <font color='red'>powered down</font>.", INVESTIGATE_SINGULO)
 			toggle_power()
-			update_appearance()
+			update_icon()
 			return
 		//emit some particles
 		for(var/obj/structure/particle_accelerator/particle_emitter/PE in connected_parts)
@@ -180,14 +179,14 @@
 			var/obj/structure/particle_accelerator/part = CP
 			part.strength = strength
 			part.powered = TRUE
-			part.update_appearance()
+			part.update_icon()
 	else
 		use_power = IDLE_POWER_USE
 		for(var/CP in connected_parts)
 			var/obj/structure/particle_accelerator/part = CP
 			part.strength = null
 			part.powered = FALSE
-			part.update_appearance()
+			part.update_icon()
 	return TRUE
 
 /obj/machinery/particle_accelerator/control_box/examine(mob/user)
@@ -206,7 +205,7 @@
 		return
 	construction_state = anchorvalue ? PA_CONSTRUCTION_UNWIRED : PA_CONSTRUCTION_UNSECURED
 	update_state()
-	update_appearance()
+	update_icon()
 
 /obj/machinery/particle_accelerator/control_box/attackby(obj/item/W, mob/user, params)
 	var/did_something = FALSE
@@ -256,7 +255,7 @@
 	if(did_something)
 		user.changeNext_move(CLICK_CD_MELEE)
 		update_state()
-		update_appearance()
+		update_icon()
 		return
 
 	return ..()
@@ -321,7 +320,7 @@
 			remove_strength()
 			. = TRUE
 
-	update_appearance()
+	update_icon()
 
 #undef PA_CONSTRUCTION_UNSECURED
 #undef PA_CONSTRUCTION_UNWIRED

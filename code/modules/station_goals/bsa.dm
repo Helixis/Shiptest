@@ -273,7 +273,7 @@
 		if("recalibrate")
 			calibrate(usr)
 			. = TRUE
-	update_appearance()
+	update_icon()
 
 /obj/machinery/computer/bsa_control/proc/calibrate(mob/user)
 	if(!GLOB.bsa_unlock)

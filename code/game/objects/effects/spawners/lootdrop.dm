@@ -948,8 +948,10 @@
 /obj/effect/spawner/lootdrop/anomaly/rock/cave
 	loot = list(
 		/obj/effect/anomaly/flux/planetary,
+		/obj/effect/anomaly/grav/planetary,
 		/obj/effect/anomaly/hallucination/planetary,
 		/obj/effect/anomaly/pyro/planetary,
+		/obj/effect/anomaly/grav/high/planetary,
 		/obj/effect/anomaly/heartbeat/planetary,
 		/obj/effect/anomaly/sparkler/planetary,
 		/obj/effect/anomaly/veins/planetary,
@@ -1118,13 +1120,6 @@
 		/obj/structure/salvageable/circuit_imprinter = 8,
 		/obj/structure/salvageable/destructive_analyzer = 8,
 		/obj/structure/salvageable/server = 8
-	)
-
-// HISPANIA ARTILLERY
-/obj/effect/spawner/lootdrop/waste/artillery
-	loot = list(
-		/obj/structure/salvageable/interdiction = 70,
-		/obj/structure/salvageable/harblun = 30
 	)
 
 /obj/effect/spawner/lootdrop/waste/girder

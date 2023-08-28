@@ -18,11 +18,6 @@
 /obj/effect/turf_decal/isf_small/right{
 	dir = 4
 	},
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 20;
-	pixel_y = 11
-	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "cu" = (
@@ -688,11 +683,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
-	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_y = 10;
-	pixel_x = -20
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)

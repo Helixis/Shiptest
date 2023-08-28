@@ -46,7 +46,7 @@
 			update_contents()
 		if (locked)
 			replace_beaker(user)
-		update_appearance()
+		update_icon()
 		I.play_tool_sound(src, 50)
 		return
 
@@ -56,7 +56,7 @@
 		if(!user.transferItemToLoc(B, src))
 			return
 		replace_beaker(user, B)
-		update_appearance()
+		update_icon()
 		updateUsrDialog()
 		return
 
@@ -80,23 +80,23 @@
 	return
 
 /obj/item/storage/portable_chem_mixer/update_icon_state()
-	if(!SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED))
+	var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
+	if (!locked)
 		icon_state = "portablechemicalmixer_open"
-		return ..()
-	if(beaker)
+	else if (beaker)
 		icon_state = "portablechemicalmixer_full"
-		return ..()
-	icon_state = "portablechemicalmixer_empty"
-	return ..()
+	else
+		icon_state = "portablechemicalmixer_empty"
+
 
 /obj/item/storage/portable_chem_mixer/AltClick(mob/living/user)
 	var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
-	if(!locked)
+	if (!locked)
 		return ..()
 	if(!can_interact(user) || !user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return
 	replace_beaker(user)
-	update_appearance()
+	update_icon()
 
 /**
  * Replaces the beaker of the portable chemical mixer with another beaker, or simply adds the new beaker if none is in currently
@@ -215,5 +215,5 @@
 			. = TRUE
 		if("eject")
 			replace_beaker(usr)
-			update_appearance()
+			update_icon()
 			. = TRUE

@@ -49,7 +49,7 @@
 	pixel_y = base_pixel_y + rand(-10, 10)
 	if(auto_rotate)
 		transform = transform.Turn(pick(0, 90, 180, 270))
-	update_appearance()
+	update_icon()
 
 /obj/item/ammo_casing/Destroy()
 	. = ..()
@@ -59,11 +59,10 @@
 
 /obj/item/ammo_casing/update_icon_state()
 	icon_state = "[initial(icon_state)][BB ? (bullet_skin ? "-[bullet_skin]" : "") : "-empty"]"
-	return ..()
 
-/obj/item/ammo_casing/update_desc()
-	desc = "[initial(desc)][BB ? null : " This one is spent."]"
-	return ..()
+/obj/item/ammo_casing/update_icon()
+	. = ..()
+	desc = "[initial(desc)][BB ? "" : " This one is spent."]"
 
 //proc to magically refill a casing with a new projectile
 /obj/item/ammo_casing/proc/newshot() //For energy weapons, syringe gun, shotgun shells and wands (!).
@@ -84,13 +83,12 @@
 				else
 					continue
 			if (boolets > 0)
-				box.update_appearance()
+				box.update_icon()
 				to_chat(user, "<span class='notice'>You collect [boolets] shell\s. [box] now contains [box.stored_ammo.len] shell\s.</span>")
 			else
 				to_chat(user, "<span class='warning'>You fail to collect anything!</span>")
 	else
 		return ..()
-
 
 /obj/item/ammo_casing/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	bounce_away(FALSE, NONE)
@@ -99,7 +97,7 @@
 /obj/item/ammo_casing/proc/bounce_away(still_warm = FALSE, bounce_delay = 3)
 	if(!heavy_metal)
 		return
-	update_appearance()
+	update_icon()
 	SpinAnimation(10, 1)
 	var/turf/T = get_turf(src)
 	if(still_warm && T && T.bullet_sizzle)

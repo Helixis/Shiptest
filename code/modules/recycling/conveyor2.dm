@@ -8,7 +8,6 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	icon_state = "conveyor_map"
 	name = "conveyor belt"
 	desc = "A conveyor belt."
-	base_icon_state = "conveyor"
 	layer = BELOW_OPEN_DOOR_LAYER
 	processing_flags = START_PROCESSING_MANUALLY
 	subsystem_type = /datum/controller/subsystem/processing/fastprocess
@@ -46,7 +45,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	. = ..()
 	if(.)
 		operating = TRUE
-		update_appearance()
+		update_icon()
 		begin_processing()                                              //WS Edit - Auto Conveyor Fix (Issue #331)
 
 // create a conveyor
@@ -113,13 +112,15 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	update()
 
 /obj/machinery/conveyor/update_icon_state()
-	icon_state = "[base_icon_state][(machine_stat & BROKEN) ? "-broken" : (operating * verted)]"
-	return ..()
+	if(machine_stat & BROKEN)
+		icon_state = "conveyor-broken"
+	else
+		icon_state = "conveyor[operating * verted]"
 
 /obj/machinery/conveyor/proc/update()
 	if(machine_stat & BROKEN || !operable || machine_stat & NOPOWER)
 		operating = FALSE
-		update_appearance()
+		update_icon()
 		return FALSE
 	return TRUE
 
@@ -234,7 +235,6 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	desc = "A conveyor control switch."
 	icon = 'icons/obj/recycling.dmi'
 	icon_state = "switch-off"
-	base_icon_state = "switch"
 	processing_flags = START_PROCESSING_MANUALLY
 
 	var/position = 0			// 0 off, -1 reverse, 1 forward
@@ -248,7 +248,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	. = ..()
 	if (newid)
 		id = newid
-	update_appearance()
+	update_icon()
 	LAZYADD(GLOB.conveyors_by_id[id], src)
 	wires = new /datum/wires/conveyor(src)
 
@@ -269,21 +269,25 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 // update the icon depending on the position
 
 /obj/machinery/conveyor_switch/update_icon_state()
-	if(position < 0)
-		icon_state = "[base_icon_state]-[invert_icon ? "fwd" : "rev"]"
-		return ..()
-	if(position > 0)
-		icon_state = "[base_icon_state]-[invert_icon ? "rev" : "fwd"]"
-		return ..()
-	icon_state = "[base_icon_state]-off"
-	return ..()
+	if(position<0)
+		if(invert_icon)
+			icon_state = "switch-fwd"
+		else
+			icon_state = "switch-rev"
+	else if(position>0)
+		if(invert_icon)
+			icon_state = "switch-rev"
+		else
+			icon_state = "switch-fwd"
+	else
+		icon_state = "switch-off"
 
 /// Updates all conveyor belts that are linked to this switch, and tells them to start processing.
 /obj/machinery/conveyor_switch/proc/update_linked_conveyors()
 	for(var/obj/machinery/conveyor/C in GLOB.conveyors_by_id[id])
 		C.operating = position
 		C.update_move_direction()
-		C.update_appearance()
+		C.update_icon()
 		if(C.operating)
 			C.begin_processing()
 		else
@@ -295,7 +299,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	for(var/obj/machinery/conveyor_switch/S in GLOB.conveyors_by_id[id])
 		S.invert_icon = invert_icon
 		S.position = position
-		S.update_appearance()
+		S.update_icon()
 		CHECK_TICK
 
 /// Updates the switch's `position` and `last_pos` variable. Useful so that the switch can properly cycle between the forwards, backwards and neutral positions.
@@ -319,7 +323,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	add_fingerprint(user)
 	play_click_sound("switch")
 	update_position()
-	update_appearance()
+	update_icon()
 	update_linked_conveyors()
 	update_linked_switches()
 
@@ -422,6 +426,6 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 
 /obj/item/paper/guides/conveyor
 	name = "paper- 'Nano-it-up U-build series, #9: Build your very own conveyor belt, in SPACE'"
-	default_raw_text = "<h1>Congratulations!</h1><p>You are now the proud owner of the best conveyor set available for space mail order! We at Nano-it-up know you love to prepare your own structures without wasting time, so we have devised a special streamlined assembly procedure that puts all other mail-order products to shame!</p><p>Firstly, you need to link the conveyor switch assembly to each of the conveyor belt assemblies. After doing so, you simply need to install the belt assemblies onto the floor, et voila, belt built. Our special Nano-it-up smart switch will detected any linked assemblies as far as the eye can see! This convenience, you can only have it when you Nano-it-up. Stay nano!</p>"
+	info = "<h1>Congratulations!</h1><p>You are now the proud owner of the best conveyor set available for space mail order! We at Nano-it-up know you love to prepare your own structures without wasting time, so we have devised a special streamlined assembly procedure that puts all other mail-order products to shame!</p><p>Firstly, you need to link the conveyor switch assembly to each of the conveyor belt assemblies. After doing so, you simply need to install the belt assemblies onto the floor, et voila, belt built. Our special Nano-it-up smart switch will detected any linked assemblies as far as the eye can see! This convenience, you can only have it when you Nano-it-up. Stay nano!</p>"
 
 #undef MAX_CONVEYOR_ITEMS_MOVE

@@ -39,7 +39,7 @@
 		if(t)
 			name = "body bag - [t]"
 			tagged = 1
-			update_appearance()
+			update_icon()
 		else
 			name = "body bag"
 		return
@@ -47,7 +47,7 @@
 		to_chat(user, "<span class='notice'>You cut the tag off [src].</span>")
 		name = "body bag"
 		tagged = 0
-		update_appearance()
+		update_icon()
 
 /obj/structure/closet/body_bag/update_overlays()
 	. = ..()

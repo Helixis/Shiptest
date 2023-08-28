@@ -53,7 +53,7 @@
 	var/oldoccupant = occupant
 	. = ..() // Parent proc takes care of removing occupant if necessary
 	if (AM == oldoccupant)
-		update_appearance()
+		update_icon()
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/on_construction()
 	..(dir, dir)
@@ -102,7 +102,7 @@
 		beaker = null
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/update_icon()
-	. = ..()
+
 	cut_overlays()
 
 	if(panel_open)
@@ -172,7 +172,7 @@
 	if(old_value) //Turned off
 		on = FALSE
 		end_processing()
-		update_appearance()
+		update_icon()
 	else //Turned on
 		begin_processing()
 
@@ -190,7 +190,7 @@
 
 	if(mob_occupant.health >= mob_occupant.getMaxHealth()) // Don't bother with fully healed people.
 		on = FALSE
-		update_appearance()
+		update_icon()
 		playsound(src, 'sound/machines/cryo_warning.ogg', volume) // Bug the doctors.
 		var/msg = "Patient fully restored."
 		if(autoeject) // Eject if configured.
@@ -225,7 +225,7 @@
 
 	if(!nodes[1] || !airs[1] || air1.get_moles(GAS_O2) < 5) // Turn off if the machine won't work due to not having enough moles to operate.
 		on = FALSE
-		update_appearance()
+		update_icon()
 		return
 
 	if(occupant)
@@ -320,7 +320,7 @@
 		|| default_change_direction_wrench(user, I) \
 		|| default_pry_open(I) \
 		|| default_deconstruction_crowbar(I))
-		update_appearance()
+		update_icon()
 		return
 	else if(I.tool_behaviour == TOOL_SCREWDRIVER)
 		to_chat(user, "<span class='warning'>You can't access the maintenance panel while the pod is " \
@@ -398,7 +398,7 @@
 				on = FALSE
 			else if(!state_open)
 				on = TRUE
-			update_appearance()
+			update_icon()
 			. = TRUE
 		if("door")
 			if(state_open)
@@ -420,7 +420,7 @@
 /obj/machinery/atmospherics/components/unary/cryo_cell/CtrlClick(mob/user)
 	if(can_interact(user) && !state_open)
 		on = !on
-		update_appearance()
+		update_icon()
 	return ..()
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/AltClick(mob/user)

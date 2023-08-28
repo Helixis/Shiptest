@@ -8,7 +8,6 @@
 	armor = list("melee" = 10, "fire" = 30, "acid" = 30)
 	strip_delay = 50
 	can_adjust = FALSE
-	supports_variations = DIGITIGRADE_VARIATION
 
 /obj/item/clothing/under/solgov/terragov
 	name = "\improper TerraGov tunic"
@@ -29,13 +28,6 @@
 	desc = "A formal SolGov uniform, commonly used by representatives and officials."
 	icon_state = "formal_solgov"
 	item_state = "formal_solgov"
-	can_adjust = FALSE
-
-/obj/item/clothing/under/solgov/formal/skirt
-	name = "\improper SolGov formal suitskirt"
-	desc = "A formal SolGov uniform, commonly used by representatives and officials."
-	icon_state = "formal_solgov_skirt"
-	item_state = "formal_solgov_skirt"
 	can_adjust = FALSE
 
 /obj/item/clothing/under/solgov/formal/terragov

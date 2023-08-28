@@ -53,25 +53,26 @@
 		return FALSE
 	return (cpu.emag_act(user))
 
-/obj/machinery/modular_computer/update_appearance()
-	. = ..()
-	set_light(cpu?.enabled ? light_strength : 0)
+/obj/machinery/modular_computer/update_icon()
+	cut_overlays()
+	icon_state = icon_state_powered
 
-/obj/machinery/modular_computer/update_icon_state()
-	icon_state = (cpu?.enabled || (!(machine_stat & NOPOWER) && cpu?.use_power())) ? icon_state_powered : icon_state_unpowered
-	return ..()
-
-/obj/machinery/modular_computer/update_overlays()
-	. = ..()
-	if(!cpu?.enabled)
+	if(!cpu || !cpu.enabled)
 		if (!(machine_stat & NOPOWER) && (cpu && cpu.use_power()))
-			. += screen_icon_screensaver
+			add_overlay(screen_icon_screensaver)
+		else
+			icon_state = icon_state_unpowered
+		set_light(0)
 	else
-		. += cpu.active_program?.program_icon_state || screen_icon_state_menu
+		set_light(light_strength)
+		if(cpu.active_program)
+			add_overlay(cpu.active_program.program_icon_state ? cpu.active_program.program_icon_state : screen_icon_state_menu)
+		else
+			add_overlay(screen_icon_state_menu)
 
 	if(cpu && cpu.obj_integrity <= cpu.integrity_failure * cpu.max_integrity)
-		. += "bsod"
-		. += "broken"
+		add_overlay("bsod")
+		add_overlay("broken")
 
 /obj/machinery/modular_computer/AltClick(mob/user)
 	if(cpu)
@@ -100,13 +101,13 @@
 		if(cpu)
 			cpu.shutdown_computer(0)
 	set_machine_stat(machine_stat | NOPOWER)
-	update_appearance()
+	update_icon()
 
 // Modular computers can have battery in them, we handle power in previous proc, so prevent this from messing it up for us.
 /obj/machinery/modular_computer/power_change()
 	if(cpu && cpu.use_power()) // If MC_CPU still has a power source, PC wouldn't go offline.
 		set_machine_stat(machine_stat & ~NOPOWER)
-		update_appearance()
+		update_icon()
 		return
 	. = ..()
 
@@ -147,8 +148,3 @@
 /obj/machinery/modular_computer/bullet_act(obj/projectile/Proj)
 	if(cpu)
 		cpu.bullet_act(Proj)
-
-/// Eats the "source" arg because update_icon actually expects args now.
-/obj/machinery/modular_computer/proc/relay_icon_update(datum/source, updates, updated)
-	SIGNAL_HANDLER
-	return update_icon(updates)

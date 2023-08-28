@@ -40,8 +40,8 @@
 		},
 		"Scribe": {
 			"outfit": "/datum/outfit/job/solgov/assistant",
-			"slots" : 2
+			"slots" : 1
 		}
 	},
-	"enabled": true
+	"enabled": false
 }

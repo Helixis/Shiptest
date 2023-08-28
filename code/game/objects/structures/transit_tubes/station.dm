@@ -38,7 +38,7 @@
 		for(var/obj/structure/transit_tube_pod/pod in loc)
 			if(!pod.moving)
 				AM.forceMove(pod)
-				pod.update_appearance()
+				pod.update_icon()
 				return
 
 
@@ -249,7 +249,7 @@
 	playsound(src, 'sound/weapons/emitter2.ogg', 50, TRUE)
 	pod.setDir(turn(src.dir, -90))
 	AM.forceMove(pod)
-	pod.update_appearance()
+	pod.update_icon()
 	launch_pod()
 
 /obj/structure/transit_tube/station/dispenser/pod_stopped(obj/structure/transit_tube_pod/pod, from_dir)

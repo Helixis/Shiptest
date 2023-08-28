@@ -165,10 +165,11 @@
 	if(!icon_empty)
 		icon_empty = icon_state
 
-	if(!hud?.mymob || !slot_id || !icon_full)
-		return ..()
-	icon_state = hud.mymob.get_item_by_slot(slot_id) ? icon_full : icon_empty
-	return ..()
+	if(hud?.mymob && slot_id && icon_full)
+		if(hud.mymob.get_item_by_slot(slot_id))
+			icon_state = icon_full
+		else
+			icon_state = icon_empty
 
 /atom/movable/screen/inventory/proc/add_overlays()
 	var/mob/user = hud?.mymob
@@ -383,7 +384,6 @@
 			icon_state = "walking"
 		if(MOVE_INTENT_RUN)
 			icon_state = "running"
-	return ..()
 
 /atom/movable/screen/mov_intent/proc/toggle(mob/user)
 	if(isobserver(user))
@@ -394,7 +394,6 @@
 	name = "stop pulling"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "pull"
-	base_icon_state = "pull"
 
 /atom/movable/screen/pull/Click()
 	if(isobserver(usr))
@@ -402,8 +401,10 @@
 	usr.stop_pulling()
 
 /atom/movable/screen/pull/update_icon_state()
-	icon_state = "[base_icon_state][hud?.mymob?.pulling ? null : 0]"
-	return ..()
+	if(hud?.mymob?.pulling)
+		icon_state = "pull"
+	else
+		icon_state = "pull0"
 
 /atom/movable/screen/resist
 	name = "resist"
@@ -421,7 +422,6 @@
 	name = "rest"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "act_rest"
-	base_icon_state = "act_rest"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
 
@@ -433,9 +433,11 @@
 /atom/movable/screen/rest/update_icon_state()
 	var/mob/living/user = hud?.mymob
 	if(!istype(user))
-		return ..()
-	icon_state = "[base_icon_state][user.resting ? 0 : null]"
-	return ..()
+		return
+	if(!user.resting)
+		icon_state = "act_rest"
+	else
+		icon_state = "act_rest0"
 
 /atom/movable/screen/storage
 	name = "storage"
@@ -573,7 +575,7 @@
 
 	if(choice != hud.mymob.zone_selected)
 		hud.mymob.zone_selected = choice
-		update_appearance()
+		update_icon()
 
 	return TRUE
 
@@ -743,15 +745,14 @@
 
 /atom/movable/screen/combo/update_icon_state(streak = "")
 	clear_streak()
-	if(timerid)
+	if (timerid)
 		deltimer(timerid)
-	if(!streak)
-		return ..()
+	if (!streak)
+		return
 	timerid = addtimer(CALLBACK(src, .proc/clear_streak), 20, TIMER_UNIQUE | TIMER_STOPPABLE)
 	icon_state = "combo"
-	for(var/i = 1; i <= length(streak); ++i)
+	for (var/i = 1; i <= length(streak); ++i)
 		var/intent_text = copytext(streak, i, i + 1)
 		var/image/intent_icon = image(icon,src,"combo_[intent_text]")
 		intent_icon.pixel_x = 16 * (i - 1) - 8 * length(streak)
 		add_overlay(intent_icon)
-	return ..()

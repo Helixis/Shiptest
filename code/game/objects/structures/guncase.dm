@@ -20,7 +20,7 @@
 				I.forceMove(src)
 			if(contents.len >= capacity)
 				break
-	update_appearance()
+	update_icon()
 
 /obj/structure/guncase/update_overlays()
 	. = ..()
@@ -29,7 +29,10 @@
 		for(var/i in 1 to contents.len)
 			gun_overlay.pixel_x = 3 * (i - 1)
 			. += new /mutable_appearance(gun_overlay)
-	. += "[icon_state]_[open ? "open" : "door"]"
+	if(open)
+		. += "[icon_state]_open"
+	else
+		. += "[icon_state]_door"
 
 /obj/structure/guncase/attackby(obj/item/I, mob/user, params)
 	if(iscyborg(user) || isalien(user))
@@ -39,14 +42,14 @@
 			if(!user.transferItemToLoc(I, src))
 				return
 			to_chat(user, "<span class='notice'>You place [I] in [src].</span>")
-			update_appearance()
+			update_icon()
 		else
 			to_chat(user, "<span class='warning'>[src] is full.</span>")
 		return
 
 	else if(user.a_intent != INTENT_HARM)
 		open = !open
-		update_appearance()
+		update_icon()
 	else
 		return ..()
 
@@ -60,7 +63,7 @@
 		show_menu(user)
 	else
 		open = !open
-		update_appearance()
+		update_icon()
 
 /**
  * show_menu: Shows a radial menu to a user consisting of an available weaponry for taking
@@ -92,7 +95,7 @@
 		return
 	if(!user.put_in_hands(weapon))
 		weapon.forceMove(get_turf(src))
-	update_appearance()
+	update_icon()
 
 /**
  * check_menu: Checks if we are allowed to interact with a radial menu
@@ -110,7 +113,7 @@
 	return TRUE
 
 /obj/structure/guncase/handle_atom_del(atom/A)
-	update_appearance()
+	update_icon()
 
 /obj/structure/guncase/contents_explosion(severity, target)
 	for(var/atom/A in contents)

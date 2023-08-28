@@ -345,12 +345,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
-"et" = (
-/obj/machinery/porta_turret/ship{
-	dir = 5
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "ev" = (
 /obj/machinery/power/rtg,
 /obj/structure/cable{
@@ -542,8 +536,9 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/machinery/porta_turret/ship,
 /turf/open/floor/engine/hull,
-/area/ship/external)
+/area/ship/bridge)
 "hK" = (
 /obj/structure/cable{
 	icon_state = "1-6"
@@ -578,12 +573,6 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
-"iH" = (
-/obj/machinery/porta_turret/ship{
-	dir = 9
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "iJ" = (
 /obj/effect/turf_decal/industrial/warning,
 /obj/effect/turf_decal/spline/fancy/opaque/black{
@@ -596,11 +585,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/firealarm/directional/east,
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 20;
-	pixel_y = 11
-	},
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering)
 "iM" = (
@@ -797,6 +781,13 @@
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/maintenance/central)
+"lU" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/porta_turret/ship,
+/turf/open/floor/engine/hull,
+/area/ship/bridge)
 "mf" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -889,10 +880,6 @@
 	},
 /obj/machinery/light/small/directional/west,
 /obj/machinery/power/apc/auto_name/directional/north,
-/obj/machinery/light_switch{
-	pixel_x = -12;
-	pixel_y = 23
-	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "nO" = (
@@ -923,7 +910,7 @@
 	},
 /obj/item/storage/part_replacer,
 /obj/item/paper{
-	default_raw_text = "Install the capacitors into the SMESes. You will need them."
+	info = "Install the capacitors into the SMESes. You will need them."
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering)
@@ -1280,11 +1267,6 @@
 	},
 /obj/machinery/light/small/directional/north,
 /obj/machinery/power/apc/auto_name/directional/east,
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 20;
-	pixel_y = 11
-	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/maintenance/central)
 "ty" = (
@@ -1336,8 +1318,9 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/machinery/porta_turret/ship,
 /turf/open/floor/engine/hull,
-/area/ship/external)
+/area/ship/bridge)
 "tU" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -1523,11 +1506,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 20;
-	pixel_y = 0
-	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "xW" = (
@@ -1581,11 +1559,6 @@
 	},
 /obj/machinery/light/small/built/directional/north{
 	pixel_x = 16
-	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -20;
-	pixel_y = 10
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
@@ -1741,12 +1714,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering)
-"Az" = (
-/obj/machinery/porta_turret/ship{
-	dir = 6
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "AO" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2069,11 +2036,6 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/directional/east,
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 20;
-	pixel_y = 11
-	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "EQ" = (
@@ -2241,6 +2203,11 @@
 /obj/effect/turf_decal/industrial/outline/yellow,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
+"Hj" = (
+/obj/effect/turf_decal/spline/fancy/opaque/black,
+/obj/machinery/porta_turret/ship,
+/turf/open/floor/plating/airless,
+/area/ship/bridge)
 "Hx" = (
 /obj/machinery/autolathe,
 /obj/machinery/airalarm/directional/east,
@@ -2588,12 +2555,6 @@
 "MU" = (
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/maintenance/central)
-"MX" = (
-/obj/machinery/porta_turret/ship{
-	dir = 1
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "MZ" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -2872,12 +2833,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
-"RE" = (
-/obj/machinery/porta_turret/ship{
-	dir = 4
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "RI" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -2899,12 +2854,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering)
-"Ss" = (
-/obj/machinery/porta_turret/ship{
-	dir = 10
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "SP" = (
 /obj/machinery/power/shieldwallgen/anchored,
 /obj/structure/cable,
@@ -2963,6 +2912,13 @@
 /obj/machinery/light/dim/directional/east,
 /turf/open/floor/circuit/red,
 /area/ship/maintenance/central)
+"UM" = (
+/obj/effect/turf_decal/spline/fancy/opaque/black{
+	dir = 1
+	},
+/obj/machinery/porta_turret/ship,
+/turf/open/floor/plating/airless,
+/area/ship/bridge)
 "UY" = (
 /obj/structure/railing/corner{
 	layer = 3.1
@@ -3271,15 +3227,15 @@ by
 by
 by
 ef
-Uq
-iH
+UM
+up
 bC
 by
 by
 by
 bC
-Ss
-qp
+up
+Hj
 oy
 by
 by
@@ -3589,8 +3545,8 @@ by
 by
 by
 by
-jI
-MX
+lU
+wq
 ym
 MU
 ev
@@ -3598,8 +3554,8 @@ Yc
 LR
 MU
 aa
-VC
-jI
+wq
+lU
 by
 by
 by
@@ -3677,7 +3633,7 @@ qw
 yK
 pi
 hH
-MX
+wq
 rx
 OG
 OG
@@ -3685,7 +3641,7 @@ hr
 OG
 OG
 Ok
-VC
+wq
 tO
 aH
 cb
@@ -3993,7 +3949,7 @@ by
 by
 by
 ef
-et
+VC
 Kc
 Jp
 EH
@@ -4007,7 +3963,7 @@ Ut
 Am
 LC
 pm
-Az
+VC
 oy
 by
 by
@@ -4113,13 +4069,13 @@ qc
 Th
 Kc
 by
-RE
+VC
 by
 oJ
 Ne
 oJ
 by
-RE
+VC
 by
 pm
 bl
@@ -4203,7 +4159,7 @@ by
 by
 by
 by
-RE
+VC
 by
 by
 by

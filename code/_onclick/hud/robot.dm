@@ -164,13 +164,13 @@
 	pull_icon.icon = 'icons/hud/screen_cyborg.dmi'
 	pull_icon.screen_loc = ui_borg_pull
 	pull_icon.hud = src
-	pull_icon.update_appearance()
+	pull_icon.update_icon()
 	hotkeybuttons += pull_icon
 
 
 	zone_select = new /atom/movable/screen/zone_sel/robot()
 	zone_select.hud = src
-	zone_select.update_appearance()
+	zone_select.update_icon()
 	static_inventory += zone_select
 
 
@@ -269,7 +269,6 @@
 /atom/movable/screen/robot/lamp
 	name = "headlamp"
 	icon_state = "lamp_off"
-	base_icon_state = "lamp"
 	var/mob/living/silicon/robot/robot
 
 /atom/movable/screen/robot/lamp/Click()
@@ -277,11 +276,13 @@
 	if(.)
 		return
 	robot?.toggle_headlamp()
-	update_appearance()
+	update_icon()
 
-/atom/movable/screen/robot/lamp/update_icon_state()
-	icon_state = "[base_icon_state]_[robot?.lamp_enabled ? "on" : "off"]"
-	return ..()
+/atom/movable/screen/robot/lamp/update_icon()
+	if(robot?.lamp_enabled)
+		icon_state = "lamp_on"
+	else
+		icon_state = "lamp_off"
 
 /atom/movable/screen/robot/modPC
 	name = "Modular Interface"

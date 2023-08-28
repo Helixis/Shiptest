@@ -59,6 +59,8 @@
 		O.dna.default_mutation_genes = dna.default_mutation_genes
 		O.dna.set_se(1, GET_INITIALIZED_MUTATION(RACEMUT))
 
+	if(suiciding)
+		O.set_suicide(suiciding)
 	if(hellbound)
 		O.hellbound = hellbound
 	O.a_intent = INTENT_HARM
@@ -234,6 +236,8 @@
 		O.dna.set_se(0, GET_INITIALIZED_MUTATION(RACEMUT))
 		O.domutcheck()
 
+	if(suiciding)
+		O.set_suicide(suiciding)
 	if(hellbound)
 		O.hellbound = hellbound
 

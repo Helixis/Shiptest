@@ -27,7 +27,7 @@
 	else
 		scanning = FALSE
 		STOP_PROCESSING(SSobj, src)
-	update_appearance()
+	update_icon()
 	return secured
 
 /obj/item/assembly/health/AltClick(mob/living/user)

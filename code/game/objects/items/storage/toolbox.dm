@@ -27,7 +27,7 @@
 			latches = "double_latch"
 			if(prob(1))
 				latches = "triple_latch"
-	update_appearance()
+	update_icon()
 
 /obj/item/storage/toolbox/ComponentInitialize()
 	. = ..()
@@ -38,6 +38,11 @@
 	. = ..()
 	if(has_latches)
 		. += latches
+
+
+/obj/item/storage/toolbox/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] robusts [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	return (BRUTELOSS)
 
 /obj/item/storage/toolbox/emergency
 	name = "emergency toolbox"
@@ -267,7 +272,7 @@
 /obj/item/storage/toolbox/ammo/shotgun/PopulateContents()
 	name = "ammo can (12ga)"
 	for (var/i in 1 to 4)
-		new /obj/item/ammo_box/a12g(src)
+		new /obj/item/storage/box/lethalshot(src)
 
 /obj/item/storage/toolbox/infiltrator
 	name = "insidious case"
@@ -335,7 +340,7 @@
 			if(/obj/item/storage/toolbox/syndicate)
 				B.toolbox_color = "s"
 		user.put_in_hands(B)
-		B.update_appearance()
+		B.update_icon()
 		to_chat(user, "<span class='notice'>You add the tiles into the empty [name]. They protrude from the top.</span>")
 		qdel(src)
 	else

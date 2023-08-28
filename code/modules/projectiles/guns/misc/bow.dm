@@ -17,9 +17,12 @@
 	bolt_type = BOLT_TYPE_NO_BOLT
 	var/drawn = FALSE
 
-/obj/item/gun/ballistic/bow/update_icon_state()
+/obj/item/gun/ballistic/bow/update_icon()
 	. = ..()
-	icon_state = chambered ? "bow_[drawn]" : "bow"
+	if(!chambered)
+		icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]_[drawn]"
 
 /obj/item/gun/ballistic/bow/chamber_round(keep_bullet = FALSE, spin_cylinder, replace_new_round)
 	if(chambered || !magazine)
@@ -34,7 +37,7 @@
 		if(!drawn)
 			playsound(src, 'sound/weapons/bowdraw.ogg', 75, 0)
 		drawn = !drawn
-	update_appearance()
+	update_icon()
 
 /obj/item/gun/ballistic/bow/afterattack(atom/target, mob/living/user, flag, params, passthrough = FALSE)
 	if(!chambered)
@@ -44,7 +47,7 @@
 		return
 	drawn = FALSE
 	. = ..() //fires, removing the arrow
-	update_appearance()
+	update_icon()
 
 /obj/item/gun/ballistic/bow/shoot_with_empty_chamber(mob/living/user)
 	return //so clicking sounds please

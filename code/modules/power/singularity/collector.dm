@@ -120,7 +120,7 @@
 		if(!user.transferItemToLoc(W, src))
 			return
 		loaded_tank = W
-		update_appearance()
+		update_icon()
 	else if(W.GetID())
 		if(allowed(user))
 			if(active)
@@ -223,7 +223,7 @@
 	if(active)
 		toggle_power()
 	else
-		update_appearance()
+		update_icon()
 
 /obj/machinery/power/rad_collector/rad_act(pulse_strength)
 	. = ..()
@@ -248,7 +248,7 @@
 	else
 		icon_state = "ca"
 		flick("ca_deactive", src)
-	update_appearance()
+	update_icon()
 	return
 
 #undef RAD_COLLECTOR_EFFICIENCY

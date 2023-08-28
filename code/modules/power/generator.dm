@@ -19,7 +19,7 @@
 	find_circs()
 	connect_to_network()
 	SSair.start_processing_machine(src)
-	update_appearance()
+	update_icon()
 	component_parts = list(new /obj/item/circuitboard/machine/generator)
 
 /obj/machinery/power/generator/ComponentInitialize()
@@ -31,7 +31,7 @@
 	SSair.stop_processing_machine(src)
 	return ..()
 
-/obj/machinery/power/generator/update_appearance()
+/obj/machinery/power/generator/update_icon()
 	cut_overlays()
 	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
 
@@ -52,7 +52,6 @@
 		var/L = min(round(lastgenlev/100000),11)
 		if(L != 0)
 			SSvis_overlays.add_vis_overlay(src, icon, "teg-op[L]", ABOVE_LIGHTING_LAYER, ABOVE_LIGHTING_PLANE, dir)
-	return ..()
 
 
 #define GENRATE 800		// generator output coefficient from Q
@@ -96,7 +95,7 @@
 			var/datum/gas_mixture/cold_circ_air1 = cold_circ.airs[1]
 			cold_circ_air1.merge(cold_air)
 
-		update_appearance()
+		update_icon()
 
 
 	src.updateDialog()
@@ -182,7 +181,7 @@
 				to_chat(user, "<span class='notice'>You start removing the circulators...</span>")
 				if(I.use_tool(src, user, 30, volume=50))
 					kill_circs()
-					update_appearance()
+					update_icon()
 					to_chat(user, "<span class='notice'>You disconnect [src]'s circulator links.</span>")
 					playsound(src, 'sound/misc/box_deploy.ogg', 50)
 				return TRUE
@@ -208,7 +207,7 @@
 		kill_circs()
 	connect_to_network()
 	to_chat(user, "<span class='notice'>You [anchored?"secure":"unsecure"] [src].</span>")
-	update_appearance()
+	update_icon()
 	return TRUE
 
 /obj/machinery/power/generator/screwdriver_act(mob/user, obj/item/I)
@@ -223,7 +222,7 @@
 	panel_open = !panel_open
 	I.play_tool_sound(src)
 	to_chat(user, "<span class='notice'>You [panel_open?"open":"close"] the panel on [src].</span>")
-	update_appearance()
+	update_icon()
 	return TRUE
 
 /obj/machinery/power/generator/crowbar_act(mob/user, obj/item/I)
@@ -246,11 +245,11 @@
 /obj/machinery/power/generator/proc/kill_circs()
 	if(hot_circ)
 		hot_circ.generator = null
-		hot_circ.update_appearance()
+		hot_circ.update_icon()
 		hot_circ = null
 	if(cold_circ)
 		cold_circ.generator = null
-		cold_circ.update_appearance()
+		cold_circ.update_icon()
 		cold_circ = null
 
 /obj/machinery/power/generator/obj_break(damage_flag)

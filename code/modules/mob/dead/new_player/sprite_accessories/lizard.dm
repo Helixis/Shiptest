@@ -3,7 +3,7 @@
 //Start markings
 
 /datum/sprite_accessory/body_markings
-	icon = 'icons/mob/species/lizard/markings.dmi'
+	icon = 'icons/mob/mutant_bodyparts.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
@@ -12,23 +12,30 @@
 	name = "None"
 	icon_state = "none"
 
+/datum/sprite_accessory/body_markings/dtiger
+	name = "Dark Tiger Body"
+	icon_state = "dtiger"
+	gender_specific = TRUE
+
 /datum/sprite_accessory/body_markings/ltiger
-	name = "Tiger"
-	icon_state = "tiger"
+	name = "Light Tiger Body"
+	icon_state = "ltiger"
+	gender_specific = TRUE
 
 /datum/sprite_accessory/body_markings/lbelly
 	name = "Light Belly"
 	icon_state = "lbelly"
+	gender_specific = TRUE
 
 //Start tails
 
 /datum/sprite_accessory/tails
-	icon = 'icons/mob/species/lizard/tails.dmi'
+	icon = 'icons/mob/mutant_bodyparts.dmi'
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "synth"
 
 /datum/sprite_accessory/tails_animated
-	icon = 'icons/mob/species/lizard/tails.dmi'
+	icon = 'icons/mob/mutant_bodyparts.dmi'
 	body_zone = BODY_ZONE_CHEST
 
 /datum/sprite_accessory/tails/lizard/smooth
@@ -73,44 +80,33 @@
 	icon_state = "large"
 	synthetic_icon_state = "large"
 
-/datum/sprite_accessory/tails/lizard/small
-	name = "Small"
-	icon_state = "small"
-	synthetic_icon_state = "none"
+//Start Snouts
 
-/datum/sprite_accessory/tails_animated/lizard/small
-	name = "Small"
-	icon_state = "small"
-	synthetic_icon_state = "none"
-
-//Start Face markings
-
-/datum/sprite_accessory/face_markings
-	icon = 'icons/mob/species/lizard/markings.dmi'
+/datum/sprite_accessory/snouts
+	icon = 'icons/mob/mutant_bodyparts.dmi'
 	body_zone = BODY_ZONE_HEAD
-	color_src = MUTCOLORS_SECONDARY
 	synthetic_icon_state = "none"
 
-/datum/sprite_accessory/face_markings/none
-	name = "None"
-	icon_state = "none"
+/datum/sprite_accessory/snouts/sharp
+	name = "Sharp"
+	icon_state = "sharp"
 
-/datum/sprite_accessory/face_markings/jaw
-	name = "Jaw"
-	icon_state = "jaw"
+/datum/sprite_accessory/snouts/round
+	name = "Round"
+	icon_state = "round"
 
-/datum/sprite_accessory/face_markings/top
-	name = "Top Stripe"
-	icon_state = "top"
+/datum/sprite_accessory/snouts/sharplight
+	name = "Sharp + Light"
+	icon_state = "sharplight"
 
-/datum/sprite_accessory/face_markings/eye
-	name = "Alligator Skink"
-	icon_state = "eye"
+/datum/sprite_accessory/snouts/roundlight
+	name = "Round + Light"
+	icon_state = "roundlight"
 
 //Start Horns
 
 /datum/sprite_accessory/horns
-	icon = 'icons/mob/species/lizard/horns.dmi'
+	icon = 'icons/mob/mutant_bodyparts.dmi'
 	color_src = HAIR
 	body_zone = BODY_ZONE_HEAD
 	synthetic_color_src = MUTCOLORS_SECONDARY
@@ -119,23 +115,6 @@
 	name = "None"
 	icon_state = "none"
 
-//new horns
-/datum/sprite_accessory/horns/broken
-	name = "Broken"
-	icon_state = "broken"
-	synthetic_icon_state = "none"
-
-/datum/sprite_accessory/horns/lightning
-	name = "Lightning"
-	icon_state = "lightning"
-	synthetic_icon_state = "none"
-
-/datum/sprite_accessory/horns/brimstone
-	name = "Brimstone"
-	icon_state = "brimstone"
-	synthetic_icon_state = "none"
-
-//old horns
 /datum/sprite_accessory/horns/simple
 	name = "Simple"
 	icon_state = "simple"
@@ -151,7 +130,7 @@
 	icon_state = "curled"
 	synthetic_icon_state = "curled_synth"
 
-/datum/sprite_accessory/horns/ram //remade
+/datum/sprite_accessory/horns/ram
 	name = "Ram"
 	icon_state = "ram"
 	synthetic_icon_state = "ram_synth"
@@ -163,7 +142,7 @@
 //Start Frills
 
 /datum/sprite_accessory/frills
-	icon = 'icons/mob/species/lizard/frills.dmi'
+	icon = 'icons/mob/mutant_bodyparts.dmi'
 
 /datum/sprite_accessory/frills/none
 	name = "None"
@@ -181,29 +160,13 @@
 	name = "Aquatic"
 	icon_state = "aqua"
 
-/datum/sprite_accessory/frills/frillhawk
-	name = "Frillhawk"
-	icon_state = "frillhawk"
-
-/datum/sprite_accessory/frills/droopy
-	name = "Droopy"
-	icon_state = "droopy"
-
-/datum/sprite_accessory/frills/neck
-	name = "Neck"
-	icon_state = "neck"
-
-/datum/sprite_accessory/frills/neckbig
-	name = "Frilled Dragon"
-	icon_state = "neckbig"
-
 //Start Spines
 
 /datum/sprite_accessory/spines
-	icon = 'icons/mob/species/lizard/tails.dmi'
+	icon = 'icons/mob/mutant_bodyparts.dmi'
 
 /datum/sprite_accessory/spines_animated
-	icon = 'icons/mob/species/lizard/tails.dmi'
+	icon = 'icons/mob/mutant_bodyparts.dmi'
 
 /datum/sprite_accessory/spines/none
 	name = "None"

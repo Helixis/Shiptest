@@ -97,3 +97,6 @@
 		WD.add_fingerprint(user)
 	dump_box_contents()
 	qdel(src)
+
+/obj/structure/ore_box/onTransitZ()
+	return

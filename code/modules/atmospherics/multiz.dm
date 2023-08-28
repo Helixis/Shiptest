@@ -4,16 +4,14 @@
 	icon_state = "multiz_pipe"
 	icon = 'icons/obj/atmos.dmi'
 
-/obj/machinery/atmospherics/pipe/multiz/update_layer()
-	return // Noop because we're moving this to /obj/machinery/atmospherics/pipe
-
-/obj/machinery/atmospherics/pipe/multiz/update_overlays()
+/obj/machinery/atmospherics/pipe/simple/multiz/update_icon()
 	. = ..()
+	cut_overlays() //This adds the overlay showing it's a multiz pipe. This should go above turfs and such
 	var/image/multiz_overlay_node = new(src) //If we have a firing state, light em up!
 	multiz_overlay_node.icon = 'icons/obj/atmos.dmi'
 	multiz_overlay_node.icon_state = "multiz_pipe"
 	multiz_overlay_node.layer = HIGH_OBJ_LAYER
-	. += multiz_overlay_node
+	add_overlay(multiz_overlay_node)
 
 ///Attempts to locate a multiz pipe that's above us, if it finds one it merges us into its pipenet
 /obj/machinery/atmospherics/pipe/simple/multiz/pipeline_expansion()

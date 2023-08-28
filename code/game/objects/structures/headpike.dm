@@ -16,7 +16,8 @@
 /obj/structure/headpike/CheckParts(list/parts_list)
 	..()
 	victim = locate(/obj/item/bodypart/head) in parts_list
-	update_appearance()
+	name = "[victim.name] on a spear"
+	update_icon()
 	if(bonespear)
 		spear = locate(/obj/item/spear/bonespear) in parts_list
 	else
@@ -25,11 +26,6 @@
 /obj/structure/headpike/Initialize()
 	. = ..()
 	pixel_x = rand(-8, 8)
-
-/obj/structure/headpike/Destroy()
-	QDEL_NULL(victim)
-	QDEL_NULL(spear)
-	return ..()
 
 /obj/structure/headpike/update_overlays()
 	. = ..()
@@ -51,17 +47,3 @@
 	spear.forceMove(drop_location())
 	spear = null
 	qdel(src)
-
-/obj/structure/headpike/update_name()
-	name = "[victim.real_name] on a [spear]"
-	return ..()
-
-/obj/structure/headpike/update_overlays()
-	. = ..()
-	if(!victim)
-		return
-	var/mutable_appearance/MA = new()
-	MA.copy_overlays(victim)
-	MA.pixel_y = 12
-	MA.pixel_x = pixel_x
-	. += victim

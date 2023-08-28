@@ -224,19 +224,17 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	else
 		..()
 
-/obj/machinery/vending/update_appearance(updates=ALL)
-	. = ..()
-	if(machine_stat & BROKEN)
-		set_light(0)
-		return
-	set_light(powered() ? MINIMUM_USEFUL_LIGHT_RANGE : 0)
-
 /obj/machinery/vending/update_icon_state()
 	if(machine_stat & BROKEN)
 		icon_state = "[initial(icon_state)]-broken"
-		return ..()
-	icon_state = "[initial(icon_state)][powered() ? null : "-off"]"
-	return ..()
+		set_light(0)
+	else if(powered())
+		icon_state = initial(icon_state)
+		set_light(1.4)
+	else
+		icon_state = "[initial(icon_state)]-off"
+		set_light(0)
+
 
 /obj/machinery/vending/update_overlays()
 	. = ..()
@@ -927,6 +925,9 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	*/
 /obj/machinery/vending/proc/canLoadItem(obj/item/I, mob/user)
 	return FALSE
+
+/obj/machinery/vending/onTransitZ()
+	return
 
 /obj/machinery/vending/custom
 	name = "Custom Vendor"

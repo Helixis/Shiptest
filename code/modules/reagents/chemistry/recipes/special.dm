@@ -182,8 +182,7 @@ GLOBAL_LIST_INIT(food_reagents, build_reagents_to_food()) //reagentid = related 
 /obj/item/paper/secretrecipe/proc/UpdateInfo()
 	var/datum/chemical_reaction/recipe = get_chemical_reaction(recipe_id)
 	if(!recipe)
-		add_raw_text("This recipe is illegible.")
-		update_appearance()
+		info = "This recipe is illegible."
 		return
 	var/list/dat = list("<ul>")
 	for(var/rid in recipe.required_reagents)
@@ -206,5 +205,5 @@ GLOBAL_LIST_INIT(food_reagents, build_reagents_to_food()) //reagentid = related 
 		else
 			dat += " above [recipe.required_temp] degrees"
 	dat += "."
-	default_raw_text = dat.Join("")
-	update_appearance()
+	info = dat.Join("")
+	update_icon()

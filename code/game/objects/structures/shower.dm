@@ -34,7 +34,7 @@
 
 /obj/machinery/shower/interact(mob/M)
 	on = !on
-	update_appearance()
+	update_icon()
 	handle_mist()
 	add_fingerprint(M)
 	if(on)

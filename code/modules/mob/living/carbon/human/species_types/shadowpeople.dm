@@ -218,7 +218,7 @@
 		var/obj/item/pda/PDA = O
 		PDA.set_light_on(FALSE)
 		PDA.set_light_range(0) //It won't be turning on again.
-		PDA.update_appearance()
+		PDA.update_icon()
 		visible_message("<span class='danger'>The light in [PDA] shorts out!</span>")
 	else
 		visible_message("<span class='danger'>[O] is disintegrated by [src]!</span>")

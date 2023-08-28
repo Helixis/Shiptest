@@ -34,7 +34,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sortList(list(
 
 /obj/item/stack/marker_beacon/Initialize(mapload)
 	. = ..()
-	update_appearance()
+	update_icon()
 
 /obj/item/stack/marker_beacon/examine(mob/user)
 	. = ..()
@@ -43,7 +43,6 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sortList(list(
 
 /obj/item/stack/marker_beacon/update_icon_state()
 	icon_state = "[initial(icon_state)][lowertext(picked_color)]"
-	return ..()
 
 /obj/item/stack/marker_beacon/attack_self(mob/user)
 	if(!isturf(user.loc))
@@ -66,7 +65,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sortList(list(
 		return
 	if(input_color)
 		picked_color = input_color
-		update_appearance()
+		update_icon()
 
 /obj/structure/marker_beacon
 	name = "marker beacon"
@@ -84,31 +83,25 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sortList(list(
 
 /obj/structure/marker_beacon/Initialize(mapload, set_color)
 	. = ..()
-	if(set_color)
-		picked_color = set_color
-	update_appearance()
+	picked_color = set_color
+	update_icon()
 
 /obj/structure/marker_beacon/deconstruct(disassembled = TRUE)
 	if(!(flags_1 & NODECONSTRUCT_1))
 		var/obj/item/stack/marker_beacon/M = new(loc)
 		M.picked_color = picked_color
-		M.update_appearance()
+		M.update_icon()
 	qdel(src)
 
 /obj/structure/marker_beacon/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>Alt-click to select a color. Current color is [picked_color].</span>"
 
-/obj/structure/marker_beacon/update_appearance(updates)
+/obj/structure/marker_beacon/update_icon()
 	while(!picked_color || !GLOB.marker_beacon_colors[picked_color])
 		picked_color = pick(GLOB.marker_beacon_colors)
-
-	. = ..()
-	set_light(light_range, light_power, GLOB.marker_beacon_colors[picked_color])
-
-/obj/structure/marker_beacon/update_icon_state()
 	icon_state = "[initial(icon_state)][lowertext(picked_color)]-on"
-	return ..()
+	set_light(light_range, light_power, GLOB.marker_beacon_colors[picked_color])
 
 /obj/structure/marker_beacon/attack_hand(mob/living/user)
 	. = ..()
@@ -118,7 +111,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sortList(list(
 	if(do_after(user, remove_speed, target = src))
 		var/obj/item/stack/marker_beacon/M = new(loc)
 		M.picked_color = picked_color
-		M.update_appearance()
+		M.update_icon()
 		transfer_fingerprints_to(M)
 		if(user.put_in_hands(M, TRUE)) //delete the beacon if it fails
 			playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
@@ -151,4 +144,4 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sortList(list(
 		return
 	if(input_color)
 		picked_color = input_color
-		update_appearance()
+		update_icon()

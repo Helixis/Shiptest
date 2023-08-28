@@ -41,7 +41,7 @@
 					armed = 0
 					to_chat(user, "<span class='warning'>You need a free hand to hold the gun!</span>")
 					return
-				update_appearance()
+				update_icon()
 				user.update_inv_back()
 		else
 			to_chat(user, "<span class='warning'>You are already holding the gun!</span>")
@@ -77,8 +77,10 @@
 
 
 /obj/item/minigunpack/update_icon_state()
-	icon_state = "[(armed ? "not" : "")]holstered"
-	return ..()
+	if(armed)
+		icon_state = "notholstered"
+	else
+		icon_state = "holstered"
 
 /obj/item/minigunpack/proc/attach_gun(mob/user)
 	if(!gun)
@@ -89,7 +91,7 @@
 		to_chat(user, "<span class='notice'>You attach the [gun.name] to the [name].</span>")
 	else
 		src.visible_message("<span class='warning'>The [gun.name] snaps back onto the [name]!</span>")
-	update_appearance()
+	update_icon()
 	user.update_inv_back()
 
 

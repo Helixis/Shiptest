@@ -98,7 +98,7 @@
 			ui.close()
 
 			to_chat(spawnee, "<span class='danger'>Your [template.name] is being prepared. Please be patient!</span>")
-			var/datum/overmap/ship/controlled/target = SSovermap.spawn_ship_at_start(template)
+			var/datum/overmap/ship/controlled/target = new(SSovermap.get_unused_overmap_square(), template)
 			if(!target?.shuttle_port)
 				to_chat(spawnee, "<span class='danger'>There was an error loading the ship. Please contact admins!</span>")
 				spawnee.new_player_panel()
@@ -143,7 +143,6 @@
 
 		var/list/ship_data = list(
 			"name" = S.name,
-			"faction" = ship_prefix_to_faction(S.source_template.prefix),
 			"class" = S.source_template.short_name,
 			"desc" = S.source_template.description,
 			"tags" = S.source_template.tags,
@@ -163,7 +162,6 @@
 			continue
 		var/list/ship_data = list(
 			"name" = T.name,
-			"faction" = ship_prefix_to_faction(T.prefix),
 			"desc" = T.description,
 			"tags" = T.tags,
 			"crewCount" = length(T.job_slots),

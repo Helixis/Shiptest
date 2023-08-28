@@ -13,10 +13,7 @@
 	name = "\improper Medibot"
 	desc = "A little medical robot. He looks somewhat underwhelmed."
 	icon = 'icons/mob/aibots.dmi'
-	icon_state = "medibot"
-	base_icon_state = "medibot"
-	var/base_screen_state = "medibot"
-	var/stationary_suffix = null //for icon states
+	icon_state = "medibot0"
 	density = FALSE
 	anchored = FALSE
 	health = 20
@@ -38,6 +35,8 @@
 	var/healthanalyzer = /obj/item/healthanalyzer
 /// drop determining variable
 	var/firstaid = /obj/item/storage/firstaid
+///based off medkit_X skins in aibots.dmi for your selection; X goes here IE medskin_tox means skin var should be "tox"
+	var/skin
 	var/mob/living/carbon/patient
 	var/mob/living/carbon/oldpatient
 	var/oldloc
@@ -68,21 +67,16 @@
 ///The last time we were tipped/righted and said a voice line, to avoid spam
 	var/last_tipping_action_voice = 0
 
-
 /mob/living/simple_animal/bot/medbot/mysterious
 	name = "\improper Mysterious Medibot"
 	desc = "International Medibot of mystery."
-	icon_state = "medibot_bezerk"
-	base_icon_state = "medibot_bezerk"
-	base_screen_state = "medibot"
+	skin = "bezerk"
 	heal_amount = 10
 
 /mob/living/simple_animal/bot/medbot/rockplanet
 	name = "\improper Abandoned Medibot"
 	desc = "A little medical robot. They look like they have some sort of bloodlust in their eyes."
-	icon_state = "medibot_evil"
-	base_icon_state = "medibot_evil"
-	base_screen_state = "medibot_evil"
+	skin = "evil"
 	emagged = 2
 	remote_disabled = 1
 	locked = TRUE
@@ -90,43 +84,29 @@
 
 /mob/living/simple_animal/bot/medbot/derelict
 	name = "\improper Old Medibot"
-	desc = "Looks like it hasn't been modified since the early models."
-	icon_state = "medibot_bezerk"
-	base_icon_state = "medibot_bezerk"
-	base_screen_state = "medibot"
+	desc = "Looks like it hasn't been modified since the late 2080s."
+	skin = "bezerk"
 	heal_threshold = 0
 	declare_crit = 0
 	heal_amount = 5
 
 /mob/living/simple_animal/bot/medbot/update_icon()
-	. = ..()
 	cut_overlays()
-	var/mutable_appearance/screen_overlay = mutable_appearance(icon, null)
-	var/mutable_appearance/screen_overlay_2 = mutable_appearance(icon, null)
-	if(stationary_mode)//we add the stationary_suffix to the screen state name, if not dont add anythiung
-		stationary_suffix = "_stationary"
-
-	icon_state = "[base_icon_state]"
-	screen_overlay.icon_state = null
-	screen_overlay_2.icon_state = null
-
-	if(on)
-		screen_overlay_2.icon_state = "[base_screen_state][stationary_suffix]_idle"
-
+	if(skin)
+		add_overlay("medskin_[skin]")
+	if(!on)
+		icon_state = "medibot0"
+		return
 	if(HAS_TRAIT(src, TRAIT_INCAPACITATED))
-		screen_overlay.icon_state = "[base_screen_state][stationary_suffix]_stunned"
-
+		icon_state = "medibota"
+		return
 	if(mode == BOT_HEALING)
-		icon_state = "[base_icon_state]_base_healing"
-		screen_overlay.icon_state = "[base_icon_state][stationary_suffix]_healing"
-
-		if(declare_cooldown > world.time) //when the crit patient alert cooldown is going on, we show the other healing screen
-			screen_overlay_2.icon_state = "[base_screen_state][stationary_suffix]_healing_l2_crit"
-		else
-			screen_overlay_2.icon_state = "[base_screen_state][stationary_suffix]_healing_l2"
-
-	add_overlay(screen_overlay)
-	add_overlay(screen_overlay_2)
+		icon_state = "medibots[stationary_mode]"
+		return
+	else if(stationary_mode) //Bot has yellow light to indicate stationary mode.
+		icon_state = "medibot2"
+	else
+		icon_state = "medibot1"
 
 /mob/living/simple_animal/bot/medbot/Initialize(mapload, new_skin)
 	. = ..()
@@ -135,8 +115,8 @@
 	prev_access = access_card.access
 	qdel(J)
 	if(new_skin)
-		base_icon_state = new_skin
-	update_appearance()
+		skin = new_skin
+	update_icon()
 
 /mob/living/simple_animal/bot/medbot/Destroy()
 	linked_techweb = null
@@ -149,14 +129,14 @@
 	oldloc = null
 	last_found = world.time
 	declare_cooldown = 0
-	update_appearance()
+	update_icon()
 
 /mob/living/simple_animal/bot/medbot/proc/soft_reset() //Allows the medibot to still actively perform its medical duties without being completely halted as a hard reset does.
 	path = list()
 	patient = null
 	mode = BOT_IDLE
 	last_found = world.time
-	update_appearance()
+	update_icon()
 
 /mob/living/simple_animal/bot/medbot/set_custom_texts()
 
@@ -212,7 +192,7 @@
 	else if(href_list["stationary"])
 		stationary_mode = !stationary_mode
 		path = list()
-		update_appearance()
+		update_icon()
 
 	else if(href_list["hptech"])
 		if(!linked_techweb)
@@ -273,7 +253,6 @@
 			var/message = pick(messagevoice)
 			speak(message)
 			playsound(src, messagevoice[message], 50, FALSE)
-			flick_overlay_static("[base_screen_state][stationary_suffix]_notice", src, 2 SECONDS)
 			last_newpatient_speak = world.time
 		return H
 	else
@@ -397,7 +376,7 @@
 	if(patient && (get_dist(src,patient) <= 1) && !tending) //Patient is next to us, begin treatment!
 		if(mode != BOT_HEALING)
 			mode = BOT_HEALING
-			update_appearance()
+			update_icon()
 			frustration = 0
 			medicate_patient(patient)
 		return
@@ -457,6 +436,9 @@
 	if(!(loc == C.loc) && !(isturf(C.loc) && isturf(loc)))
 		return FALSE
 
+	if(C.suiciding)
+		return FALSE //Kevorkian school of robotic medical assistants.
+
 	if(emagged == 2) //Everyone needs our medicine. (Our medicine is toxins)
 		return TRUE
 
@@ -488,6 +470,9 @@
 		return TRUE
 
 /mob/living/simple_animal/bot/medbot/attack_hand(mob/living/carbon/human/H)
+	if(INTERACTING_WITH(H, src))
+		to_chat(H, "<span class='warning'>You're already interacting with [src].</span>")
+		return
 
 	if(H.a_intent == INTENT_DISARM && mode != BOT_TIPPED)
 		H.visible_message("<span class='danger'>[H] begins tipping over [src].</span>", "<span class='warning'>You begin tipping over [src]...</span>")
@@ -514,9 +499,9 @@
 		var/mob/living/carbon/C = A
 		patient = C
 		mode = BOT_HEALING
-		update_appearance()
+		update_icon()
 		medicate_patient(C)
-		update_appearance()
+		update_icon()
 	else
 		..()
 
@@ -540,7 +525,6 @@
 		speak(message)
 		playsound(src, messagevoice[message], 50)
 		oldpatient = patient
-		flick_overlay_static("[base_screen_state][stationary_suffix]_death", src, 6 SECONDS)
 		soft_reset()
 		return
 
@@ -567,7 +551,6 @@
 			var/message = pick(messagevoice)
 			speak(message)
 			playsound(src, messagevoice[message], 50)
-			flick_overlay_static("[base_screen_state][stationary_suffix]_patched", src, 2 SECONDS)
 			bot_reset()
 			tending = FALSE
 		else if(patient)
@@ -596,7 +579,7 @@
 			else
 				tending = FALSE
 
-			update_appearance()
+			update_icon()
 			if(!tending)
 				visible_message("[src] places its tools back into itself.")
 				soft_reset()

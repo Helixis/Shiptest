@@ -131,9 +131,6 @@
 /obj/effect/turf_decal/trimline/opaque/bar/filled/warning{
 	dir = 4
 	},
-/obj/machinery/light_switch{
-	pixel_y = 22
-	},
 /turf/open/floor/plasteel/white,
 /area/ship/engineering)
 "cZ" = (
@@ -175,7 +172,7 @@
 /obj/item/modular_computer/tablet/preset/advanced,
 /obj/item/modular_computer/tablet/preset/advanced,
 /obj/item/paper{
-	default_raw_text = "Congratulations on your purchase of Cybersun G-1010 Long Range Communication Tables (Chat client installed seperately)"
+	info = "Congratulations on your purchase of Cybersun G-1010 Long Range Communication Tables (Chat client installed seperately)"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
@@ -353,10 +350,6 @@
 	},
 /obj/machinery/camera/autoname{
 	dir = 8
-	},
-/obj/machinery/light_switch{
-	pixel_y = 23;
-	pixel_x = -12
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
@@ -574,9 +567,6 @@
 /obj/effect/turf_decal/trimline/opaque/bar/filled/warning{
 	dir = 8
 	},
-/obj/machinery/light_switch{
-	pixel_y = 22
-	},
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "nO" = (
@@ -607,7 +597,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
 "pa" = (
-/obj/machinery/fax,
+/obj/machinery/photocopier/faxmachine/longrange,
 /obj/item/toy/figure/detective{
 	name = "Intel Buddy";
 	pixel_x = 5;
@@ -732,10 +722,6 @@
 	},
 /obj/machinery/door/window{
 	dir = 4
-	},
-/obj/machinery/light_switch{
-	pixel_y = 22;
-	pixel_x = -11
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
@@ -957,11 +943,6 @@
 	pixel_x = -9;
 	pixel_y = -3
 	},
-/obj/machinery/light_switch{
-	pixel_x = -20;
-	pixel_y = 12;
-	dir = 4
-	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "xf" = (
@@ -1108,11 +1089,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light_switch{
-	pixel_y = -20;
-	dir = 1;
-	pixel_x = 6
-	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/cargo)
 "zY" = (
@@ -1169,10 +1145,6 @@
 	icon_state = "0-8"
 	},
 /obj/item/radio/intercom/directional/north,
-/obj/machinery/light_switch{
-	pixel_y = 23;
-	pixel_x = -12
-	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/dorm)
 "CR" = (
@@ -1827,7 +1799,7 @@
 /obj/item/reagent_containers/pill/cyanide,
 /obj/item/reagent_containers/pill/cyanide,
 /obj/item/paper/crumpled{
-	default_raw_text = "Hand this stuff out to the field agents. They'll have a blast."
+	info = "Hand this stuff out to the field agents. They'll have a blast."
 	},
 /obj/item/clothing/mask/chameleon,
 /obj/item/card/id/syndicate/anyone,

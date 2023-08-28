@@ -83,7 +83,6 @@
 #define MAPPING_MARGIN 5
 
 /datum/virtual_level
-	/// An admin-facing name used to identify the virtual level. May be duplicate, or changed after instancing.
 	var/name = "Sub Map Zone"
 	var/relative_id
 	var/id
@@ -548,10 +547,16 @@
 	return get_alive_client_mobs() + get_dead_client_mobs()
 
 /datum/virtual_level/proc/get_alive_client_mobs()
-	return LAZYACCESS(SSmobs.players_by_virtual_z, "[z_value]") || list()
+	. = list()
+	for(var/mob/Mob as anything in SSmobs.clients_by_zlevel[z_value])
+		if(is_in_bounds(Mob))
+			. += Mob
 
 /datum/virtual_level/proc/get_dead_client_mobs()
-	return LAZYACCESS(SSmobs.dead_players_by_virtual_z, "[z_value]") || list()
+	. = list()
+	for(var/mob/Mob as anything in SSmobs.dead_players_by_zlevel[z_value])
+		if(is_in_bounds(Mob))
+			. += Mob
 
 /datum/virtual_level/proc/get_mind_mobs()
 	. = list()

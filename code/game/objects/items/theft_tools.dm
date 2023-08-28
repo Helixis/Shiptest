@@ -35,6 +35,10 @@
 		flick(pulseicon, src)
 		radiation_pulse(src, 400, 2)
 
+/obj/item/nuke_core/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is rubbing [src] against [user.p_them()]self! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	return (TOXLOSS)
+
 //nuke core box, for carrying the core
 /obj/item/nuke_core_container
 	name = "nuke core container"
@@ -89,7 +93,7 @@
 	random_color = FALSE
 
 /obj/item/paper/guides/antag/nuke_instructions
-	default_raw_text = "How to break into a Nanotrasen self-destruct terminal and remove its plutonium core:<br>\
+	info = "How to break into a Nanotrasen self-destruct terminal and remove its plutonium core:<br>\
 	<ul>\
 	<li>Use a screwdriver with a very thin tip (provided) to unscrew the terminal's front panel</li>\
 	<li>Dislodge and remove the front panel with a crowbar</li>\
@@ -102,7 +106,7 @@
 // STEALING SUPERMATTER
 
 /obj/item/paper/guides/antag/supermatter_sliver
-	default_raw_text = "How to safely extract a supermatter sliver:<br>\
+	info = "How to safely extract a supermatter sliver:<br>\
 	<ul>\
 	<li>Approach an active supermatter crystal with radiation shielded personal protective equipment. DO NOT MAKE PHYSICAL CONTACT.</li>\
 	<li>Use a supermatter scalpel (provided) to slice off a sliver of the crystal.</li>\
@@ -134,7 +138,7 @@
 			return FALSE
 		forceMove(tongs)
 		tongs.sliver = src
-		tongs.update_appearance()
+		tongs.update_icon()
 		to_chat(user, "<span class='notice'>You carefully pick up [src] with [tongs].</span>")
 	else if(istype(W, /obj/item/scalpel/supermatter) || istype(W, /obj/item/nuke_core_container/supermatter/)) // we don't want it to dust
 		return
@@ -225,7 +229,6 @@
 		icon_state = "supermatter_tongs_loaded"
 	else
 		icon_state = "supermatter_tongs"
-	return ..()
 
 /obj/item/hemostat/supermatter/afterattack(atom/O, mob/user, proximity)
 	. = ..()
@@ -239,7 +242,7 @@
 		sliver.forceMove(loc)
 		visible_message("<span class='notice'>\The [sliver] falls out of \the [src] as it hits the ground.</span>")
 		sliver = null
-		update_appearance()
+		update_icon()
 	..()
 
 /obj/item/hemostat/supermatter/proc/Consume(atom/movable/AM, mob/user)
@@ -259,4 +262,4 @@
 	radiation_pulse(src, 500, 2)
 	playsound(src, 'sound/effects/supermatter.ogg', 50, TRUE)
 	QDEL_NULL(sliver)
-	update_appearance()
+	update_icon()

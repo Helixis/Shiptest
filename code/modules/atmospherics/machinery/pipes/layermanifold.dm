@@ -42,34 +42,34 @@
 /obj/machinery/atmospherics/pipe/layer_manifold/proc/get_all_connected_nodes()
 	return front_nodes + back_nodes + nodes
 
-/obj/machinery/atmospherics/pipe/layer_manifold/update_layer()
+/obj/machinery/atmospherics/pipe/layer_manifold/update_icon()	//HEAVILY WIP FOR UPDATE ICONS!!
+	cut_overlays()
 	layer = initial(layer) + (PIPING_LAYER_MAX * PIPING_LAYER_LCHANGE)	//This is above everything else.
 
-/obj/machinery/atmospherics/pipe/layer_manifold/update_overlays()
-	. = ..()
-
 	for(var/node in front_nodes)
-		. += get_attached_images(node)
+		add_attached_images(node)
 	for(var/node in back_nodes)
-		. += get_attached_images(node)
+		add_attached_images(node)
 
-/obj/machinery/atmospherics/pipe/layer_manifold/proc/get_attached_images(obj/machinery/atmospherics/A)
+/obj/machinery/atmospherics/pipe/layer_manifold/proc/add_attached_images(obj/machinery/atmospherics/A)
 	if(!A)
 		return
-
-	. = list()
 	if(istype(A, /obj/machinery/atmospherics/pipe/layer_manifold))
 		for(var/i in PIPING_LAYER_MIN to PIPING_LAYER_MAX)
-			. += get_attached_image(get_dir(src, A), i)
-		return
-	. += get_attached_image(get_dir(src, A), A.piping_layer, A.pipe_color)
+			add_attached_image(get_dir(src, A), i)
+			return
+	add_attached_image(get_dir(src, A), A.piping_layer, A.pipe_color)
 
-/obj/machinery/atmospherics/pipe/layer_manifold/proc/get_attached_image(p_dir, p_layer, p_color = null)
+/obj/machinery/atmospherics/pipe/layer_manifold/proc/add_attached_image(p_dir, p_layer, p_color = null)
+	var/image/I
 
-	var/image/I = getpipeimage(icon, "pipe-3", p_dir, p_color, p_layer)
+	if(p_color)
+		I = getpipeimage(icon, "pipe", p_dir, p_color, piping_layer = p_layer)
+	else
+		I = getpipeimage(icon, "pipe", p_dir, piping_layer = p_layer)
 
 	I.layer = layer - 0.01
-	return I
+	add_overlay(I)
 
 /obj/machinery/atmospherics/pipe/layer_manifold/SetInitDirections()
 	switch(dir)
@@ -96,7 +96,7 @@
 			new_nodes += foundfront
 		if(foundback && !QDELETED(foundback))
 			new_nodes += foundback
-	update_appearance()
+	update_icon()
 	return new_nodes
 
 /obj/machinery/atmospherics/pipe/layer_manifold/atmosinit()
@@ -123,7 +123,7 @@
 		if(reference in back_nodes)
 			var/i = back_nodes.Find(reference)
 			back_nodes[i] = null
-	update_appearance()
+	update_icon()
 
 /obj/machinery/atmospherics/pipe/layer_manifold/relaymove(mob/living/user, direction)
 	if(initialize_directions & direction)

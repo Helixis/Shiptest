@@ -40,5 +40,5 @@
 		var/datum/tgs_message_content/result = sc.Run(u, params)
 		result = UpgradeDeprecatedCommandResponse(result, command)
 
-		return result ? result.text : TRUE
+		return result?.text
 	return "Unknown command: [command]!"

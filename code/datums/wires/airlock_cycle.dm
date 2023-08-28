@@ -29,7 +29,7 @@
 		if(WIRE_POWER) // Short out for a long time.
 			if(!A.shorted)
 				A.shorted = TRUE
-				A.update_appearance()
+				A.update_icon()
 			addtimer(CALLBACK(A, /obj/machinery/advanced_airlock_controller.proc/reset, wire), 1200)
 		if(WIRE_IDSCAN) // Toggle lock.
 			A.locked = !A.locked
@@ -44,7 +44,7 @@
 		if(WIRE_POWER) // Short out forever.
 			A.shock(usr, 50)
 			A.shorted = !mend
-			A.update_appearance()
+			A.update_icon()
 		if(WIRE_IDSCAN)
 			if(!mend)
 				A.locked = TRUE

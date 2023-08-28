@@ -15,7 +15,6 @@
 	desc = "A heavy machine gun, designated 'L6 SAW'. Has 'Aussec Armoury - 490 FS' engraved on the receiver below the designation. Chambered in 7.12x82mm."
 	icon_state = "l6"
 	item_state = "l6closedmag"
-	base_icon_state = "l6"
 	mag_type = /obj/item/ammo_box/magazine/mm712x82
 	can_suppress = FALSE
 	spread = 7
@@ -43,7 +42,7 @@
 	cover_open = !cover_open
 	to_chat(user, "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>")
 	playsound(user, 'sound/weapons/gun/l6/l6_door.ogg', 60, TRUE)
-	update_appearance()
+	update_icon()
 
 
 /obj/item/gun/ballistic/automatic/hmg/l6_saw/update_overlays()
@@ -57,7 +56,7 @@
 		return
 	else
 		. = ..()
-		update_appearance()
+		update_icon()
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/item/gun/ballistic/automatic/hmg/l6_saw/attack_hand(mob/user)

@@ -3,7 +3,6 @@
 	desc = "A machine for custom fitting augmentations, with in-built spraypainter."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pdapainter"
-	base_icon_state = "pdapainter"
 	circuit = /obj/item/circuitboard/machine/aug_manipulator
 	density = TRUE
 	obj_integrity = 200
@@ -19,21 +18,23 @@
 		. += "<span class='notice'>Alt-click to eject the limb.</span>"
 
 /obj/machinery/aug_manipulator/Initialize()
-	if(!base_icon_state)
-		base_icon_state = initial(icon_state)
+	initial_icon_state = initial(icon_state)
 	return ..()
 
 /obj/machinery/aug_manipulator/update_icon_state()
 	if(machine_stat & BROKEN)
-		icon_state = "[base_icon_state]-broken"
-		return ..()
-	icon_state = "[base_icon_state][powered() ? null : "-off"]"
-	return ..()
+		icon_state = "[initial_icon_state]-broken"
+		return
+
+	if(powered())
+		icon_state = initial_icon_state
+	else
+		icon_state = "[initial_icon_state]-off"
 
 /obj/machinery/aug_manipulator/update_overlays()
 	. = ..()
 	if(storedpart)
-		. += "[base_icon_state]-closed"
+		. += "[initial_icon_state]-closed"
 
 /obj/machinery/aug_manipulator/Destroy()
 	QDEL_NULL(storedpart)
@@ -51,7 +52,7 @@
 /obj/machinery/aug_manipulator/handle_atom_del(atom/A)
 	if(A == storedpart)
 		storedpart = null
-		update_appearance()
+		update_icon()
 
 /obj/machinery/aug_manipulator/attackby(obj/item/O, mob/user, params)
 	if(default_deconstruction_screwdriver(user, "pdapainter-broken", "pdapainter", O)) //placeholder, get a sprite monkey to make an actual sprite, I can't be asked.
@@ -80,7 +81,7 @@
 				return
 			storedpart = O
 			O.add_fingerprint(user)
-			update_appearance()
+			update_icon()
 
 	else if(O.tool_behaviour == TOOL_WELDER && user.a_intent != INTENT_HARM)
 		if(obj_integrity < max_integrity)
@@ -97,7 +98,7 @@
 				to_chat(user, "<span class='notice'>You repair [src].</span>")
 				set_machine_stat(machine_stat & ~BROKEN)
 				obj_integrity = max(obj_integrity, max_integrity)
-				update_appearance()
+				update_icon()
 		else
 			to_chat(user, "<span class='notice'>[src] does not need repairs.</span>")
 	else
@@ -129,7 +130,7 @@
 	if(storedpart)
 		storedpart.forceMove(get_turf(src))
 		storedpart = null
-		update_appearance()
+		update_icon()
 	else
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 

@@ -57,10 +57,6 @@
 /obj/effect/temp_visual/dir_setting/firing_effect
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "firing_effect"
-	light_system = MOVABLE_LIGHT
-	light_range = 2
-	light_power = 0.4
-	light_color = COLOR_VERY_SOFT_YELLOW
 	duration = 2
 
 /obj/effect/temp_visual/dir_setting/firing_effect/setDir(newdir)
@@ -79,15 +75,7 @@
 
 /obj/effect/temp_visual/dir_setting/firing_effect/energy
 	icon_state = "firing_effect_energy"
-	light_color = COLOR_RED_LIGHT
 	duration = 3
-
-/obj/effect/temp_visual/dir_setting/firing_effect/gauss
-//gauss doesn't have a muzzle flash
-	light_system = null
-	light_range = 0
-	light_power = 0
-	light_color = null
 
 /obj/effect/temp_visual/dir_setting/firing_effect/magic
 	icon_state = "shieldsparkles"
@@ -514,26 +502,22 @@
 	status = rcd_status
 	delay = rcd_delay
 	if (status == RCD_DECONSTRUCT)
-		addtimer(CALLBACK(src, /atom/.proc/update_appearance), 1.1 SECONDS)
+		addtimer(CALLBACK(src, /atom/.proc/update_icon), 11)
 		delay -= 11
 		icon_state = "rcd_end_reverse"
 	else
-		update_appearance()
+		update_icon()
 
 /obj/effect/constructing_effect/update_icon_state()
 	icon_state = "rcd"
-	if(delay < 10)
+	if (delay < 10)
 		icon_state += "_shortest"
-		return ..()
-	if (delay < 20)
+	else if (delay < 20)
 		icon_state += "_shorter"
-		return ..()
-	if (delay < 37)
+	else if (delay < 37)
 		icon_state += "_short"
-		return ..()
-	if(status == RCD_DECONSTRUCT)
+	if (status == RCD_DECONSTRUCT)
 		icon_state += "_reverse"
-	return ..()
 
 /obj/effect/constructing_effect/proc/end_animation()
 	if (status == RCD_DECONSTRUCT)

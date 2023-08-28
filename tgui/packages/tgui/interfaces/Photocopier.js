@@ -1,37 +1,26 @@
-import { sortBy } from 'common/collections';
-import { useBackend } from '../backend';
 import {
-  Box,
-  Button,
-  Dropdown,
-  Flex,
-  NumberInput,
   ProgressBar,
+  NumberInput,
+  Button,
   Section,
+  Box,
+  Flex,
 } from '../components';
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const Photocopier = (props, context) => {
   const { data } = useBackend(context);
-  const { isAI, has_toner, has_item, forms_exist } = data;
+  const { isAI, has_toner, has_item } = data;
 
   return (
-    <Window title="Photocopier" width={320} height={512}>
+    <Window title="Photocopier" width={240} height={isAI ? 309 : 234}>
       <Window.Content>
         {has_toner ? (
           <Toner />
         ) : (
           <Section title="Toner">
             <Box color="average">No inserted toner cartridge.</Box>
-          </Section>
-        )}
-        {forms_exist ? (
-          <Blanks />
-        ) : (
-          <Section title="Blanks">
-            <Box color="average">
-              No forms found. Please contact your system administrator.
-            </Box>
           </Section>
         )}
         {has_item ? (
@@ -47,9 +36,9 @@ export const Photocopier = (props, context) => {
   );
 };
 
-const Toner = (props, context) => {
+export const Toner = (props, context) => {
   const { act, data } = useBackend(context);
-  const { has_toner, max_toner, current_toner } = data;
+  const { max_toner, current_toner } = data;
 
   const average_toner = max_toner * 0.66;
   const bad_toner = max_toner * 0.33;
@@ -59,7 +48,7 @@ const Toner = (props, context) => {
       title="Toner"
       buttons={
         <Button
-          disabled={!has_toner}
+          disabled={!current_toner}
           onClick={() => act('remove_toner')}
           icon="eject"
         >
@@ -81,7 +70,7 @@ const Toner = (props, context) => {
   );
 };
 
-const Options = (props, context) => {
+export const Options = (props, context) => {
   const { act, data } = useBackend(context);
   const { color_mode, is_photo, num_copies, has_enough_toner } = data;
 
@@ -165,58 +154,7 @@ const Options = (props, context) => {
   );
 };
 
-const Blanks = (props, context) => {
-  const { act, data } = useBackend(context);
-  const { blanks, category, has_toner } = data;
-
-  const sortedBlanks = sortBy((blank) => blanks.category)(blanks || []);
-
-  const categories = [];
-  for (let blank of sortedBlanks) {
-    if (!categories.includes(blank.category)) {
-      categories.push(blank.category);
-    }
-  }
-
-  const selectedCategory = category ?? categories[0];
-  const visibleBlanks = sortedBlanks.filter(
-    (blank) => blank.category === selectedCategory
-  );
-
-  return (
-    <Section title="Blanks">
-      <Dropdown
-        width="100%"
-        options={categories}
-        selected={selectedCategory}
-        onSelected={(value) =>
-          act('choose_category', {
-            category: value,
-          })
-        }
-      />
-      <Box mt={0.4}>
-        {visibleBlanks.map((blank) => (
-          <Button
-            key={blank.code}
-            title={blank.name}
-            disabled={!has_toner}
-            onClick={() =>
-              act('print_blank', {
-                name: blank.name,
-                info: blank.info,
-              })
-            }
-          >
-            {blank.code}
-          </Button>
-        ))}
-      </Box>
-    </Section>
-  );
-};
-
-const AIOptions = (props, context) => {
+export const AIOptions = (props, context) => {
   const { act, data } = useBackend(context);
   const { can_AI_print } = data;
 

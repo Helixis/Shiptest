@@ -274,11 +274,6 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/light_switch{
-	pixel_x = 19;
-	dir = 8;
-	pixel_y = 11
-	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
 "gj" = (
@@ -873,9 +868,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/observer_start,
-/obj/machinery/light_switch{
-	pixel_y = 23
-	},
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
 "rk" = (
@@ -956,10 +948,6 @@
 /obj/machinery/firealarm/directional/north,
 /obj/structure/cable{
 	icon_state = "4-8"
-	},
-/obj/machinery/light_switch{
-	pixel_x = -12;
-	pixel_y = 23
 	},
 /turf/open/floor/wood,
 /area/ship/crew)
@@ -1446,10 +1434,6 @@
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/machinery/light_switch{
-	pixel_x = -12;
-	pixel_y = 23
-	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "Cr" = (
@@ -1583,12 +1567,6 @@
 	},
 /turf/open/floor/plasteel/patterned/ridged,
 /area/ship/cargo)
-"EW" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 9
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/engineering)
 "Fa" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 5
@@ -1732,9 +1710,7 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "Gu" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 5
-	},
+/obj/machinery/porta_turret/ship/ballistic,
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
 "Gv" = (
@@ -1948,11 +1924,6 @@
 /obj/item/storage/pill_bottle/iron,
 /obj/item/storage/pill_bottle/charcoal,
 /obj/structure/extinguisher_cabinet/directional/east,
-/obj/machinery/light_switch{
-	pixel_x = 19;
-	dir = 8;
-	pixel_y = 11
-	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "Lq" = (
@@ -2524,11 +2495,6 @@
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -19;
-	pixel_y = 12
-	},
 /turf/open/floor/plasteel/stairs{
 	dir = 1;
 	icon = 'icons/obj/stairs.dmi'
@@ -2716,9 +2682,7 @@
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
 "YT" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 10
-	},
+/obj/machinery/porta_turret/ship/ballistic,
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/engineering)
 "Zh" = (
@@ -2726,7 +2690,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 6
 	},
-/obj/machinery/fax,
+/obj/machinery/photocopier/faxmachine/longrange,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "Zt" = (
@@ -2805,7 +2769,7 @@ bA
 bA
 bA
 bA
-EW
+YT
 IX
 WY
 iJ

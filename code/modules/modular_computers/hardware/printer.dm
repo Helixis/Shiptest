@@ -23,19 +23,18 @@
 	if(!check_functionality())
 		return FALSE
 
-	var/obj/item/paper/printed_paper = new/obj/item/paper(holder.drop_location())
+	var/obj/item/paper/P = new/obj/item/paper(holder.drop_location())
 
 	// Damaged printer causes the resulting paper to be somewhat harder to read.
-
 	if(damage > damage_malfunction)
-		printed_paper.add_raw_text(stars(text_to_print, 100-malfunction_probability))
+		P.info = stars(text_to_print, 100-malfunction_probability)
 	else
-		printed_paper.add_raw_text(text_to_print)
+		P.info = text_to_print
 	if(paper_title)
-		printed_paper.name = paper_title
-	printed_paper.update_appearance()
+		P.name = paper_title
+	P.update_icon()
 	stored_paper--
-	printed_paper = null
+	P = null
 	return TRUE
 
 /obj/item/computer_hardware/printer/try_insert(obj/item/I, mob/living/user = null)

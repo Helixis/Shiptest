@@ -19,7 +19,7 @@
 		burning = FALSE
 		icon_state = "torch_unlit"
 		set_light(0)
-		update_appearance()
+		update_icon()
 		return
 	if(!burning)
 		user.visible_message("<span class='notice'>[user] starts to pull [src] free from the ground....</span>", "<span class='notice'>You start to pull [src] free from the ground...</span>")
@@ -33,7 +33,7 @@
 /obj/structure/destructible/tribal_torch/attackby(obj/item/W, mob/user, params)
 	if(W.get_temperature())
 		StartBurning()
-		update_appearance()
+		update_icon()
 		user.visible_message("<span class='notice'>[user] lights [src] with [W].</span>", "<span class='notice'>You light [src] with [W].</span>")
 		return
 
@@ -42,7 +42,7 @@
 		burning = TRUE
 		icon_state = "torch_lit"
 		set_light(7)
-		update_appearance()
+		update_icon()
 		return
 
 /obj/structure/destructible/tribal_torch/fire_act(exposed_temperature, exposed_volume)

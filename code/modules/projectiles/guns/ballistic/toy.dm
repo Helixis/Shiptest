@@ -85,10 +85,9 @@
 /obj/item/gun/ballistic/automatic/smg/c20r/toy //This is the syndicate variant with syndicate firing pin and riot darts.
 	name = "donksoft SMG"
 	desc = "A bullpup two-round burst toy SMG, designated 'C-20r'. Ages 8 and up."
-	can_suppress = FALSE
+	can_suppress = TRUE
 	item_flags = NONE
 	mag_type = /obj/item/ammo_box/magazine/toy/smgm45/riot
-	fire_sound = 'sound/items/syringeproj.ogg'
 	casing_ejector = FALSE
 	clumsy_check = FALSE
 

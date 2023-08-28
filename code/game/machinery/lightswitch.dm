@@ -3,7 +3,6 @@
 	name = "light switch"
 	icon = 'icons/obj/power.dmi'
 	icon_state = "light1"
-	base_icon_state = "light"
 	desc = "Make dark."
 	power_channel = AREA_USAGE_LIGHT
 	/// Set this to a string, path, or area instance to control that area
@@ -30,23 +29,20 @@
 	if(!name)
 		name = "light switch ([area.name])"
 
-	update_appearance()
-
-/obj/machinery/light_switch/update_appearance(updates=ALL)
-	. = ..()
-	luminosity = (machine_stat & NOPOWER) ? 0 : 1
+	update_icon()
 
 /obj/machinery/light_switch/update_icon_state()
+	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+	luminosity = 0
 	if(machine_stat & NOPOWER)
-		icon_state = "[base_icon_state]-p"
-		return ..()
-	icon_state = "[base_icon_state][area.lightswitch ? 1 : 0]"
-	return ..()
-
-/obj/machinery/light_switch/update_overlays()
-	. = ..()
-	if(!(machine_stat & NOPOWER))
-		SSvis_overlays.add_vis_overlay(src, icon, "[base_icon_state]-glow", EMISSIVE_LAYER, EMISSIVE_PLANE, dir, alpha)
+		icon_state = "light-p"
+	else
+		luminosity = 1
+		SSvis_overlays.add_vis_overlay(src, icon, "light-glow", EMISSIVE_LAYER, EMISSIVE_PLANE, dir, alpha)
+		if(area.lightswitch)
+			icon_state = "light1"
+		else
+			icon_state = "light0"
 
 /obj/machinery/light_switch/examine(mob/user)
 	. = ..()
@@ -57,10 +53,10 @@
 
 	area.lightswitch = !area.lightswitch
 	play_click_sound("button")
-	area.update_appearance()
+	area.update_icon()
 
 	for(var/obj/machinery/light_switch/L in area)
-		L.update_appearance()
+		L.update_icon()
 
 	area.power_change()
 
@@ -75,12 +71,3 @@
 		return
 	if(!(machine_stat & (BROKEN|NOPOWER)))
 		power_change()
-
-/obj/item/wallframe/light_switch
-	name = "lightswitch frame"
-	desc = "A ready-to-go light switch. Just slap it on a wall!"
-	icon_state = "button"
-	result_path = /obj/machinery/light_switch
-	pixel_shift = 24
-	inverse = FALSE
-	custom_materials = list(/datum/material/iron = 75)

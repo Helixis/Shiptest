@@ -47,14 +47,14 @@
 	else
 		target = null
 		STOP_PROCESSING(SSfastprocess, src)
-	update_appearance()
+	update_icon()
 
 /obj/item/pinpointer/process()
 	if(!active)
 		return PROCESS_KILL
 	if(process_scan)
 		scan_for_target()
-	update_appearance()
+	update_icon()
 
 /obj/item/pinpointer/proc/scan_for_target()
 	return

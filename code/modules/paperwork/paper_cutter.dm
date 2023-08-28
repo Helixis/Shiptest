@@ -15,11 +15,27 @@
 /obj/item/papercutter/Initialize()
 	. = ..()
 	storedcutter = new /obj/item/hatchet/cutterblade(src)
-	update_appearance()
+	update_icon()
+
+
+/obj/item/papercutter/suicide_act(mob/user)
+	if(storedcutter)
+		user.visible_message("<span class='suicide'>[user] is beheading [user.p_them()]self with [src.name]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		if(iscarbon(user))
+			var/mob/living/carbon/C = user
+			var/obj/item/bodypart/BP = C.get_bodypart(BODY_ZONE_HEAD)
+			if(BP)
+				BP.drop_limb()
+				playsound(loc, "desceration" ,50, TRUE, -1)
+		return (BRUTELOSS)
+	else
+		user.visible_message("<span class='suicide'>[user] repeatedly bashes [src.name] against [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		playsound(loc, 'sound/items/gavel.ogg', 50, TRUE, -1)
+		return (BRUTELOSS)
+
 
 /obj/item/papercutter/update_icon_state()
 	icon_state = (storedcutter ? "[initial(icon_state)]-cutter" : "[initial(icon_state)]")
-	return ..()
 
 /obj/item/papercutter/update_overlays()
 	. =..()
@@ -34,7 +50,7 @@
 		playsound(loc, "pageturn", 60, TRUE)
 		to_chat(user, "<span class='notice'>You place [P] in [src].</span>")
 		storedpaper = P
-		update_appearance()
+		update_icon()
 		return
 	if(istype(P, /obj/item/hatchet/cutterblade) && !storedcutter)
 		if(!user.transferItemToLoc(P, src))
@@ -42,7 +58,7 @@
 		to_chat(user, "<span class='notice'>You replace [src]'s [P].</span>")
 		P.forceMove(src)
 		storedcutter = P
-		update_appearance()
+		update_icon()
 		return
 	if(P.tool_behaviour == TOOL_SCREWDRIVER && storedcutter)
 		P.play_tool_sound(src)
@@ -64,7 +80,7 @@
 		to_chat(user, "<span class='notice'>You remove [src]'s [storedcutter].</span>")
 		user.put_in_hands(storedcutter)
 		storedcutter = null
-		update_appearance()
+		update_icon()
 
 	if(storedpaper)
 		playsound(src.loc, 'sound/weapons/slash.ogg', 50, TRUE)
@@ -73,7 +89,7 @@
 		qdel(storedpaper)
 		new /obj/item/paperslip(get_turf(src))
 		new /obj/item/paperslip(get_turf(src))
-		update_appearance()
+		update_icon()
 
 /obj/item/papercutter/MouseDrop(atom/over_object)
 	. = ..()

@@ -47,7 +47,7 @@
 
 
 /*
-SUBTLER
+SUBTLER  //WS - Subtle emotes
 */
 
 /datum/emote/living/subtler

@@ -150,10 +150,8 @@
 /obj/machinery/door/keycard/gates/update_icon_state()
 	if(density)
 		icon_state = "closed"
-		return ..()
 	else
 		icon_state = "open"
-		return ..()
 
 /obj/machinery/door/keycard/gates/drakelair
 	puzzle_id = "drakelairkey"

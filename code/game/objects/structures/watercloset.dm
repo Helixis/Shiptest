@@ -15,7 +15,7 @@
 /obj/structure/toilet/Initialize()
 	. = ..()
 	open = round(rand(0, 1))
-	update_appearance()
+	update_icon()
 
 
 /obj/structure/toilet/attack_hand(mob/living/user)
@@ -71,12 +71,11 @@
 			w_items -= I.w_class
 	else
 		open = !open
-		update_appearance()
+		update_icon()
 
 
 /obj/structure/toilet/update_icon_state()
 	icon_state = "toilet[open][cistern]"
-	return ..()
 
 /obj/structure/toilet/deconstruct()
 	if(!(flags_1 & NODECONSTRUCT_1))
@@ -96,7 +95,7 @@
 		if(I.use_tool(src, user, 30))
 			user.visible_message("<span class='notice'>[user] [cistern ? "replaces the lid on the cistern" : "lifts the lid off the cistern"]!</span>", "<span class='notice'>You [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]!</span>", "<span class='hear'>You hear grinding porcelain.</span>")
 			cistern = !cistern
-			update_appearance()
+			update_icon()
 	else if(I.tool_behaviour == TOOL_WRENCH && !(flags_1&NODECONSTRUCT_1))
 		I.play_tool_sound(src)
 		deconstruct()
@@ -437,20 +436,20 @@
 
 /obj/structure/curtain/proc/toggle()
 	open = !open
-	if(open)
-		layer = SIGN_LAYER
-		density = FALSE
-		set_opacity(FALSE)
-	else
+	update_icon()
+
+/obj/structure/curtain/update_icon()
+	if(!open)
+		icon_state = "[icon_type]-closed"
 		layer = WALL_OBJ_LAYER
+		open = FALSE
 		if(opaque_closed)
 			set_opacity(TRUE)
-
-	update_appearance()
-
-/obj/structure/curtain/update_icon_state()
-	icon_state = "[icon_type]-[open ? "open" : "closed"]"
-	return ..()
+	else
+		icon_state = "[icon_type]-open"
+		layer = SIGN_LAYER
+		open = TRUE
+		set_opacity(FALSE)
 
 /obj/structure/curtain/attackby(obj/item/W, mob/user)
 	if (istype(W, /obj/item/toy/crayon))

@@ -5,6 +5,8 @@
 /area/template_noop)
 "aS" = (
 /obj/structure/rack,
+/obj/item/clothing/under/costume/singer/blue,
+/obj/item/clothing/under/costume/singer/yellow,
 /turf/open/floor/plating,
 /area/ruin/jungle/onceler/main)
 "bh" = (
@@ -291,6 +293,11 @@
 /obj/effect/turf_decal/industrial/warning/corner{
 	dir = 1
 	},
+/turf/open/floor/plating,
+/area/ruin/jungle/onceler/main)
+"IE" = (
+/obj/structure/rack,
+/obj/item/clothing/under/rank/engineering/engineer/maintenance_tech/skirt,
 /turf/open/floor/plating,
 /area/ruin/jungle/onceler/main)
 "LW" = (
@@ -939,7 +946,7 @@ bh
 Pb
 Ws
 zu
-aS
+IE
 AR
 NO
 ir

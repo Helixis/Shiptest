@@ -3,7 +3,6 @@
 	desc = "If you see this, yell at adminbus."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "dispenser"
-	base_icon_state = "dispenser"
 	amount = 10
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	flags_1 = NODECONSTRUCT_1
@@ -59,7 +58,7 @@
 			var/input = text2num(params["amount"])
 			if(input)
 				amount = input
-	update_appearance()
+	update_icon()
 
 /obj/machinery/chem_dispenser/chem_synthesizer/proc/find_reagent(input)
 	. = FALSE

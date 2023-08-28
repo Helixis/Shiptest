@@ -24,12 +24,11 @@
 	else if(LAZYACCESS(modifiers, RIGHT_CLICK))
 		bd.mode.change_settings(usr.client)
 
-	update_appearance()
+	update_icon()
 	return 1
 
 /atom/movable/screen/buildmode/mode/update_icon_state()
 	icon_state = bd.mode.get_button_iconstate()
-	return ..()
 
 /atom/movable/screen/buildmode/help
 	icon_state = "buildhelp"
@@ -47,11 +46,10 @@
 
 /atom/movable/screen/buildmode/bdir/update_icon_state()
 	dir = bd.build_dir
-	return ..()
 
 /atom/movable/screen/buildmode/bdir/Click()
 	bd.toggle_dirswitch()
-	update_appearance()
+	update_icon()
 	return 1
 
 // used to switch between modes

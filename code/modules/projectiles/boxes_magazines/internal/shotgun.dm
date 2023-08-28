@@ -1,8 +1,9 @@
 /obj/item/ammo_box/magazine/internal/shot
 	name = "shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
-	caliber = "12ga"
+	caliber = "shotgun"
 	max_ammo = 4
+	multiload = 0
 
 /obj/item/ammo_box/magazine/internal/shot/tube
 	name = "dual feed shotgun internal tube"
@@ -25,7 +26,6 @@
 /obj/item/ammo_box/magazine/internal/shot/dual
 	name = "double-barrel shotgun internal magazine"
 	max_ammo = 2
-	instant_load = TRUE
 
 /obj/item/ammo_box/magazine/internal/shot/improvised
 	name = "improvised shotgun internal magazine"
@@ -45,17 +45,18 @@
 
 /obj/item/ammo_box/magazine/internal/shot/winchester
 	name = "winchester internal magazine"
-	ammo_type = /obj/item/ammo_casing/c38
-	caliber = ".38"
+	ammo_type = /obj/item/ammo_casing/c38/hunting
+	caliber = "38"
 	max_ammo = 7
+	multiload = FALSE
 
 /obj/item/ammo_box/magazine/internal/shot/winchester/lethal
-	ammo_type = /obj/item/ammo_casing/c38
+	ammo_type = /obj/item/ammo_casing/c38/hunting
 
 /obj/item/ammo_box/magazine/internal/shot/contender
 	name = "contender internal magazine"
 	ammo_type = /obj/item/ammo_casing/a4570
-	caliber = ".45-70"
+	caliber = "4570"
 	max_ammo = 1
 	multiload = FALSE
 

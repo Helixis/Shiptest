@@ -58,7 +58,7 @@
 			powered = TRUE
 	else
 		powered = FALSE
-	update_appearance()
+	update_icon()
 
 /obj/item/defibrillator/update_overlays()
 	. = ..()
@@ -130,7 +130,7 @@
 
 	else if(W.tool_behaviour == TOOL_SCREWDRIVER)
 		if(cell)
-			cell.update_appearance()
+			cell.update_icon()
 			cell.forceMove(get_turf(src))
 			cell = null
 			to_chat(user, "<span class='notice'>You remove the cell from [src].</span>")
@@ -232,7 +232,7 @@
 			visible_message("<span class='notice'>[src] beeps: Charge depleted.</span>")
 			playsound(src, 'sound/machines/defib_failed.ogg', 50, FALSE)
 	paddles.cooldown = FALSE
-	paddles.update_appearance()
+	paddles.update_icon()
 	update_power()
 
 /obj/item/defibrillator/compact
@@ -358,13 +358,13 @@
 	if(req_defib || !time)
 		return
 	cooldown = TRUE
-	update_appearance()
+	update_icon()
 	sleep(time)
 	var/turf/T = get_turf(src)
 	T.audible_message("<span class='notice'>[src] beeps: Unit is recharged.</span>")
 	playsound(src, 'sound/machines/defib_ready.ogg', 50, FALSE)
 	cooldown = FALSE
-	update_appearance()
+	update_icon()
 
 /obj/item/shockpaddles/Initialize()
 	. = ..()
@@ -377,14 +377,20 @@
 		return INITIALIZE_HINT_QDEL
 	defib = loc
 	busy = FALSE
-	update_appearance()
+	update_icon()
+
+/obj/item/shockpaddles/suicide_act(mob/user)
+	user.visible_message("<span class='danger'>[user] is putting the live paddles on [user.p_their()] chest! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	if(req_defib)
+		defib.deductcharge(revivecost)
+	playsound(src, 'sound/machines/defib_zap.ogg', 50, TRUE, -1)
+	return (OXYLOSS)
 
 /obj/item/shockpaddles/update_icon_state()
 	icon_state = "[base_icon_state][wielded]"
 	item_state = icon_state
 	if(cooldown)
 		icon_state = "[base_icon_state][wielded]_cooldown"
-	return ..()
 
 /obj/item/shockpaddles/dropped(mob/user)
 	if(!req_defib)
@@ -477,7 +483,7 @@
 		defib.deductcharge(revivecost)
 		cooldown = TRUE
 	busy = FALSE
-	update_appearance()
+	update_icon()
 	if(req_defib)
 		defib.cooldowncheck(user)
 	else
@@ -491,7 +497,7 @@
 	user.visible_message("<span class='warning'>[user] begins to place [src] on [H]'s chest.</span>",
 		"<span class='warning'>You overcharge the paddles and begin to place them onto [H]'s chest...</span>")
 	busy = TRUE
-	update_appearance()
+	update_icon()
 	if(do_after(user, 15, target = H))
 		user.visible_message("<span class='notice'>[user] places [src] on [H]'s chest.</span>",
 			"<span class='warning'>You place [src] on [H]'s chest and begin to charge them.</span>")
@@ -504,13 +510,13 @@
 		if(do_after(user, 15, target = H)) //Takes longer due to overcharging
 			if(!H)
 				busy = FALSE
-				update_appearance()
+				update_icon()
 				return
 			if(H && H.stat == DEAD)
 				to_chat(user, "<span class='warning'>[H] is dead.</span>")
 				playsound(src, 'sound/machines/defib_failed.ogg', 50, FALSE)
 				busy = FALSE
-				update_appearance()
+				update_icon()
 				return
 			user.visible_message("<span class='boldannounce'><i>[user] shocks [H] with \the [src]!</span>", "<span class='warning'>You shock [H] with \the [src]!</span>")
 			playsound(src, 'sound/machines/defib_zap.ogg', 100, TRUE, -1)
@@ -530,18 +536,18 @@
 				defib.deductcharge(revivecost)
 				cooldown = TRUE
 			busy = FALSE
-			update_appearance()
+			update_icon()
 			if(!req_defib)
 				recharge(60)
 			if(req_defib && (defib.cooldowncheck(user)))
 				return
 	busy = FALSE
-	update_appearance()
+	update_icon()
 
 /obj/item/shockpaddles/proc/do_help(mob/living/carbon/H, mob/living/user)
 	user.visible_message("<span class='warning'>[user] begins to place [src] on [H]'s chest.</span>", "<span class='warning'>You begin to place [src] on [H]'s chest...</span>")
 	busy = TRUE
-	update_appearance()
+	update_icon()
 	if(do_after(user, 30, target = H)) //beginning to place the paddles on patient's chest to allow some time for people to move away to stop the process
 		user.visible_message("<span class='notice'>[user] places [src] on [H]'s chest.</span>", "<span class='warning'>You place [src] on [H]'s chest.</span>")
 		playsound(src, 'sound/machines/defib_charge.ogg', 75, FALSE)
@@ -555,7 +561,7 @@
 						user.audible_message("<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Patient's chest is obscured. Operation aborted.</span>")
 						playsound(src, 'sound/machines/defib_failed.ogg', 50, FALSE)
 						busy = FALSE
-						update_appearance()
+						update_icon()
 						return
 			if(H.stat == DEAD)
 				H.visible_message("<span class='warning'>[H]'s body convulses a bit.</span>")
@@ -566,8 +572,9 @@
 				shock_touching(30, H)
 				var/failed
 
-
-				if (H.hellbound)
+				if (H.suiciding)
+					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Recovery of patient impossible. Further attempts futile.</span>"
+				else if (H.hellbound)
 					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's soul appears to be on another plane of existence. Further attempts futile.</span>"
 				else if (!heart)
 					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's heart is missing.</span>"
@@ -580,6 +587,8 @@
 					if(BR)
 						if(BR.organ_flags & ORGAN_FAILING)
 							failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's brain is too damaged, repair and try again. </span>"
+						if(BR.suicided || BR.brainmob?.suiciding)
+							failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - No intelligence pattern can be detected in patient's brain. Further attempts futile.</span>"
 					else
 						failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's brain is missing. Further attempts futile.</span>"
 
@@ -610,7 +619,7 @@
 				if(req_defib)
 					defib.deductcharge(revivecost)
 					cooldown = 1
-				update_appearance()
+				update_icon()
 				if(req_defib)
 					defib.cooldowncheck(user)
 				else
@@ -630,7 +639,7 @@
 				user.visible_message("<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Patient is not in a valid state. Operation aborted.</span>")
 				playsound(src, 'sound/machines/defib_failed.ogg', 50, FALSE)
 	busy = FALSE
-	update_appearance()
+	update_icon()
 
 /obj/item/shockpaddles/cyborg
 	name = "cyborg defibrillator paddles"

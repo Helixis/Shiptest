@@ -37,7 +37,7 @@
 	charge = maxcharge
 	if(ratingdesc)
 		desc += " This one has a rating of [DisplayEnergy(maxcharge)], and you should not swallow it."
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -101,6 +101,10 @@
 		. += "<span class='danger'>This power cell seems to be faulty!</span>"
 	else
 		. += "The charge meter reads [round(src.percent())]%."
+
+/obj/item/stock_parts/cell/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is licking the electrodes of [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	return (FIRELOSS)
 
 /obj/item/stock_parts/cell/on_reagent_change(changetype)
 	rigged = !isnull(reagents.has_reagent(/datum/reagent/toxin/plasma, 5)) //has_reagent returns the reagent datum
@@ -203,7 +207,7 @@
 /obj/item/stock_parts/cell/crap/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/upgraded
 	name = "upgraded power cell"
@@ -225,7 +229,7 @@
 /obj/item/stock_parts/cell/secborg/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/mini_egun
 	name = "miniature energy gun power cell"
@@ -271,7 +275,7 @@
 /obj/item/stock_parts/cell/high/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/super
 	name = "super-capacity power cell"
@@ -284,7 +288,7 @@
 /obj/item/stock_parts/cell/super/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/hyper
 	name = "hyper-capacity power cell"
@@ -297,7 +301,7 @@
 /obj/item/stock_parts/cell/hyper/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/bluespace
 	name = "bluespace power cell"
@@ -311,7 +315,7 @@
 /obj/item/stock_parts/cell/bluespace/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/infinite
 	name = "infinite-capacity power cell!"
@@ -367,7 +371,7 @@
 /obj/item/stock_parts/cell/emproof/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/emproof/empty/ComponentInitialize()
 	. = ..()
@@ -417,9 +421,9 @@
 /obj/item/stock_parts/cell/gun/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
-/obj/item/stock_parts/cell/gun/update_appearance()
+/obj/item/stock_parts/cell/gun/update_icon()
 	cut_overlays()
 	if(grown_battery)
 		. += mutable_appearance('icons/obj/power.dmi', "grown_wires")
@@ -433,7 +437,6 @@
 		add_overlay("[initial(icon_state)]-o2")
 	else
 		add_overlay("[initial(icon_state)]-o1")
-	return ..()
 
 /obj/item/stock_parts/cell/gun/upgraded
 	name = "upgraded weapon power cell"
@@ -445,7 +448,7 @@
 /obj/item/stock_parts/cell/gun/upgraded/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/gun/mini
 	name = "miniature weapon power cell"
@@ -457,7 +460,7 @@
 /obj/item/stock_parts/cell/gun/mini/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 /obj/item/stock_parts/cell/gun/solgov
 	name = "SolGov power cell"
@@ -474,7 +477,7 @@
 /obj/item/stock_parts/cell/gun/large/empty/Initialize()
 	. = ..()
 	charge = 0
-	update_appearance()
+	update_icon()
 
 
 #undef CELL_DRAIN_TIME

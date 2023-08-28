@@ -63,7 +63,7 @@
 		assembly.state = AIRLOCK_ASSEMBLY_NEEDS_ELECTRONICS
 		assembly.created_name = name
 		assembly.update_name()
-		assembly.update_appearance()
+		assembly.update_icon()
 		assembly.welded = TRUE
 		assembly.dir = dir
 		new /obj/item/electronics/airlock(loc)
@@ -136,8 +136,10 @@
 			playsound(src, close_sound, 30, FALSE)
 
 /obj/machinery/door/poddoor/update_icon_state()
-	. = ..()
-	icon_state = density ? "closed" : "open"
+	if(density)
+		icon_state = "closed"
+	else
+		icon_state = "open"
 
 /obj/machinery/door/poddoor/try_to_activate_door(mob/user)
 	return

@@ -39,6 +39,15 @@
 /obj/item/melee/baton/get_cell()
 	return cell
 
+/obj/item/melee/baton/suicide_act(mob/user)
+	if(cell && cell.charge && turned_on)
+		user.visible_message("<span class='suicide'>[user] is putting the live [name] in [user.p_their()] mouth! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		. = (FIRELOSS)
+		attack(user,user)
+	else
+		user.visible_message("<span class='suicide'>[user] is shoving the [name] down their throat! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		. = (OXYLOSS)
+
 /obj/item/melee/baton/Initialize()
 	. = ..()
 	if(preload_cell_type)
@@ -46,7 +55,7 @@
 			log_mapping("[src] at [AREACOORD(src)] had an invalid preload_cell_type: [preload_cell_type].")
 		else
 			cell = new preload_cell_type(src)
-	update_appearance()
+	update_icon()
 	RegisterSignal(src, COMSIG_PARENT_ATTACKBY, .proc/convert)
 
 
@@ -73,7 +82,7 @@
 	if(A == cell)
 		cell = null
 		turned_on = FALSE
-		update_appearance()
+		update_icon()
 	return ..()
 
 /obj/item/melee/baton/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
@@ -93,19 +102,17 @@
 		if(turned_on && cell.charge < cell_hit_cost)
 			//we're below minimum, turn off
 			turned_on = FALSE
-			update_appearance()
+			update_icon()
 			playsound(src, activate_sound, 75, TRUE, -1)
 
 
 /obj/item/melee/baton/update_icon_state()
 	if(turned_on)
 		icon_state = "[initial(icon_state)]_active"
-		return ..()
-	if(!cell)
+	else if(!cell)
 		icon_state = "[initial(icon_state)]_nocell"
-		return ..()
-	icon_state = "[initial(icon_state)]"
-	return ..()
+	else
+		icon_state = "[initial(icon_state)]"
 
 /obj/item/melee/baton/examine(mob/user)
 	. = ..()
@@ -127,7 +134,7 @@
 				return
 			cell = W
 			to_chat(user, "<span class='notice'>You install a cell in [src].</span>")
-			update_appearance()
+			update_icon()
 
 	else if(W.tool_behaviour == TOOL_SCREWDRIVER)
 		tryremovecell(user)
@@ -136,12 +143,12 @@
 
 /obj/item/melee/baton/proc/tryremovecell(mob/user)
 	if(cell && can_remove_cell)
-		cell.update_appearance()
+		cell.update_icon()
 		cell.forceMove(get_turf(src))
 		cell = null
 		to_chat(user, "<span class='notice'>You remove the cell from [src].</span>")
 		turned_on = FALSE
-		update_appearance()
+		update_icon()
 
 /obj/item/melee/baton/attack_self(mob/user)
 	toggle_on(user)
@@ -157,7 +164,7 @@
 			to_chat(user, "<span class='warning'>[src] does not have a power source!</span>")
 		else
 			to_chat(user, "<span class='warning'>[src] is out of charge.</span>")
-	update_appearance()
+	update_icon()
 	add_fingerprint(user)
 
 /obj/item/melee/baton/proc/clumsy_check(mob/living/carbon/human/user)
@@ -326,6 +333,15 @@
 			addtimer(CALLBACK(src, /atom/movable.proc/throw_at, thrownby, throw_range+2, throw_speed, null, TRUE), 1)
 	else
 		return ..()
+
+
+/obj/item/melee/baton/boomerang/update_icon_state()
+	if(turned_on)
+		icon_state = "[initial(icon_state)]_active"
+	else if(!cell)
+		icon_state = "[initial(icon_state)]_nocell"
+	else
+		icon_state = "[initial(icon_state)]"
 
 /obj/item/melee/baton/boomerang/loaded //Same as above, comes with a cell.
 	preload_cell_type = /obj/item/stock_parts/cell/high

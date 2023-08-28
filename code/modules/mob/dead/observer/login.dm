@@ -14,5 +14,9 @@
 		preferred_form = client.prefs.ghost_form
 		ghost_orbit = client.prefs.ghost_orbit
 
-	update_icon(ALL, preferred_form)
+	var/turf/T = get_turf(src)
+	if (isturf(T))
+		update_z(T.z)
+
+	update_icon(preferred_form)
 	updateghostimages()

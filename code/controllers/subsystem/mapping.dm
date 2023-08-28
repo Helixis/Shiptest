@@ -23,8 +23,6 @@ SUBSYSTEM_DEF(mapping)
 	var/list/shuttle_templates = list()
 	var/list/shelter_templates = list()
 	var/list/holodeck_templates = list()
-	// List mapping TYPES of outpost map templates to instances of their singletons.
-	var/list/outpost_templates = list()
 
 	var/list/areas_in_z = list()
 
@@ -37,6 +35,7 @@ SUBSYSTEM_DEF(mapping)
 	var/station_start  // should only be used for maploading-related tasks
 	var/space_levels_so_far = 0
 	var/list/datum/space_level/z_list
+	var/datum/space_level/empty_space
 
 	/// List of all map zones
 	var/list/map_zones = list()
@@ -77,37 +76,15 @@ SUBSYSTEM_DEF(mapping)
 
 	for(var/N in nuke_tiles)
 		var/turf/open/floor/circuit/C = N
-		C.update_appearance()
+		C.update_icon()
 
 /datum/controller/subsystem/mapping/Recover()
 	flags |= SS_NO_INIT
 	initialized = SSmapping.initialized
-
 	map_templates = SSmapping.map_templates
-
 	ruins_templates = SSmapping.ruins_templates
-	ruin_types_list = SSmapping.ruin_types_list
-	ruin_types_probabilities = SSmapping.ruin_types_probabilities
+	ruin_types_list = SSmapping.ruins_templates
 
-	shuttle_templates = SSmapping.shuttle_templates
-	shelter_templates = SSmapping.shelter_templates
-	holodeck_templates = SSmapping.holodeck_templates
-
-	outpost_templates = SSmapping.outpost_templates
-
-	shuttle_templates = SSmapping.shuttle_templates
-	shelter_templates = SSmapping.shelter_templates
-	holodeck_templates = SSmapping.holodeck_templates
-
-	areas_in_z = SSmapping.areas_in_z
-	map_zones = SSmapping.map_zones
-	biomes = SSmapping.biomes
-	planet_types = SSmapping.planet_types
-
-	maplist = SSmapping.maplist
-	ship_purchase_list = SSmapping.ship_purchase_list
-
-	virtual_z_translation = SSmapping.virtual_z_translation
 	z_list = SSmapping.z_list
 
 #define INIT_ANNOUNCE(X) to_chat(world, "<span class='boldannounce'>[X]</span>"); log_world(X)
@@ -128,7 +105,6 @@ SUBSYSTEM_DEF(mapping)
 	load_ship_templates()
 	preloadShelterTemplates()
 	preloadHolodeckTemplates()
-	preloadOutpostTemplates()
 
 /datum/controller/subsystem/mapping/proc/preloadRuinTemplates()
 	for(var/datum/planet_type/type as anything in subtypesof(/datum/planet_type))
@@ -175,7 +151,6 @@ SUBSYSTEM_DEF(mapping)
 
 #define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); return; }
 #define CHECK_LIST_EXISTS(X) if(!islist(data[X])) { log_world("[##X] missing from json!"); return; }
-
 /datum/controller/subsystem/mapping/proc/load_ship_template_individual(filename,mapfolder)
 	var/file = file(mapfolder + filename)
 	if(!file)
@@ -244,6 +219,9 @@ SUBSYSTEM_DEF(mapping)
 	if(isnum(data["officer_time_coeff"]))
 		S.officer_time_coeff = data["officer_time_coeff"]
 
+	if(isnum(data["starting_funds"]))
+		S.starting_funds = data["starting_funds"]
+
 	if(isnum(data["enabled"]) && data["enabled"])
 		S.enabled = TRUE
 		ship_purchase_list[S.name] = S
@@ -256,14 +234,14 @@ SUBSYSTEM_DEF(mapping)
 	maplist = list()
 	ship_purchase_list = list()
 	var/list/filelist = flist("_maps/configs/")
-	var/list/filelistHISPANIA = flist("_maps/HISPANIAconfigs/") //Cambios Hispania
+	var/list/filelistHISPANIA = flist("_maps/HISPANIAconfigs/")
 
 	for(var/filename in filelistHISPANIA)
 		load_ship_template_individual(filename,"_maps/HISPANIAconfigs/")
 
 	for(var/filename in filelist)
 		load_ship_template_individual(filename,"_maps/configs/")
-//Fin cambios hispania
+
 #undef CHECK_STRING_EXISTS
 #undef CHECK_LIST_EXISTS
 
@@ -305,12 +283,6 @@ SUBSYSTEM_DEF(mapping)
 
 		holodeck_templates[holo_template.template_id] = holo_template
 		map_templates[holo_template.template_id] = holo_template
-
-/datum/controller/subsystem/mapping/proc/preloadOutpostTemplates()
-	for(var/datum/map_template/outpost/outpost_type as anything in subtypesof(/datum/map_template/outpost))
-		var/datum/map_template/outpost/outpost_template = new outpost_type()
-		outpost_templates[outpost_template.type] = outpost_template
-		map_templates[outpost_template.name] = outpost_template
 
 //////////////////
 // RESERVATIONS //

@@ -2728,7 +2728,7 @@
 	O.transfer_fingerprints_to(conc_floor)
 	conc_floor.harden_lvl = 0
 	conc_floor.check_harden()
-	conc_floor.update_appearance()
+	conc_floor.update_icon()
 	qdel(O)
 	return
 

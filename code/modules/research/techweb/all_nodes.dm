@@ -13,9 +13,9 @@
 		// Cargo Stuff
 		"c-reader", "desttagger", "salestagger", "handlabel", "packagewrap",
 		// Research Stuff
-		"destructive_analyzer", "experimentor", "rdconsole", "bepis", "rdserver", "design_disk", "tech_disk", "mechfab",
+		"destructive_analyzer", "circuit_imprinter", "experimentor", "rdconsole", "bepis", "rdserver", "design_disk", "tech_disk", "mechfab",
 		// Miscellaneous Stufff
-		"paystand", "space_heater", "bucket", "plastic_knife", "plastic_fork", "plastic_spoon", "fax",
+		"paystand", "space_heater", "bucket", "plastic_knife", "plastic_fork", "plastic_spoon",
 		// Security Stuff
 		"sec_rshot", "sec_beanbag_slug", "sec_slug", "sec_Islug", "sec_dart", 	"sec_38", "buckshot_shell", "beanbag_slug", "rubber_shot",
 		//Handgun Ammo (Security)
@@ -248,9 +248,18 @@
 	display_name = "Miniaturized Bluespace Research"
 	description = "Extreme reduction in space required for bluespace engines, leading to portable bluespace technology."
 	prereq_ids = list("bluespace_travel", "practical_bluespace", "high_efficiency")
-	design_ids = list("bluespace_matter_bin", "femto_mani", "triphasic_scanning", "quantum_keycard", "wormholeprojector", "swapper")
+	design_ids = list("bluespace_matter_bin", "femto_mani", "bluespacebodybag", "triphasic_scanning", "quantum_keycard", "wormholeprojector", "swapper")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
+
+/datum/techweb_node/advanced_bluespace
+	id = "bluespace_storage"
+	display_name = "Advanced Bluespace Storage"
+	description = "With the use of bluespace we can create even more advanced storage devices than we could have ever done"
+	prereq_ids = list("micro_bluespace", "janitor")
+	design_ids = list("bag_holding")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	export_price = 3000
 
 /datum/techweb_node/practical_bluespace
 	id = "practical_bluespace"
@@ -1164,46 +1173,10 @@
 	id = "basic_shuttle"
 	display_name = "Basic Shuttle Research"
 	description = "Research the technology required to create and use basic shuttles."
-	prereq_ids = list("adv_engi")
-	design_ids = list("engine_plasma", "engine_ion", "engine_heater", "engine_smes")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-	export_price = 500
-
-/datum/techweb_node/artillery_shuttle_tech
-	id = "artillery_shuttle"
-	display_name = "Artillery Shuttle Research"
-	description = "Research the technology required to create basic combat tech for shuttles."
-	prereq_ids = list("basic_shuttle")
-	design_ids = list("harblun_lg", "interd")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
-	export_price = 250
-
-/datum/techweb_node/interdiction_shuttle_tech
-	id = "interdiction_shuttle"
-	display_name = "Interdiction Shuttle Research"
-	description = "Research the technology required to create proper interdiction machines."
-	prereq_ids = list("artillery_shuttle")
-	design_ids = list("harblun")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
+	prereq_ids = list("bluespace_travel", "adv_engi")
+	design_ids = list("engine_plasma", "engine_ion", "engine_heater", "engine_smes", "shuttle_helm", "rapid_shuttle_designator")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
-
-/datum/techweb_node/adv_interdiction_shuttle_tech
-	id = "adv_interdiction_shuttle"
-	display_name = "Advanced Interdiction Shuttle Research"
-	description = "Research the technology required to create high-gamma interdiction machines."
-	prereq_ids = list("interdiction_shuttle", "bluespace_travel")
-	design_ids = list("harblun_mg")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 50000)
-	export_price = 5000
-
-/datum/techweb_node/independent_shuttle_tech
-	id = "intermediate_shuttle"
-	display_name = "Independent Shuttle Research"
-	description = "Research the technology required to create new basic shuttles."
-	prereq_ids = list("basic_shuttle", "bluespace_travel")
-	design_ids = list("shuttle_helm", "rapid_shuttle_designator")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
-	export_price = 1000 // Nah
 
 /datum/techweb_node/exp_shuttle_tech
 	id = "exp_shuttle"

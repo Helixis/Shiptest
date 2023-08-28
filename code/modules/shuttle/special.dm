@@ -10,7 +10,6 @@
 	icon = 'icons/obj/machines/magic_emitter.dmi'
 	icon_state = "wabbajack_statue"
 	icon_state_on = "wabbajack_statue_on"
-	base_icon_state = "wabbajack_statue"
 	active = FALSE
 	allow_switch_interact = FALSE
 	var/list/active_tables = list()
@@ -20,11 +19,13 @@
 	. = ..()
 	if(prob(50))
 		desc = "Oh no, not again."
-	update_appearance()
+	update_icon()
 
 /obj/machinery/power/emitter/energycannon/magical/update_icon_state()
-	. = ..()
-	icon_state = active ? icon_state_on : initial(icon_state)
+	if(active)
+		icon_state = icon_state_on
+	else
+		icon_state = initial(icon_state)
 
 /obj/machinery/power/emitter/energycannon/magical/process()
 	. = ..()
@@ -38,7 +39,7 @@
 			visible_message("<span class='revenboldnotice'>\
 				[src] closes its eyes.</span>")
 		active = FALSE
-	update_appearance()
+	update_icon()
 
 /obj/machinery/power/emitter/energycannon/magical/attackby(obj/item/W, mob/user, params)
 	return

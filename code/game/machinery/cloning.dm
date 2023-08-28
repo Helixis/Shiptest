@@ -97,7 +97,7 @@
 		beaker = new_beaker
 	else
 		beaker = null
-	update_appearance()
+	update_icon()
 	return TRUE
 
 /obj/machinery/clonepod/ui_interact(mob/user, datum/tgui/ui)
@@ -200,16 +200,20 @@
 		if(!QDELETED(clonemind.current))
 			if(clonemind.current.stat != DEAD)	//mind is associated with a non-dead body
 				return NONE
+			if(clonemind.current.suiciding) // Mind is associated with a body that is suiciding.
+				return NONE
 		if(!clonemind.active)
 			// get_ghost() will fail if they're unable to reenter their body
 			var/mob/dead/observer/G = clonemind.get_ghost()
 			if(!G)
 				return NONE
+			if(G.suiciding) // The ghost came from a body that is suiciding.
+				return NONE
 		if(clonemind.damnation_type) //Can't clone the damned.
 			INVOKE_ASYNC(src, .proc/horrifyingsound)
 			mess = TRUE
 			icon_state = "pod_g"
-			update_appearance()
+			update_icon()
 			return NONE
 	attempting = TRUE //One at a time!!
 	countdown.start()
@@ -273,6 +277,7 @@
 
 		H.set_cloned_appearance()
 
+		H.set_suicide(FALSE)
 	attempting = FALSE
 	return CLONING_SUCCESS
 
@@ -287,7 +292,7 @@
 			connected_message("Clone Ejected: Not enough material.")
 			if(internal_radio)
 				SPEAK("The cloning of [mob_occupant.real_name] has been ended prematurely due to insufficient material.")
-		if(mob_occupant && (mob_occupant.stat == DEAD) ||  mob_occupant.hellbound)  //Autoeject corpses.
+		if(mob_occupant && (mob_occupant.stat == DEAD) || (mob_occupant.suiciding) || mob_occupant.hellbound)  //Autoeject corpses and suiciding dudes.
 			connected_message("Clone Rejected: Deceased.")
 			if(internal_radio)
 				SPEAK("The cloning of [mob_occupant.real_name] has been \
@@ -591,7 +596,7 @@
 
 /obj/item/paper/guides/jobs/medical/cloning
 	name = "paper - 'H-87 Cloning Apparatus Manual"
-	default_raw_text = {"<h4>Getting Started</h4>
+	info = {"<h4>Getting Started</h4>
 	Congratulations, you have has purchased the H-87 industrial cloning device!<br>
 	Using the H-87 is almost as simple as brain surgery! Simply insert the target humanoid into the scanning chamber and select the scan option to create a new profile!<br>
 	<b>That's all there is to it!</b><br>

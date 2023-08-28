@@ -231,10 +231,9 @@
 
 /turf/open/floor/carpet/Initialize(mapload, inherited_virtual_z)
 	. = ..()
-	update_appearance()
+	update_icon()
 
 /turf/open/floor/carpet/update_icon()
-	. = ..()
 	if(!..())
 		return 0
 	if(!broken && !burnt)
@@ -442,11 +441,11 @@
 
 /turf/open/floor/carpet/break_tile()
 	broken = TRUE
-	update_appearance()
+	update_icon()
 
 /turf/open/floor/carpet/burn_tile()
 	burnt = TRUE
-	update_appearance()
+	update_icon()
 
 /turf/open/floor/carpet/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	return FALSE

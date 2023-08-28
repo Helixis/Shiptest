@@ -13,7 +13,7 @@
 	. = ..()
 	if(blood_type != null)
 		reagents.add_reagent(unique_blood ? unique_blood : /datum/reagent/blood, 200, list("viruses"=null,"blood_DNA"=null,"blood_type"=get_blood_type(blood_type),"resistances"=null,"trace_chem"=null))
-		update_appearance()
+		update_icon()
 
 /obj/item/reagent_containers/blood/on_reagent_change(changetype)
 	if(reagents)
@@ -22,11 +22,10 @@
 			blood_type = B.data["blood_type"]
 		else
 			blood_type = null
-	update_name()
-	update_appearance()
+	update_pack_name()
+	update_icon()
 
-/obj/item/reagent_containers/blood/update_name(updates)
-	. = ..()
+/obj/item/reagent_containers/blood/proc/update_pack_name()
 	if(!labelled)
 		if(blood_type)
 			name = "blood pack[blood_type ? " - [unique_blood ? blood_type : blood_type.name]" : null]"
@@ -89,6 +88,6 @@
 			name = "blood pack - [t]"
 		else
 			labelled = 0
-			update_name()
+			update_pack_name()
 	else
 		return ..()

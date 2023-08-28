@@ -51,7 +51,6 @@
 /datum/outfit/job/brig_phys/syndicate/sbc
 	name = "Medic (Twinkleshine)"
 
-	uniform = /obj/item/clothing/under/rank/medical/doctor/red
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile/evil
 	alt_uniform = /obj/item/clothing/under/syndicate/cybersun
 	glasses = /obj/item/clothing/glasses/hud/health
@@ -61,9 +60,8 @@
 	suit = /obj/item/clothing/suit/longcoat/roboblack
 	alt_suit = /obj/item/clothing/suit/toggle/labcoat
 	suit_store =  null
-	head = null
 	ears = /obj/item/radio/headset/syndicate
-	mask = /obj/item/clothing/mask/gas/syndicate/voicechanger
+	mask = /obj/item/clothing/mask/chameleon
 	id = /obj/item/card/id/syndicate_command/crew_id/med
 	implants = list(/obj/item/implant/weapons_auth)
 	backpack_contents = list(/obj/item/pda/brig_phys)

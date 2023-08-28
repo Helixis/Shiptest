@@ -382,6 +382,7 @@
 /area/ship/crew/office)
 "fC" = (
 /obj/structure/table/wood,
+/obj/machinery/photocopier/faxmachine/longrange,
 /obj/structure/window/plasma/reinforced/spawner/east,
 /obj/structure/window/plasma/reinforced/spawner,
 /turf/open/floor/carpet/purple,

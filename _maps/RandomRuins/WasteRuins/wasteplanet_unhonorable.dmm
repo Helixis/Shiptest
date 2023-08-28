@@ -6,89 +6,82 @@
 /obj/structure/sign/warning/radiation,
 /turf/closed/wall/r_wall,
 /area/ruin)
-"d" = (
-/obj/structure/radioactive,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/ruin)
 "e" = (
 /obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/ruin)
-"g" = (
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "i" = (
 /obj/effect/gibspawner,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "j" = (
 /obj/item/grenade/syndieminibomb,
 /obj/item/ammo_box/magazine/aknt,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "k" = (
 /obj/structure/radioactive/stack,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "l" = (
 /obj/structure/table/reinforced,
 /obj/item/ammo_box/magazine/aknt{
 	pixel_x = -15;
 	pixel_y = -9
 	},
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "m" = (
 /obj/effect/radiation,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "n" = (
 /obj/item/ammo_box/magazine/aknt,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "o" = (
 /obj/structure/fence/door,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "p" = (
 /obj/item/stack/sheet/mineral/uranium/five,
 /obj/effect/mine/shrapnel,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "q" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/ballistic/automatic/assualt/ak47/nt,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "r" = (
 /obj/item/stack/sheet/mineral/uranium/five,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "s" = (
 /obj/structure/fence/corner{
 	dir = 10
 	},
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "t" = (
 /obj/item/stack/sheet/mineral/uranium/five,
 /obj/structure/radioactive/stack,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "v" = (
 /obj/machinery/door/airlock/vault,
 /obj/effect/mapping_helpers/airlock/locked,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin/powered)
 "x" = (
 /obj/item/stack/sheet/mineral/uranium/five,
 /obj/structure/radioactive,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "y" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/energy/e_gun/nuclear,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "z" = (
 /obj/structure/sign/warning/radiation,
@@ -97,7 +90,7 @@
 "A" = (
 /obj/item/grenade/frag,
 /obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "B" = (
 /turf/closed/wall/r_wall/rust,
@@ -105,15 +98,11 @@
 "C" = (
 /obj/item/ammo_box/magazine/aknt,
 /obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "D" = (
 /obj/structure/fence,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
-"E" = (
-/obj/effect/radiation,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "F" = (
 /turf/closed/wall/r_wall,
@@ -121,40 +110,40 @@
 "G" = (
 /obj/item/stack/sheet/mineral/uranium/five,
 /obj/effect/gibspawner,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "H" = (
 /obj/item/grenade/stingbang,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "I" = (
 /obj/item/flashlight/lantern,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "K" = (
 /obj/effect/mine/shrapnel,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "L" = (
 /obj/structure/sign/warning/radiation,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "M" = (
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "O" = (
 /obj/structure/marker_beacon,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "P" = (
 /obj/effect/gibspawner,
 /obj/structure/radioactive/waste,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 "Q" = (
 /obj/structure/fence/corner,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "R" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
@@ -162,28 +151,24 @@
 /obj/item/clothing/head/radiation{
 	pixel_y = 8
 	},
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "S" = (
 /obj/structure/sign/warning/longtermwaste{
 	pixel_y = 32
 	},
 /obj/structure/radioactive,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "U" = (
 /obj/structure/radioactive,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/ruin)
 "W" = (
 /obj/structure/fence{
 	dir = 8
 	},
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/overmap_encounter/planetoid/wasteplanet/explored)
-"Z" = (
-/obj/effect/mine/shrapnel,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
 /area/ruin)
 
 (1,1,1) = {"
@@ -228,7 +213,7 @@ a
 B
 B
 x
-d
+U
 e
 i
 t
@@ -246,11 +231,11 @@ a
 (4,1,1) = {"
 B
 B
-d
+U
 G
-g
+M
 j
-g
+M
 F
 B
 S
@@ -286,8 +271,8 @@ F
 B
 q
 A
-E
-g
+m
+M
 I
 B
 O
@@ -307,7 +292,7 @@ l
 n
 i
 C
-Z
+K
 v
 M
 M
@@ -325,7 +310,7 @@ F
 r
 p
 H
-g
+M
 i
 B
 O
@@ -342,10 +327,10 @@ O
 F
 F
 P
-g
+M
 e
 r
-d
+U
 B
 F
 M

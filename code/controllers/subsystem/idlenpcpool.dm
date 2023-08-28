@@ -6,7 +6,7 @@ SUBSYSTEM_DEF(idlenpcpool)
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
 	var/list/currentrun = list()
-	var/list/idle_mobs_by_virtual_level = list()
+	var/static/list/idle_mobs_by_zlevel[][]
 
 /datum/controller/subsystem/idlenpcpool/stat_entry(msg)
 	var/list/idlelist = GLOB.simple_animals[AI_IDLE]
@@ -14,10 +14,12 @@ SUBSYSTEM_DEF(idlenpcpool)
 	msg = "IdleNPCS:[length(idlelist)]|Z:[length(zlist)]"
 	return ..()
 
-/datum/controller/subsystem/idlenpcpool/proc/try_wakeup_virtual_z(virt_z)
-	virt_z = "[virt_z]"
-	for(var/mob/living/simple_animal/animal as anything in LAZYACCESS(idle_mobs_by_virtual_level, virt_z))
-		animal.check_should_sleep()
+/datum/controller/subsystem/idlenpcpool/proc/MaxZChanged()
+	if (!islist(idle_mobs_by_zlevel))
+		idle_mobs_by_zlevel = new /list(world.maxz,0)
+	while (SSidlenpcpool.idle_mobs_by_zlevel.len < world.maxz)
+		SSidlenpcpool.idle_mobs_by_zlevel.len++
+		SSidlenpcpool.idle_mobs_by_zlevel[idle_mobs_by_zlevel.len] = list()
 
 /datum/controller/subsystem/idlenpcpool/fire(resumed = FALSE)
 
@@ -39,6 +41,6 @@ SUBSYSTEM_DEF(idlenpcpool)
 			if(SA.stat != DEAD)
 				SA.handle_automated_movement()
 			if(SA.stat != DEAD)
-				SA.check_should_sleep()
+				SA.consider_wakeup()
 		if (MC_TICK_CHECK)
 			return

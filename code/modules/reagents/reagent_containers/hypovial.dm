@@ -28,13 +28,13 @@
 		icon_state = "hypovial"
 	for(var/R in comes_with)
 		reagents.add_reagent(R,comes_with[R])
-	update_appearance()
+	update_icon()
 
 
 /obj/item/reagent_containers/glass/bottle/vial/on_reagent_change()
-	update_appearance()
+	update_icon()
 
-/obj/item/reagent_containers/glass/bottle/vial/update_appearance()
+/obj/item/reagent_containers/glass/bottle/vial/update_icon()
 	cut_overlays()
 	if(reagents.total_volume)
 		var/mutable_appearance/filling = mutable_appearance('icons/obj/reagentfillings.dmi', "hypovial10")
@@ -54,7 +54,6 @@
 
 		filling.color = mix_color_from_reagents(reagents.reagent_list)
 		add_overlay(filling)
-	return ..()
 
 /obj/item/reagent_containers/glass/bottle/vial/tiny
 	name = "small hypovial"
@@ -87,7 +86,7 @@
 						"large black hypovial" = "hypoviallarge-t"
 						)
 
-/obj/item/reagent_containers/glass/bottle/vial/large/update_appearance()
+/obj/item/reagent_containers/glass/bottle/vial/large/update_icon()
 	cut_overlays()
 	if(reagents.total_volume)
 		var/mutable_appearance/filling = mutable_appearance('icons/obj/reagentfillings.dmi', "hypoviallarge10")
@@ -107,7 +106,6 @@
 
 		filling.color = mix_color_from_reagents(reagents.reagent_list)
 		add_overlay(filling)
-	return ..()
 
 /obj/item/reagent_containers/glass/bottle/vial/large/bluespace
 	possible_transfer_amounts = list(5,10,15,20)

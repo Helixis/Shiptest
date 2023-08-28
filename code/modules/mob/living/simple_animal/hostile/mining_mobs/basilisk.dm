@@ -136,9 +136,9 @@
 				audible_message("<span class='danger'>[src]'s shell violently cracks as it's armor is shattered!</span>")
 				throw_message = "bounces off of"
 				shell_snap_message = TRUE //so it doesnt repeat
-		update_appearance()
+		update_icon()
 		return TRUE
-	update_appearance()
+	update_icon()
 	return FALSE
 
 /mob/living/simple_animal/hostile/asteroid/basilisk/whitesands/CanAttack(atom/the_target)
@@ -185,7 +185,7 @@
 	..()
 	cut_overlays()
 
-/mob/living/simple_animal/hostile/asteroid/basilisk/whitesands/update_appearance()
+/mob/living/simple_animal/hostile/asteroid/basilisk/whitesands/update_icon()
 	. = ..()
 	if(stat == CONSCIOUS)
 		if(has_shell)

@@ -30,7 +30,7 @@
 			"slots": 1
 		},
 		"Engineering Tenant": {
-			"outfit": "/datum/outfit/job/engineer",
+			"outfit": "/datum/outfit/job/engineer/electrician",
 			"slots": 1
 		},
 		"Tenant": {
