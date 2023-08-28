@@ -2658,8 +2658,7 @@
 /area/ship/crew/cryo)
 "pm" = (
 /obj/machinery/computer/communications{
-	dir = 8;
-	icon_state = "computer-right"
+	dir = 8
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -3489,9 +3488,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "ud" = (
-/obj/machinery/computer/helm{
-	dir = 8;
-	icon_state = "computer-left"
+/obj/machinery/computer/helm/natonavy{
+	dir = 8
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
