@@ -5392,7 +5392,6 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
 	req_access_txt = "19";
-	req_ship_access = s
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
@@ -5641,7 +5640,6 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
 	req_access_txt = "19";
-	req_ship_access = s
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2
@@ -7472,7 +7470,6 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
 	req_access_txt = "19";
-	req_ship_access = s
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
