@@ -7400,9 +7400,6 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/engineering/atmospherics)
-"Ro" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/crew/toilet)
 "Rq" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/crew/dorm)
@@ -8384,9 +8381,6 @@
 /obj/structure/railing,
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
-"WU" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/engineering)
 "WZ" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Canteen";
@@ -9152,7 +9146,7 @@ hr
 vx
 XK
 jn
-WU
+MM
 VV
 Aj
 VV
@@ -9258,9 +9252,9 @@ mY
 Qr
 YB
 BU
-Ro
+YB
 BU
-Ro
+YB
 Vx
 VV
 ui
