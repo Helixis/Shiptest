@@ -575,7 +575,6 @@
 /area/ruin/space/has_grav/ancientstation/betacorridor)
 "bx" = (
 /obj/machinery/door/airlock/command/glass{
-	id_tag = "ceofficedoor";
 	name = "Chief Engineer";
 	req_access_txt = "56"
 	},
@@ -774,7 +773,6 @@
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
 	hackProof = 1;
-	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
@@ -1030,7 +1028,6 @@
 /area/ruin/space/has_grav/ancientstation/rnd)
 "cD" = (
 /obj/machinery/door/airlock/external{
-	id_tag = "supply_home";
 	locked = 1;
 	name = "Cargo Docking Hatch";
 	req_access_txt = "31"
@@ -1283,7 +1280,6 @@
 "dd" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical/glass{
-	id_tag = "CloningDoor";
 	name = "Genetics Cloning";
 	req_one_access_txt = "5;9"
 	},
@@ -1419,7 +1415,6 @@
 "dx" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/external{
-	id_tag = "supply_home";
 	locked = 1;
 	name = "Cargo Docking Hatch";
 	req_access_txt = "31"
@@ -1993,7 +1988,6 @@
 "eZ" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
-	id_tag = "mining_home";
 	locked = 1;
 	name = "Mining Dock Airlock";
 	req_access_txt = "48"
@@ -2124,7 +2118,6 @@
 /area/ruin/space/has_grav/ancientstation/betacorridor)
 "fv" = (
 /obj/machinery/door/airlock/command{
-	id_tag = "captainofficedoor";
 	name = "Captain's Office";
 	req_access_txt = "20"
 	},
@@ -2293,7 +2286,6 @@
 /area/ruin/space/has_grav/ancientstation/betacorridor)
 "gb" = (
 /obj/machinery/door/airlock{
-	id_tag = "toilet_unit1";
 	name = "Unit 1"
 	},
 /turf/open/floor/plasteel,
@@ -2448,7 +2440,6 @@
 /area/ruin/space/has_grav/ancientstation/comm)
 "gB" = (
 /obj/machinery/door/airlock/command{
-	id_tag = "cmoofficedoor";
 	name = "CMO's Office";
 	req_access_txt = "40"
 	},
@@ -3168,7 +3159,6 @@
 /area/ruin/space/has_grav/ancientstation/deltacorridor)
 "iy" = (
 /obj/machinery/door/airlock/command{
-	id_tag = "captainofficedoor";
 	name = "Captain's Office";
 	req_access_txt = "20"
 	},
@@ -3479,7 +3469,6 @@
 "jA" = (
 /obj/machinery/door/airlock/external{
 	hackProof = 1;
-	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -3548,7 +3537,6 @@
 /area/ruin/space/has_grav/ancientstation/rnd)
 "jK" = (
 /obj/machinery/door/airlock/command/glass{
-	id_tag = "hosofficedoor";
 	name = "Head of Security";
 	req_access_txt = "58"
 	},
@@ -4030,7 +4018,6 @@
 "lu" = (
 /obj/machinery/door/airlock/external{
 	hackProof = 1;
-	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
 /obj/structure/fans/tiny,
@@ -4117,7 +4104,6 @@
 "lH" = (
 /obj/machinery/door/airlock/external{
 	hackProof = 1;
-	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
@@ -4531,7 +4517,6 @@
 /area/ruin/space/has_grav/ancientstation/betacorridor)
 "mU" = (
 /obj/machinery/door/airlock/command/glass{
-	id_tag = "rdofficedoor";
 	name = "Research Director";
 	req_access_txt = "30"
 	},
@@ -4811,7 +4796,6 @@
 	tag = ""
 	},
 /obj/machinery/door/airlock/external{
-	id_tag = "mining_home";
 	locked = 1;
 	name = "Mining Dock Airlock";
 	req_access_txt = "48"
@@ -5164,7 +5148,6 @@
 /area/ruin/space/has_grav/ancientstation/comm)
 "pe" = (
 /obj/machinery/door/airlock/external{
-	id_tag = "mining_home";
 	locked = 1;
 	name = "Mining Dock Airlock";
 	req_access_txt = "48"
@@ -5809,7 +5792,6 @@
 /area/ruin/space/has_grav/ancientstation)
 "sC" = (
 /obj/machinery/door/airlock/external{
-	id_tag = "supply_home";
 	locked = 1;
 	name = "Cargo Docking Hatch";
 	req_access_txt = "31"
@@ -7253,7 +7235,6 @@
 	security_level = 1
 	},
 /obj/machinery/door/poddoor/preopen{
-	id_tag = "Prison Gate";
 	name = "Prison Lockdown Blast Doors"
 	},
 /turf/open/floor/plasteel,
@@ -7407,7 +7388,6 @@
 /obj/machinery/door/poddoor{
 	density = 0;
 	icon_state = "open";
-	id_tag = "xenobio2";
 	opacity = 0
 	},
 /obj/structure/cable{
