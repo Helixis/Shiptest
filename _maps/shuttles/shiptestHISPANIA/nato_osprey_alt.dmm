@@ -91,6 +91,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "aE" = (
@@ -445,16 +446,6 @@
 	},
 /turf/open/floor/plating,
 /area/ship/cargo)
-"cO" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/grille,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/ship/construction)
 "cT" = (
 /obj/machinery/atmospherics/pipe/simple/dark/visible{
 	dir = 5
@@ -774,15 +765,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
-"eH" = (
-/obj/machinery/door/window/brigdoor/security{
-	req_one_access_txt = "19"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/turf/open/floor/plasteel/dark,
-/area/ship/security)
 "eI" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5237,12 +5219,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/cargo/office)
-"El" = (
-/obj/machinery/power/apc/highcap{
-	dir = 1
-	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/security)
 "Em" = (
 /obj/machinery/door/window/eastright{
 	dir = 2;
@@ -5392,6 +5368,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
 	req_access_txt = "19";
+	req_ship_access = s
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
@@ -5640,6 +5617,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
 	req_access_txt = "19";
+	req_ship_access = s
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2
@@ -7467,6 +7445,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
 	req_access_txt = "19";
+	req_ship_access = s
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
@@ -9740,7 +9719,7 @@ li
 li
 li
 li
-El
+IL
 aC
 ew
 IL
@@ -10001,7 +9980,7 @@ tT
 DY
 cq
 hI
-cO
+qL
 TE
 gM
 li
@@ -10266,7 +10245,7 @@ li
 IL
 mP
 yK
-eH
+pI
 Xt
 Zr
 Zr
