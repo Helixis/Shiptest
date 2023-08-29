@@ -13,4 +13,4 @@
 /obj/item/computer/atc_chatter/proc/atc()
 	var/chatter_key = rand(1,44)
 	playsound(src, "sound/hispania/voice/nato-atc/Chatter[chatter_key].ogg", 50, TRUE)
-	addtimer(CALLBACK(src, PROC_REF(atc)), rand(15 SECONDS, 20 SECONDS))
+	addtimer(CALLBACK(src, PROC_REF(atc)), rand(15 SECONDS, 30 SECONDS))
