@@ -2223,7 +2223,6 @@
 /area/ruin/space/has_grav/ancientstation)
 "fP" = (
 /obj/machinery/door/poddoor{
-	id_tag = "chapelgun";
 	name = "Chapel Launcher Door";
 	},
 /obj/structure/fans/tiny,
@@ -4109,7 +4108,6 @@
 "lG" = (
 /obj/machinery/door/poddoor/shutters{
 	dir = 2;
-	id_tag = "stationawaygate";
 	name = "Gateway Access Shutters"
 	},
 /turf/open/floor/plasteel{
@@ -4368,7 +4366,6 @@
 "mC" = (
 /obj/machinery/mass_driver{
 	dir = 4;
-	id_tag = "chapelgun"
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -7087,7 +7084,7 @@
 "Mg" = (
 /mob/living/simple_animal/hostile/gorilla{
 	name = "Harambe";
-	desc = s
+	desc = "A misunderstood 2016 gorilla."
 	},
 /turf/open/floor/wood/mahogany,
 /area/ruin/space/has_grav/ancientstation/powered)
