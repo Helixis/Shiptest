@@ -7249,7 +7249,6 @@
 /area/ruin/space/has_grav/ancientstation/atmo)
 "OF" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Prison Wing";
 	req_access_txt = "2";
 	security_level = 1
 	},
@@ -7409,7 +7408,6 @@
 	density = 0;
 	icon_state = "open";
 	id_tag = "xenobio2";
-	name = "Containment Blast Doors";
 	opacity = 0
 	},
 /obj/structure/cable{
