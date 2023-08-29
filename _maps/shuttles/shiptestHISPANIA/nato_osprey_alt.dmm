@@ -5367,8 +5367,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
-	req_access_txt = "19";
-	req_ship_access = s
+	req_access_txt = "19"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
@@ -5616,8 +5615,7 @@
 "Gz" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
-	req_access_txt = "19";
-	req_ship_access = s
+	req_access_txt = "19"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2
@@ -7444,8 +7442,7 @@
 /obj/machinery/atmospherics/pipe/simple/green/hidden/layer1,
 /obj/machinery/door/airlock/highsecurity{
 	name = "NATO Armory";
-	req_access_txt = "19";
-	req_ship_access = s
+	req_access_txt = "19"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
