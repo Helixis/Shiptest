@@ -1,0 +1,34 @@
+{
+  "map_name": "Kansatsu-Class Halterio",
+  "prefix": "IRMV",
+  "namelists": [
+    "MYTHOLOGICAL",
+    "BEASTS",
+    "NATURAL_AGGRESSIVE",
+    "INTEQ"
+  ],
+  "map_short_name": "Kansatsu-Class Halterio",
+  "description": "Originalmente un modelo mensajero Type-S de SolGov, remodelado por Cybersun en la Kansatsu para misiones de reconocimiento o espionaje.\n\nEsta nave en particular fue carpturada y re-armada por INTEQ para acomodar la nave a las peculiares necesidades de sus nuevos dueños, debido a su reducido tamaño, se suele preferir para misiones cortas de ataque y retirada",
+  "tags": [
+    "Combat"
+  ],
+  "map_path": "_maps/shuttles/shiptest/inteq_kansatsu_halterio.dmm",
+  "map_id": "inteq_kansatsu_halterio",
+  "limit": 1,
+  "job_slots": {
+    "Vanguard": {
+      "outfit": "/datum/outfit/job/captain/inteq/naked",
+      "officer": true,
+      "slots": 2
+    },
+    "Enforcer": {
+      "outfit": "/datum/outfit/job/security/inteq",
+      "slots": 3
+    },
+    "Recruit": {
+      "outfit": "/datum/outfit/job/assistant/inteq",
+      "slots": 3
+    }
+  },
+  "enabled": true
+}
