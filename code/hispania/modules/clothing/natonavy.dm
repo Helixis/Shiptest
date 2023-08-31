@@ -59,7 +59,7 @@
 	desc = "A close-fitting tactical mask with an especially aggressive Cloaker-o-nator 420-69."
 	icon = 'icons/hispania/obj/clothing/under/natonavy.dmi'
 	mob_overlay_icon = 'icons/hispania/mob/clothing/under/natonavy.dmi'
-	var/cooldown = 0
+	cooldown = 0
 	var/phrase = 1
 	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/selectphrase)
 	var/phrase_list = list(
