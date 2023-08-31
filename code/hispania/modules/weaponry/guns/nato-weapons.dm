@@ -38,6 +38,7 @@
 	icon_state = "nato-vector"
 	item_state = "nato-vector"
 	fire_sound_volume = 25
+	mag_type = /obj/item/ammo_box/magazine/smgm9mm
 
 // Marksman Rifle
 /obj/item/gun/ballistic/automatic/assualt/p16/nato_cm16
@@ -52,13 +53,12 @@
 	fire_delay = 5
 
 // Automatic Shotgun
-/obj/item/gun/ballistic/shotgun/automatic/combat/nato
+/obj/item/gun/ballistic/shotgun/bulldog/minutemen/nato
 	name = "NATO Combat Shotgun"
 	desc = "A semi automatic shotgun with tactical furniture and a six-shell capacity underneath. Designed for the NATO forces"
 	icon = 'icons/hispania/obj/projectiles/48x32guns.dmi'
 	icon_state = "nato-cm15"
 	item_state = "nato-cm15"
-	fire_delay = 3
 
 // Revolver
 /obj/item/gun/ballistic/derringer/traitor/nato
