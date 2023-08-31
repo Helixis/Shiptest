@@ -1,3 +1,6 @@
+///////////////////////////////////////////////////////////////
+/////////////////////// ** UNIFORMES ** ///////////////////////
+// Uniforme, no-enlistados
 /obj/item/clothing/under/natonavy
 	name = "\improper NATO Navy Recruit Fatigues"
 	desc = "Specialized combat uniform utilized by the NATO Navy serving the Galactic Federation. This uniform is usually used by joined forces aboard a NATO ship"
@@ -9,6 +12,7 @@
 	strip_delay = 50
 	can_adjust = FALSE
 
+// Generalista enlistados, bajo rango
 /obj/item/clothing/under/natonavy/formed
 	name = "\improper NATO Navy Fatigue"
 	desc = "Specialized combat uniform utilized by the NATO Navy serving the Galactic Federation. This one has higher rank markings than its regular fatigue counterpart."
@@ -16,6 +20,7 @@
 	item_state = "nato_formed"
 	can_adjust = FALSE
 
+// Para la Policía Militar
 /obj/item/clothing/under/natonavy/mp
 	name = "\improper NATO Navy MP Uniform"
 	desc = "Specialized combat uniform utilized by the NATO Navy Military Police."
@@ -23,6 +28,7 @@
 	item_state = "nato_mp"
 	can_adjust = FALSE
 
+// Uniforme de especialista
 /obj/item/clothing/under/natonavy/officer
 	name = "\improper NATO Navy Specialist Fatigues"
 	desc = "Specialized combat uniform utilized by the NATO Navy Officers serving the Galactic Federation."
@@ -30,6 +36,7 @@
 	item_state = "nato_officer"
 	can_adjust = FALSE
 
+// Uniforme de altos mandos
 /obj/item/clothing/under/natonavy/officer_higher
 	name = "\improper NATO Navy Officer Fatigues"
 	desc = "Specialized combat uniform utilized by the NATO Navy higher ranking Officers serving the Galactic Federation. This one has additional insignia on its shoulders and cuffs."
@@ -37,6 +44,7 @@
 	item_state = "nato_higher_officer"
 	can_adjust = FALSE
 
+// Uniforme de Almirante
 /obj/item/clothing/under/natonavy/admiral
 	name = "\improper NATO Navy Admiral Uniform"
 	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Admiral\". Worn exclusively by the NATO Navy Admiralty. It's got exotic materials for protection."
@@ -44,10 +52,8 @@
 	item_state = "nato_admiral"
 	can_adjust = FALSE
 
-/obj/item/clothing/suit/armor/vest/marine/nato
-	name = "NATO Tactical Armor Vest"
-	icon_state = "marine_medium"
-
+///////////////////////////////////////////////////////////////
+/////////////////////// ** MÁSCARAS ** ///////////////////////
 /*
 /obj/item/clothing/mask/gas/sechailer/cloaker
 	name = "\improper NATO Tactical Mask"
@@ -110,9 +116,13 @@
 		var/key = phrase_list[phrase]
 		var/message = phrase_list[key]
 		usr.visible_message("[usr]'s Cloaker-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
-		playsound(src.loc, "modular_hispania/sound/voice/hailer/cloaker/[key].ogg", 100, 0, 4)
+		playsound(src.loc, "/sound/hispania/voice/hailer/cloaker/[key].ogg", 100, 0, 4)
 		cooldown = world.time
 */
+
+
+///////////////////////////////////////////////////////////////
+/////////////////////// ** HARDSUITS ** ///////////////////////
 // NATO Hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/natonavy
 	mob_overlay_icon = 'icons/hispania/mob/clothing/hats/helmets.dmi'
@@ -120,7 +130,8 @@
 	icon_state = "hardsuit0-nato"
 	item_state = "hardsuit0-nato"
 	name = "NATO Navy Hardsuit Helmet"
-	desc = "An advanced helmet designed for combat in a hazardous, low pressure environment. Shines with a high polish."
+	desc = "An advanced helmet designed for combat in a hazardous, low pressure environment. Shines with a high polish. It is in EVA Mode"
+	alt_desc = "An advanced helmet designed for combat in a hazardous, low pressure environment. Shines with a high polish. It is in COMBAT Mode"
 	hardsuit_type = "nato"
 	armor = list("melee" = 35, "bullet" = 45, "laser" = 25, "energy" = 35, "bomb" = 35, "bio" = 100, "rad" = 65, "fire" = 65, "acid" = 90)
 	light_range = 10
@@ -133,7 +144,47 @@
 	icon_state = "hardsuit0-nato"
 	item_state = "hardsuit0-nato"
 	name = "NATO Navy Hardsuit"
-	desc = "An advanced suit designed for combat in a hazardous, low pressure environments. Shines with a high polish."
+	desc = "An advanced suit designed for combat in a hazardous, low pressure environments. Shines with a high polish. It is in EVA Mode"
+	alt_desc = "An advanced suit designed for combat in a hazardous, low pressure environments. Shines with a high polish. It is in COMBAT Mode"
 	hardsuit_type = "nato"
 	armor = list("melee" = 35, "bullet" = 45, "laser" = 25, "energy" = 35, "bomb" = 35, "bio" = 100, "rad" = 65, "fire" = 65, "acid" = 90)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/natonavy
+
+// NATO Elite Hardsuit
+/obj/item/clothing/head/helmet/space/hardsuit/syndi/elite/natonavy
+	icon_state = "hardsuit0-natoelite"
+	item_state = "hardsuit0-natoelite"
+	name = "NATO Navy Elite Hardsuit Helmet"
+	desc = "An elite version of the NATO helmet, with improved armour and fireproofing. It is in EVA Mode"
+	alt_desc = "An elite version of the NATO helmet, with improved armour and fireproofing. It is in COMBAT Mode"
+	hardsuit_type = "nato"
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 35, "energy" = 45, "bomb" = 45, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
+	light_range = 10
+	heat_protection = HEAD
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+
+/obj/item/clothing/suit/space/hardsuit/syndi/elite/natonavy
+	icon_state = "hardsuit0-natoelite"
+	item_state = "hardsuit0-natoelite"
+	name = "NATO Navy Elite Hardsuit"
+	desc =  "An elite version of the NATO hardsuit, with improved armour and fireproofing. It is in EVA Mode"
+	alt_desc = "An elite version of the NATO hardsuit, with improved armour and fireproofing. It is in COMBAT Mode"
+	hardsuit_type = "nato"
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 35, "energy" = 45, "bomb" = 45, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite/natonavy
+
+//////////////////////////////////////////////////////////////////////
+/////////////////////// ** BOINAS / CASCOS ** ///////////////////////
+/obj/item/clothing/head/beret/sec/nato
+	desc = "A beret made out of black reinforced fabric with the NATO insignia emblazoned on it. For officers with class."
+	icon_state = "beret_officer"
+
+/obj/item/clothing/head/beret/sec/nato/higher
+	desc = "A beret made out of black reinforced fabric with the NATO insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction."
+	icon_state = "beret_officer"
+
+///////////////////////////////////////////////////////////////
+/////////////////////// ** CHALECOS ** ///////////////////////
+/obj/item/clothing/suit/armor/vest/marine/nato
+	name = "NATO Tactical Armor Vest"
+	icon_state = "marine_medium"
