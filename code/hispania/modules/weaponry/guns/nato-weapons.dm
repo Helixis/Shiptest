@@ -67,4 +67,4 @@
 	icon = 'icons/hispania/obj/projectiles/projectile.dmi'
 	icon_state = "nato-mateba"
 	item_state = "nato-mateba"
-	mag_type = /obj/item/ammo_box/magazine/internal/derr357, /obj/item/ammo_box/magazine/internal/derr38
+	mag_type = /obj/item/ammo_box/magazine/internal/derr357
