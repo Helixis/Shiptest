@@ -54,10 +54,11 @@
 
 ///////////////////////////////////////////////////////////////
 /////////////////////// ** MÁSCARAS ** ///////////////////////
-/*
 /obj/item/clothing/mask/gas/sechailer/cloaker
 	name = "\improper NATO Tactical Mask"
 	desc = "A close-fitting tactical mask with an especially aggressive Cloaker-o-nator 420-69."
+	icon = 'icons/hispania/obj/clothing/under/natonavy.dmi'
+	mob_overlay_icon = 'icons/hispania/mob/clothing/under/natonavy.dmi'
 	var/cooldown = 0
 	var/phrase = 1
 	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/selectphrase)
@@ -90,10 +91,14 @@
 /datum/action/item_action/selectphrase
 	name = "Change Phrase"
 
+/datum/action/item_action/halt
+	name = "HALT!"
+
 /obj/item/clothing/mask/gas/sechailer/cloaker/ui_action_click(mob/user, actiontype)
-	if(actiontype == /datum/action/item_action/halt)
+	to_chat(user,"<span class='notice'>You pressed [actiontype]</span>")
+	if(istype(actiontype, /datum/action/item_action/halt))
 		halt()
-	else if(actiontype == /datum/action/item_action/selectphrase)
+	else if(istype(actiontype, /datum/action/item_action/selectphrase))
 		var/key = phrase_list[phrase]
 		var/message = phrase_list[key]
 
@@ -116,9 +121,8 @@
 		var/key = phrase_list[phrase]
 		var/message = phrase_list[key]
 		usr.visible_message("[usr]'s Cloaker-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
-		playsound(src.loc, "/sound/hispania/voice/hailer/cloaker/[key].ogg", 100, 0, 4)
+		playsound(src, "/sound/hispania/voice/hailer/cloaker/[key].ogg", 50, TRUE)
 		cooldown = world.time
-*/
 
 
 ///////////////////////////////////////////////////////////////
@@ -157,11 +161,9 @@
 	name = "NATO Navy Elite Hardsuit Helmet"
 	desc = "An elite version of the NATO helmet, with improved armour and fireproofing. It is in EVA Mode"
 	alt_desc = "An elite version of the NATO helmet, with improved armour and fireproofing. It is in COMBAT Mode"
-	hardsuit_type = "nato"
+	hardsuit_type = "natoelite"
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 35, "energy" = 45, "bomb" = 45, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
-	light_range = 10
-	heat_protection = HEAD
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	light_range = 15
 
 /obj/item/clothing/suit/space/hardsuit/syndi/elite/natonavy
 	icon_state = "hardsuit0-natoelite"
@@ -169,7 +171,7 @@
 	name = "NATO Navy Elite Hardsuit"
 	desc =  "An elite version of the NATO hardsuit, with improved armour and fireproofing. It is in EVA Mode"
 	alt_desc = "An elite version of the NATO hardsuit, with improved armour and fireproofing. It is in COMBAT Mode"
-	hardsuit_type = "nato"
+	hardsuit_type = "natoelite"
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 35, "energy" = 45, "bomb" = 45, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite/natonavy
 
