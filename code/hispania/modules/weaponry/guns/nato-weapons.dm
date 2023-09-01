@@ -15,8 +15,8 @@
 	desc = "An old and reliable sniper design based on the Intervention, called Ekho, with suppression integrated. Quickscoping still doesn't work."
 	fire_sound_volume = 25
 	icon = 'icons/hispania/obj/projectiles/48x32guns.dmi'
-	icon_state = "sniper"
-	item_state = "sniper"
+	icon_state = "ekho"
+	item_state = "ekho"
 	zoom_amt = 15
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/nato_ekho
 
@@ -67,4 +67,4 @@
 	icon = 'icons/hispania/obj/projectiles/projectile.dmi'
 	icon_state = "nato-mateba"
 	item_state = "nato-mateba"
-	mag_type = /obj/item/ammo_box/magazine/internal/derr357
+	mag_type = /obj/item/ammo_box/magazine/internal/derr357/nato
