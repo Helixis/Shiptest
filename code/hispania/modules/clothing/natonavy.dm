@@ -57,8 +57,8 @@
 /obj/item/clothing/mask/gas/sechailer/cloaker
 	name = "\improper NATO Tactical Mask"
 	desc = "A close-fitting tactical mask with an especially aggressive Cloaker-o-nator 420-69."
-	icon = 'icons/hispania/obj/clothing/under/natonavy.dmi'
-	mob_overlay_icon = 'icons/hispania/mob/clothing/under/natonavy.dmi'
+	icon = 'icons/hispania/obj/clothing/masks/masks.dmi'
+	mob_overlay_icon = 'icons/hispania/mob/clothing/masks/mask.dmi'
 	cooldown = 0
 	var/phrase = 1
 	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/selectphrase)
@@ -95,7 +95,6 @@
 	name = "HALT!"
 
 /obj/item/clothing/mask/gas/sechailer/cloaker/ui_action_click(mob/user, actiontype)
-	to_chat(user,"<span class='notice'>You pressed [actiontype]</span>")
 	if(istype(actiontype, /datum/action/item_action/halt))
 		halt()
 	else if(istype(actiontype, /datum/action/item_action/selectphrase))
@@ -121,7 +120,7 @@
 		var/key = phrase_list[phrase]
 		var/message = phrase_list[key]
 		usr.visible_message("[usr]'s Cloaker-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
-		playsound(src, "/sound/hispania/voice/hailer/cloaker/[key].ogg", 30, FALSE)
+		playsound(src, "sound/hispania/voice/hailer/cloaker/[key].ogg", 50, TRUE)
 		cooldown = world.time
 
 

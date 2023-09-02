@@ -905,6 +905,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/construction)
+"fE" = (
+/obj/structure/guncase,
+/obj/item/gun/ballistic/automatic/pistol/m1911/enforcer,
+/obj/item/gun/ballistic/automatic/pistol/m1911/enforcer,
+/turf/open/floor/circuit/red,
+/area/ship/security/armory)
 "fF" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
@@ -1949,9 +1955,6 @@
 "lo" = (
 /obj/machinery/airalarm/directional/west,
 /obj/structure/closet/crate/secure/weapon,
-/obj/item/gun/ballistic/automatic/sniper_rifle,
-/obj/item/ammo_box/magazine/sniper_rounds,
-/obj/item/ammo_box/magazine/sniper_rounds,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "lr" = (
@@ -6996,6 +6999,10 @@
 	pixel_x = 32;
 	req_access_txt = "19"
 	},
+/obj/item/ammo_box/magazine/m45/nato_enforcer,
+/obj/item/ammo_box/magazine/m45/nato_enforcer,
+/obj/item/ammo_box/magazine/m45/nato_enforcer,
+/obj/item/ammo_box/magazine/m45/nato_enforcer,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "OS" = (
@@ -9268,7 +9275,7 @@ Hn
 oK
 Hn
 VV
-cD
+fE
 VV
 lr
 VV
