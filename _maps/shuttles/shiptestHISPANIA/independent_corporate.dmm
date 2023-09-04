@@ -2583,8 +2583,7 @@
 "wS" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
-	id = "bridge_shutters";
-	id_tag = "bridge_shutters"
+	id = "bridge_shutters"
 	},
 /obj/machinery/door/poddoor{
 	id = "bridge_shutters"
@@ -2670,8 +2669,7 @@
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
 	dir = 4;
-	id = "bridge_shutters";
-	id_tag = "bridge_shutters"
+	id = "bridge_shutters"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
@@ -3050,8 +3048,7 @@
 	},
 /obj/machinery/door/poddoor{
 	dir = 4;
-	id = "propulsor_blastdoor";
-	id_tag = "propulsor_blastdoor"
+	id = "propulsor_blastdoor"
 	},
 /obj/machinery/door/poddoor{
 	dir = 4;
@@ -3083,7 +3080,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxin_output{
 	dir = 4;
 	name = "incinerator output inlet";
-	id = "incinerator_out";
 	id_tag = "incinerator_out"
 	},
 /turf/open/floor/engine/vacuum,
@@ -4287,8 +4283,7 @@
 /area/ship/hallway/central)
 "LM" = (
 /obj/machinery/door/poddoor{
-	id = "south_hangar";
-	id_tag = "south_hangar"
+	id = "south_hangar"
 	},
 /obj/machinery/door/poddoor{
 	id = "south_hangar"
@@ -4307,7 +4302,6 @@
 	name = "Off Ramp";
 	pixel_y = 9;
 	pixel_x = -8;
-	id_tag = "out_conveyor"
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/dark,
@@ -4862,8 +4856,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/door/poddoor{
-	id = "south_hangar";
-	id_tag = "south_hangar"
+	id = "south_hangar"
 	},
 /obj/machinery/door/poddoor{
 	id = "south_hangar"
@@ -4882,7 +4875,7 @@
 "QN" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/incinerator_input{
 	dir = 4;
-	id_tag = "incinerator_in"
+	id = "incinerator_in"
 	},
 /turf/open/floor/engine/vacuum,
 /area/ship/engineering/engine)
