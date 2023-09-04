@@ -1642,10 +1642,9 @@
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/airalarm/directional/north,
 /obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/item/storage/firstaid/brute,
 /obj/item/storage/firstaid/fire,
-/obj/item/defibrillator,
+/obj/item/storage/firstaid,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "nV" = (
@@ -2281,13 +2280,9 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "tr" = (
-/obj/effect/turf_decal/corner/opaque/brown/border{
-	dir = 10
-	},
-/obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/eight,
-/turf/open/floor/plasteel/dark,
-/area/ship/cargo)
+/obj/item/banner/medical,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
 "ts" = (
 /obj/machinery/door/airlock/mining,
 /obj/machinery/door/firedoor/border_only{
@@ -3905,7 +3900,6 @@
 /turf/open/floor/carpet/stellar,
 /area/ship/crew/office)
 "HS" = (
-/obj/machinery/vending/mining_equipment,
 /obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo/office)
@@ -4388,7 +4382,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 4
 	},
-/obj/machinery/rnd/production/techfab/department/engineering,
+/obj/machinery/autolathe/hacked,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
 "Mu" = (
@@ -5476,8 +5470,8 @@
 	dir = 10
 	},
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/eight,
 /obj/machinery/light/directional/south,
+/obj/effect/spawner/lootdrop/maintenance/two,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "Vu" = (
@@ -5702,7 +5696,7 @@
 	dir = 10
 	},
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/four,
+/obj/effect/spawner/lootdrop/maintenance/two,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "Ya" = (
@@ -6509,9 +6503,9 @@ DD
 oH
 oO
 Lm
-Ad
+tr
 Ga
-ry
+tr
 DD
 "}
 (15,1,1) = {"
@@ -6593,7 +6587,7 @@ ja
 Zs
 FH
 Ka
-Ad
+ry
 DD
 "}
 (17,1,1) = {"
@@ -7427,7 +7421,7 @@ Sa
 Jm
 Jm
 WW
-tr
+XY
 Mg
 hc
 dZ
