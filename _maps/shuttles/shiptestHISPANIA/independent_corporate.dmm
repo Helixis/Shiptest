@@ -2585,11 +2585,6 @@
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo/office)
-"wQ" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal{
-	appearance_flags = d
-	},
-/area/ship/crew/office)
 "wS" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
@@ -7332,7 +7327,7 @@ eH
 ja
 oL
 ld
-wQ
+on
 zK
 ah
 KM
