@@ -41,8 +41,8 @@
 			"outfit": "/datum/outfit/job/quartermaster",
 			"slots": 1
 		},
-		"Trader": {
-			"outfit": "/datum/outfit/job/trader",
+		"Head of Trade": {
+			"outfit": "/datum/outfit/job/head_of_personnel",
 			"slots": 1
 		},
 		"Shaft Miner": {
