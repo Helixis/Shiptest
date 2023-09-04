@@ -254,7 +254,6 @@
 /area/ship/cargo/office)
 "br" = (
 /obj/structure/table/reinforced,
-/obj/machinery/photocopier/faxmachine,
 /obj/machinery/light/directional/east,
 /obj/item/megaphone/command{
 	pixel_x = 1;
@@ -3572,11 +3571,8 @@
 /area/ship/bridge)
 "EL" = (
 /obj/structure/table/reinforced,
-/obj/machinery/photocopier/faxmachine/longrange{
-	pixel_x = 4;
-	pixel_y = 0
-	},
 /obj/machinery/firealarm/directional/north,
+/obj/machinery/fax,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "ET" = (
@@ -4193,7 +4189,6 @@
 /area/ship/engineering)
 "KM" = (
 /obj/structure/table,
-/obj/machinery/photocopier/faxmachine,
 /obj/machinery/light/directional/west,
 /turf/open/floor/carpet/stellar,
 /area/ship/crew/office)
