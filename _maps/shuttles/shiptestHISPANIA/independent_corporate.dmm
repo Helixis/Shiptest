@@ -1278,11 +1278,8 @@
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
 "lc" = (
-/obj/machinery/air_sensor/atmos/toxins_mixing_tank{
-	id_tag = "corporate_incinerator_sensor";
-	name = "incinerator gas sensor"
-	},
 /obj/machinery/igniter/incinerator_atmos,
+/obj/machinery/air_sensor/atmos/incinerator_tank,
 /turf/open/floor/engine/vacuum,
 /area/ship/engineering/engine)
 "ld" = (
@@ -4562,7 +4559,7 @@
 	},
 /obj/machinery/computer/atmos_control/tank/toxin_tank{
 	dir = 4;
-	sensors = list("corporate_incinerator_sensor" = "Incinerator Room");
+	sensors = list("incinerator_sensor" = "Incinerator Room");
 	name = "Incinerator Chmaber Control";
 	output_tag = "incinerator_out";
 	input_tag = "incinerator_in"
