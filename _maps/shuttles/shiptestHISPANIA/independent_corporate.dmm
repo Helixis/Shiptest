@@ -4886,8 +4886,7 @@
 /area/ship/storage)
 "QN" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/incinerator_input{
-	dir = 4;
-	id_tag = "incinerator_in"
+	dir = 4
 	},
 /turf/open/floor/engine/vacuum,
 /area/ship/engineering/engine)
