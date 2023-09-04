@@ -1274,8 +1274,7 @@
 "lc" = (
 /obj/machinery/air_sensor/atmos/toxins_mixing_tank{
 	id_tag = "corporate_incinerator_sensor";
-	name = "incinerator gas sensor";
-	id = "corporate_incinerator_sensor"
+	name = "incinerator gas sensor"
 	},
 /obj/machinery/igniter/incinerator_atmos,
 /turf/open/floor/engine/vacuum,
@@ -2080,8 +2079,7 @@
 	icon_state = "0-1"
 	},
 /obj/machinery/door/poddoor{
-	id = "north_hangar";
-	id_tag = "north_hangar"
+	id = "north_hangar"
 	},
 /obj/machinery/door/poddoor{
 	id = "north_hangar"
