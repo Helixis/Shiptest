@@ -81,11 +81,11 @@
 				to_chat(spawnee, "<span class='danger'>You do not have enough playtime to spawn this ship!</span>")
 				return
 			if(template.name == "Osprey-class NATO MotherShip")
-				var nato_members = list("Asriel_FBI", "Chekolotof", "Agus")
+				var nato_members = list("asriel_fbi", "asrielfbi", "\improper Asriel_FBI")
 				if (spawnee.ckey in nato_members)
-					to_chat(spawnee, "<span class='danger'>You have been authorized to use this ship!</span>")
+					to_chat(spawnee, "<span class='danger'>You have been authorized to use this ship</span>")
 				else
-					to_chat(spawnee, "<span class='danger'>You have NOT been authorized to use this ship!</span>")
+					to_chat(spawnee, "<span class='danger'>You require Admiral rank or higher to deploy a NATO MotherShip on this Sector!</span>")
 					return
 			var/num_ships_with_template = 0
 			for(var/datum/overmap/ship/controlled/Ship as anything in SSovermap.controlled_ships)
