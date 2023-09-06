@@ -1460,6 +1460,7 @@
 #include "code\hispania\modules\jobs\job_types\hammer.dm"
 #include "code\hispania\modules\jobs\job_types\mantarraya.dm"
 #include "code\hispania\modules\jobs\job_types\natonavy.dm"
+#include "code\hispania\modules\mob\emote.dm"
 #include "code\hispania\modules\overmap\atc_chatter.dm"
 #include "code\hispania\modules\overmap\ships\controlled_ship_datum.dm"
 #include "code\hispania\modules\projectiles\ammo_boxes.dm"

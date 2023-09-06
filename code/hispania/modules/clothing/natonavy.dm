@@ -120,7 +120,7 @@
 		var/key = phrase_list[phrase]
 		var/message = phrase_list[key]
 		usr.visible_message("[usr]'s Cloaker-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
-		playsound(src, "sound/hispania/voice/hailer/cloaker/[key].ogg", 50, TRUE)
+		playsound(src, "sound/hispania/voice/hailer/cloaker/[key].ogg", 50, FALSE)
 		cooldown = world.time
 
 

@@ -52,6 +52,6 @@
 /obj/item/ammo_box/magazine/internal/derr357/nato
 	name = "\improper NATO revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/a357
-	caliber = ".357", ".38"
+	caliber = ".357"
 	max_ammo = 6
 	instant_load = TRUE
