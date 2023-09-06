@@ -35,7 +35,7 @@
 	shoes = /obj/item/clothing/shoes/combat
 	head = /obj/item/clothing/head/helmet/sec
 	suit = /obj/item/clothing/suit/armor/vest
-	/obj/item/storage/belt/military/assault
+	belt = /obj/item/storage/belt/military/assault
 
 	uniform = /obj/item/clothing/under/natonavy/mp
 
