@@ -10,45 +10,45 @@
 	"map_short_name": "NATO-Osprey-class",
 	"map_path": "_maps/shuttles/shiptestHISPANIA/nato_osprey_alt.dmm",
 	"description": "Some of the most modern ships in Nanotrasen’s fleet and a prestigious assignment for their captains, the famed Osprey of the ICW’s most dramatic astronautical engagements lives on as a very well-appointed exploration ship. Extensively refurbished from their origins as Bluespace Artillery platforms, the contemporary Osprey repurposes military-grade sensor equipment and AI systems for exploration and scientific work. Features include respectably-equipped medical, culinary, and scientific facilities and an AI core, as well as a ship-wide disposals and delivery system and a very spacious cargo bay. However, the powerful (if temperamental) supermatter engines that powered the initial batch of Ospreys were stripped out during their rebuilds, and the replacement generator banks have left contemporary Ospreys somewhat power-starved.",
-	"tags": ["Military", "Cargo", "Robotics", "Generalist"],
+	"tags": ["Military", "MotherShip", "Generalist"],
 	"limit": 1,
 	"starting_funds": 6000,
 	"job_slots": {
 		"Admiral": {
-			"outfit": "/datum/outfit/job/captain/nt",
+			"outfit": "/datum/outfit/job/nato/enlisted/officer/higher_officer/admiral",
 			"officer": true,
 			"slots": 1
 		},
 		"Captain": {
-			"outfit": "/datum/outfit/job/head_of_personnel/nt",
+			"outfit": "/datum/outfit/job/nato/enlisted/officer/higher_officer",
 			"officer": true,
 			"slots": 1
 		},
 		"Commanding Lieutenant": {
-			"outfit": "/datum/outfit/job/scientist",
+			"outfit": "/datum/outfit/job/nato/enlisted/officer/higher_officer",
 			"officer": true,
 			"slots": 1
 		},
 		"Lieutenant": {
-			"outfit": "/datum/outfit/job/doctor",
+			"outfit": "/datum/outfit/job/nato/enlisted/officer/higher_officer",
 			"officer": true,
 			"slots": 2
 		},
 		"Sargeant": {
-			"outfit": "/datum/outfit/job/paramedic",
-			"slots": 4
-		},
-		"MP": {
-			"outfit": "/datum/outfit/job/engineer/nt",
+			"outfit": "/datum/outfit/job/nato/enlisted/officer",
 			"slots": 3
 		},
+		"Military Police": {
+			"outfit": "/datum/outfit/job/nato/enlisted/mp",
+			"slots": 2
+		},
 		"Enlisted Soldier": {
-			"outfit": "/datum/outfit/job/atmos",
-			"slots": 6
+			"outfit": "/datum/outfit/job/nato/enlisted",
+			"slots": 3
 		},
 		"Non-Enlisted Recruit": {
-			"outfit": "/datum/outfit/job/quartermaster",
-			"slots": 6
+			"outfit": "/datum/outfit/job/nato",
+			"slots": 3
 		}
 	},
 	"enabled": true
