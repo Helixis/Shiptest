@@ -1,4 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/docking_port/stationary{
+	dwidth = 15;
+	width = 10;
+	height = 15
+	},
+/obj/docking_port/mobile{
+	port_direction = 8;
+	preferred_direction = 4;
+	dir = 2
+	},
+/turf/template_noop,
+/area/template_noop)
 "ad" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
@@ -46,6 +59,17 @@
 	},
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
+"at" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/table,
+/obj/item/clothing/mask/vape,
+/turf/open/floor/carpet/stellar,
+/area/ship/crew/office)
 "au" = (
 /obj/machinery/door/window/eastleft,
 /obj/structure/disposalpipe/segment{
@@ -218,8 +242,12 @@
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "bj" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/template_noop)
+/obj/effect/turf_decal/corner/opaque/yellow/border{
+	dir = 6
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plasteel,
+/area/ship/hallway/aft)
 "bl" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/carpet/stellar,
@@ -819,13 +847,6 @@
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plasteel/dark,
 /area/ship/science)
-"gk" = (
-/obj/effect/turf_decal/corner/opaque/yellow/border{
-	dir = 6
-	},
-/obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/plasteel,
-/area/ship/hallway/aft)
 "gm" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
@@ -854,6 +875,16 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/science)
+"gF" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/chair,
+/turf/open/floor/plasteel/mono,
+/area/ship/hallway/aft)
 "gH" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
@@ -1222,8 +1253,7 @@
 /area/ship/science/robotics)
 "kj" = (
 /obj/structure/table,
-/obj/item/toy/figure/ian,
-/obj/item/book/random,
+/obj/item/instrument/guitar,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
 "km" = (
@@ -1261,17 +1291,6 @@
 /obj/machinery/computer/mech_bay_power_console,
 /turf/open/floor/plasteel/white,
 /area/ship/science)
-"kL" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/table,
-/obj/item/clothing/mask/vape,
-/turf/open/floor/carpet/stellar,
-/area/ship/crew/office)
 "kN" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
@@ -1931,6 +1950,9 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
+"pZ" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/template_noop)
 "qa" = (
 /obj/machinery/door/poddoor{
 	id = "south_hangar"
@@ -2720,12 +2742,6 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /turf/open/floor/plating,
 /area/ship/engineering)
-"xq" = (
-/obj/structure/table,
-/obj/item/toy/cards/deck,
-/obj/item/book/random,
-/turf/open/floor/plasteel/grimy,
-/area/ship/crew)
 "xB" = (
 /obj/machinery/door/window/eastleft{
 	name = "Engine Access"
@@ -4426,6 +4442,12 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
+"Ms" = (
+/obj/structure/table,
+/obj/item/toy/figure/ian,
+/obj/item/book/random,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
 "Mt" = (
 /obj/structure/railing{
 	dir = 4
@@ -4598,16 +4620,6 @@
 /obj/machinery/porta_turret/ship/ballistic,
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/engineering/communications)
-"Ny" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/chair,
-/turf/open/floor/plasteel/mono,
-/area/ship/hallway/aft)
 "NF" = (
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/dark,
@@ -4795,18 +4807,11 @@
 /turf/open/floor/engine/o2,
 /area/ship/engineering/atmospherics)
 "PC" = (
-/obj/docking_port/stationary{
-	dwidth = 15;
-	width = 30;
-	height = 15
-	},
-/obj/docking_port/mobile{
-	port_direction = 8;
-	preferred_direction = 4;
-	dir = 2
-	},
-/turf/template_noop,
-/area/template_noop)
+/obj/structure/table,
+/obj/item/toy/cards/deck,
+/obj/item/book/random,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
 "PG" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/plasteel/tech,
@@ -5064,11 +5069,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/aft)
-"RH" = (
-/obj/structure/table,
-/obj/item/instrument/guitar,
-/turf/open/floor/plasteel/grimy,
-/area/ship/crew)
 "RP" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
@@ -6452,7 +6452,7 @@ nA
 PV
 Nc
 PV
-xq
+PC
 Ga
 tE
 xM
@@ -6702,7 +6702,7 @@ mf
 Kr
 ja
 BB
-RH
+kj
 Ka
 Fs
 DD
@@ -6866,7 +6866,7 @@ zR
 FQ
 AD
 Ka
-kj
+Ms
 Ad
 rv
 DD
@@ -7541,7 +7541,7 @@ Jm
 WW
 NQ
 Mg
-bj
+pZ
 dZ
 dZ
 dZ
@@ -7553,7 +7553,7 @@ dZ
 dZ
 dZ
 dZ
-bj
+pZ
 eH
 Jz
 ie
@@ -7565,7 +7565,7 @@ Bl
 HN
 HN
 HN
-kL
+at
 on
 "}
 (39,1,1) = {"
@@ -7724,7 +7724,7 @@ OE
 XB
 XB
 XB
-Ny
+gF
 tY
 Mh
 HN
@@ -7757,7 +7757,7 @@ dZ
 dZ
 dZ
 dZ
-PC
+ab
 dJ
 Hn
 cp
@@ -7951,7 +7951,7 @@ VK
 Of
 Ux
 Mg
-bj
+pZ
 dZ
 dZ
 dZ
@@ -7963,13 +7963,13 @@ dZ
 dZ
 dZ
 dZ
-bj
+pZ
 eH
 Qs
 CX
 cj
 IM
-gk
+bj
 eH
 on
 dZ
