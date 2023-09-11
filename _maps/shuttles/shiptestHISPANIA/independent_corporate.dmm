@@ -804,6 +804,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/structure/chair,
 /turf/open/floor/plasteel/mono,
 /area/ship/hallway/aft)
 "gd" = (
@@ -2093,7 +2094,9 @@
 /area/ship/cargo)
 "rv" = (
 /obj/structure/table,
-/obj/machinery/chem_dispenser/drinks,
+/obj/machinery/chem_dispenser/drinks{
+	dir = 1
+	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -2324,7 +2327,6 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage)
 "tz" = (
-/obj/machinery/droneDispenser,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/science/robotics)
 "tA" = (
@@ -2858,7 +2860,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
 "zv" = (
-/obj/machinery/ore_silo,
+/obj/structure/table/reinforced,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo/office)
 "zw" = (
@@ -3176,7 +3178,7 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "BO" = (
-/obj/machinery/suit_storage_unit/inherit/industrial,
+/obj/machinery/suit_storage_unit/industrial,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "BQ" = (
@@ -4354,7 +4356,15 @@
 "Mm" = (
 /obj/machinery/firealarm/directional/east,
 /obj/machinery/light/directional/north,
+/obj/item/mop,
+/obj/item/soap,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/watertank/janitor,
 /obj/structure/closet/l3closet/janitor,
+/obj/item/storage/belt/janitor,
+/obj/item/clothing/suit/bio_suit/janitor,
+/obj/item/clothing/head/bio_hood/janitor,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Mr" = (
@@ -5332,6 +5342,16 @@
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
 /area/ship/engineering)
+"Uv" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/chair,
+/turf/open/floor/plasteel/mono,
+/area/ship/hallway/aft)
 "Ux" = (
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 6
@@ -5502,7 +5522,9 @@
 /area/ship/storage)
 "VG" = (
 /obj/structure/table,
-/obj/machinery/chem_dispenser/drinks/beer,
+/obj/machinery/chem_dispenser/drinks/beer{
+	dir = 1
+	},
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
 "VK" = (
@@ -7652,7 +7674,7 @@ OE
 XB
 XB
 XB
-LU
+Uv
 tY
 Mh
 HN
