@@ -25,6 +25,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/chair{
+	dir = 8
+	},
 /turf/open/floor/carpet/stellar,
 /area/ship/crew/office)
 "as" = (
@@ -78,9 +81,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/structure/chair{
-	dir = 1
-	},
+/obj/structure/table,
+/obj/item/clothing/mask/vape,
 /turf/open/floor/carpet/stellar,
 /area/ship/crew/office)
 "aO" = (
@@ -378,6 +380,7 @@
 /area/ship/engineering/atmospherics)
 "cz" = (
 /obj/machinery/smartfridge/bloodbank/preloaded,
+/obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "cB" = (
@@ -488,6 +491,13 @@
 	},
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
+"dm" = (
+/obj/effect/turf_decal/corner/opaque/yellow/border{
+	dir = 6
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plasteel,
+/area/ship/hallway/aft)
 "dz" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
@@ -1216,6 +1226,8 @@
 /area/ship/science/robotics)
 "kj" = (
 /obj/structure/table,
+/obj/item/toy/cards/deck,
+/obj/item/book/random,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
 "km" = (
@@ -2027,6 +2039,7 @@
 /obj/item/storage/box/donkpockets/donkpocketpizza,
 /obj/item/storage/box/donkpockets/donkpocketpizza,
 /obj/item/storage/box/donkpockets/donkpocketpizza,
+/obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
 "rd" = (
@@ -2201,7 +2214,7 @@
 /turf/open/floor/engine/n2,
 /area/ship/engineering/atmospherics)
 "st" = (
-/obj/machinery/portable_atmospherics/canister/toxins,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage)
 "sx" = (
@@ -2270,6 +2283,13 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
+"sX" = (
+/obj/structure/table,
+/obj/item/toy/figure/ian,
+/obj/item/book/random,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
 "sZ" = (
@@ -2384,6 +2404,7 @@
 /obj/item/ammo_box/magazine/co9mm,
 /obj/item/ammo_box/c9mm,
 /obj/structure/closet/secure_closet/captains,
+/obj/item/storage/secure/briefcase,
 /turf/open/floor/carpet/stellar,
 /area/ship/bridge)
 "tY" = (
@@ -2431,6 +2452,7 @@
 /obj/item/bedsheet/brown,
 /obj/structure/bed,
 /obj/structure/curtain/bounty,
+/obj/item/book/random,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "ux" = (
@@ -2737,6 +2759,7 @@
 /obj/structure/sink{
 	pixel_y = 22
 	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "xN" = (
@@ -2891,6 +2914,18 @@
 /obj/machinery/photocopier,
 /turf/open/floor/carpet/stellar,
 /area/ship/crew/office)
+"zL" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/carpet/stellar,
+/area/ship/crew/office)
 "zO" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
@@ -2990,6 +3025,16 @@
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plasteel/grimy,
 /area/ship/hallway/central)
+"AJ" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/chair,
+/turf/open/floor/plasteel/mono,
+/area/ship/hallway/aft)
 "AL" = (
 /obj/machinery/porta_turret/ai,
 /obj/machinery/airalarm/directional/south,
@@ -3078,7 +3123,7 @@
 /area/ship/cargo/office)
 "Bn" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/portable_atmospherics/canister/toxins,
+/obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage)
 "Bx" = (
@@ -3149,6 +3194,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/storage)
+"BK" = (
+/obj/structure/table,
+/obj/item/instrument/guitar,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
 "BL" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /obj/machinery/atmospherics/pipe/simple/green/visible{
@@ -3179,6 +3229,8 @@
 /area/ship/engineering)
 "BO" = (
 /obj/machinery/suit_storage_unit/industrial,
+/obj/item/clothing/suit/space/hardsuit/engine,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "BQ" = (
@@ -3204,6 +3256,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "Cd" = (
@@ -3319,6 +3372,7 @@
 	},
 /obj/structure/table,
 /obj/machinery/light/directional/east,
+/obj/item/book/random,
 /turf/open/floor/plasteel,
 /area/ship/hallway/aft)
 "Da" = (
@@ -3739,6 +3793,10 @@
 	},
 /obj/machinery/airalarm/directional/north,
 /obj/structure/janitorialcart,
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = -15
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Gy" = (
@@ -3976,6 +4034,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm/directional/east,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel,
 /area/ship/hallway/aft)
 "IO" = (
@@ -4181,6 +4240,7 @@
 "KM" = (
 /obj/structure/table,
 /obj/machinery/light/directional/west,
+/obj/item/storage/briefcase,
 /turf/open/floor/carpet/stellar,
 /area/ship/crew/office)
 "KN" = (
@@ -4365,6 +4425,7 @@
 /obj/item/storage/belt/janitor,
 /obj/item/clothing/suit/bio_suit/janitor,
 /obj/item/clothing/head/bio_hood/janitor,
+/obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Mr" = (
@@ -5342,16 +5403,6 @@
 /obj/structure/catwalk/over,
 /turf/open/floor/plating,
 /area/ship/engineering)
-"Uv" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/chair,
-/turf/open/floor/plasteel/mono,
-/area/ship/hallway/aft)
 "Ux" = (
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 6
@@ -6652,7 +6703,7 @@ mf
 Kr
 ja
 BB
-kj
+BK
 Ka
 Fs
 DD
@@ -6816,7 +6867,7 @@ zR
 FQ
 AD
 Ka
-kj
+sX
 Ad
 rv
 DD
@@ -7474,7 +7525,7 @@ on
 tK
 HN
 HN
-aG
+zL
 on
 "}
 (38,1,1) = {"
@@ -7674,7 +7725,7 @@ OE
 XB
 XB
 XB
-Uv
+AJ
 tY
 Mh
 HN
@@ -7919,7 +7970,7 @@ Qs
 CX
 cj
 IM
-bJ
+dm
 eH
 on
 dZ
