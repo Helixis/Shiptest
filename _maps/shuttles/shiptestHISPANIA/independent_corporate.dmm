@@ -7,16 +7,6 @@
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
-"ae" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/chair,
-/turf/open/floor/plasteel/mono,
-/area/ship/hallway/aft)
 "ag" = (
 /obj/machinery/porta_turret/ship/ballistic,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -228,10 +218,15 @@
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "bj" = (
-/obj/structure/table,
-/obj/item/instrument/guitar,
-/turf/open/floor/plasteel/grimy,
-/area/ship/crew)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/chair,
+/turf/open/floor/plasteel/mono,
+/area/ship/hallway/aft)
 "bl" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/carpet/stellar,
@@ -322,6 +317,19 @@
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
+"bE" = (
+/obj/docking_port/stationary{
+	dwidth = 15;
+	width = 10;
+	height = 15
+	},
+/obj/docking_port/mobile{
+	port_direction = 8;
+	preferred_direction = 4;
+	dir = 2
+	},
+/turf/template_noop,
+/area/ship/external/dark)
 "bJ" = (
 /obj/effect/turf_decal/corner/opaque/yellow/border{
 	dir = 6
@@ -499,6 +507,12 @@
 	},
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
+"do" = (
+/obj/structure/table,
+/obj/item/toy/figure/ian,
+/obj/item/book/random,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
 "dz" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
@@ -586,6 +600,12 @@
 "dZ" = (
 /turf/template_noop,
 /area/template_noop)
+"eh" = (
+/obj/structure/table,
+/obj/item/toy/cards/deck,
+/obj/item/book/random,
+/turf/open/floor/plasteel/grimy,
+/area/ship/crew)
 "ek" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -1228,8 +1248,7 @@
 /area/ship/science/robotics)
 "kj" = (
 /obj/structure/table,
-/obj/item/toy/cards/deck,
-/obj/item/book/random,
+/obj/item/instrument/guitar,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
 "km" = (
@@ -2444,19 +2463,6 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
-"uv" = (
-/obj/docking_port/stationary{
-	dwidth = 15;
-	width = 10;
-	height = 15
-	},
-/obj/docking_port/mobile{
-	port_direction = 8;
-	preferred_direction = 4;
-	dir = 2
-	},
-/turf/template_noop,
-/area/template_noop)
 "uw" = (
 /obj/item/bedsheet/brown,
 /obj/structure/bed,
@@ -2728,13 +2734,6 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /turf/open/floor/plating,
 /area/ship/engineering)
-"xq" = (
-/obj/effect/turf_decal/corner/opaque/yellow/border{
-	dir = 6
-	},
-/obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/plasteel,
-/area/ship/hallway/aft)
 "xB" = (
 /obj/machinery/door/window/eastleft{
 	name = "Engine Access"
@@ -4789,6 +4788,13 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/engineering)
+"Py" = (
+/obj/effect/turf_decal/corner/opaque/yellow/border{
+	dir = 6
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plasteel,
+/area/ship/hallway/aft)
 "Pz" = (
 /obj/machinery/air_sensor/atmos/oxygen_tank,
 /turf/open/floor/engine/o2,
@@ -5862,12 +5868,6 @@
 	},
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
-"Zf" = (
-/obj/structure/table,
-/obj/item/toy/figure/ian,
-/obj/item/book/random,
-/turf/open/floor/plasteel/grimy,
-/area/ship/crew)
 "Zh" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8
@@ -6450,7 +6450,7 @@ nA
 PV
 Nc
 PV
-kj
+eh
 Ga
 tE
 xM
@@ -6700,7 +6700,7 @@ mf
 Kr
 ja
 BB
-bj
+kj
 Ka
 Fs
 DD
@@ -6864,7 +6864,7 @@ zR
 FQ
 AD
 Ka
-Zf
+do
 Ad
 rv
 DD
@@ -7722,7 +7722,7 @@ OE
 XB
 XB
 XB
-ae
+bj
 tY
 Mh
 HN
@@ -7755,7 +7755,7 @@ dZ
 dZ
 dZ
 dZ
-uv
+bE
 dJ
 Hn
 cp
@@ -7967,7 +7967,7 @@ Qs
 CX
 cj
 IM
-xq
+Py
 eH
 on
 dZ
