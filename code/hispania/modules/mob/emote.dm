@@ -7,13 +7,13 @@
 	mob_type_allowed_typecache = list(/mob/living, /mob/dead/observer)
 	mob_type_ignore_stat_typecache = list(/mob/dead/observer)
 	var/emote_cooldown = 2
-	cooldown = 0
+	var/world_cooldown = 0
 
 /datum/emote/audio/run_emote(mob/user, params,  type_override, intentional)
 	. = ..()
 	if(.)
-		if(cooldown < world.time - emote_cooldown)
-			cooldown = world.time
+		if(world_cooldown < world.time - emote_cooldown)
+			world_cooldown = world.time
 			if(isobserver(user) && prob(90)) //Taunting in their grave
 				user.playsound_local(get_turf(user), emote_sound, 50, FALSE)
 				return
