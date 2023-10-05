@@ -1,0 +1,58 @@
+{
+	"$schema": "",
+	"map_name": "Corporate-class Comercial Cruiser",
+	"prefix": "CMSV",
+	"namelists": [
+		"NANOTRASEN",
+		"SPACE",
+		"MYTHOLOGICAL",
+		"WEAPONS"
+	],
+	"map_short_name": "Corporate-class",
+	"map_path": "_maps/shuttles/shiptestHISPANIA/independent_corporate.dmm",
+	"description": "It is one of the most prestigious and 'expensive' ships designed by the solar shipyards. An option only available to the most ambitious and rich in the known universe. The Corporate has been designed to function as mobile trading posts that can be parked in planetary orbits. Its donut-shaped design gives it an elegant yet imposing appearance, reminiscent of a space station.",
+	"tags": ["Robotics", "Trade"],
+	"limit": 1,
+	"starting_funds": 4000,
+	"job_slots": {
+		"Captain": {
+			"outfit": "/datum/outfit/job/captain",
+			"officer": true,
+			"slots": 1
+		},
+		"First Officer": {
+			"outfit": "/datum/outfit/job/head_of_personnel",
+			"officer": true,
+			"slots": 1
+		},
+		"Roboticist": {
+			"outfit": "/datum/outfit/job/roboticist",
+			"slots": 2
+		},
+		"Medical Doctor": {
+			"outfit": "/datum/outfit/job/doctor",
+			"slots": 1
+		},
+		"Engineer": {
+			"outfit": "/datum/outfit/job/solgov/engineer",
+			"slots": 2
+		},
+		"Head of Trade": {
+			"outfit": "/datum/outfit/job/quartermaster",
+			"slots": 1
+		},
+		"Shaft Miner": {
+			"outfit": "/datum/outfit/job/miner/classic",
+			"slots": 2
+		},
+		"Janitor": {
+			"outfit": "/datum/outfit/job/janitor",
+			"slots": 1
+		},
+		"Assistant": {
+			"outfit": "/datum/outfit/job/assistant",
+			"slots": 3
+		}
+	},
+	"enabled": true
+}
