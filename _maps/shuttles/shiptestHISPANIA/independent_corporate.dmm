@@ -2982,6 +2982,10 @@
 	pixel_y = 22
 	},
 /obj/machinery/light/directional/north,
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 20
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "xN" = (
