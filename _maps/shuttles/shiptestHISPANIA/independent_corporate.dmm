@@ -921,6 +921,7 @@
 /area/ship/bridge)
 "gr" = (
 /obj/structure/closet/crate,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/science/robotics)
 "gv" = (
@@ -2703,6 +2704,7 @@
 "uV" = (
 /obj/structure/rack,
 /obj/item/mmi/posibrain,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/science/robotics)
 "vn" = (
@@ -6237,6 +6239,11 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/carpet/stellar,
 /area/ship/bridge)
+"YG" = (
+/obj/structure/closet/crate,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plasteel/tech/grid,
+/area/ship/science)
 "YH" = (
 /obj/machinery/computer/crew/syndie{
 	dir = 8
@@ -7163,7 +7170,7 @@ DD
 "}
 (19,1,1) = {"
 PY
-mn
+YG
 Ea
 PY
 ek
