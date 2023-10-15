@@ -2967,6 +2967,12 @@
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 5
 	},
+/obj/item/storage/backpack/satchel/explorer,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/under/rank/cargo/miner,
+/obj/item/clothing/shoes/workboots/mining,
+/obj/item/shovel,
+/obj/item/storage/bag/ore,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo/office)
 "xL" = (
@@ -4749,6 +4755,12 @@
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 1
 	},
+/obj/item/storage/backpack/satchel/explorer,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/under/rank/cargo/miner,
+/obj/item/clothing/shoes/workboots/mining,
+/obj/item/shovel,
+/obj/item/storage/bag/ore,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo/office)
 "Mm" = (
