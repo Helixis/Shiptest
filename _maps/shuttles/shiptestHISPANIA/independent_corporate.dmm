@@ -45,6 +45,9 @@
 	id = "bridge_lockdown";
 	pixel_x = -10
 	},
+/obj/machinery/light_switch{
+	pixel_y = 20
+	},
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "au" = (
@@ -266,14 +269,7 @@
 "br" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
-/obj/item/megaphone/command{
-	pixel_x = 1;
-	pixel_y = 1
-	},
-/obj/item/pen,
-/obj/machinery/light_switch{
-	pixel_y = 20
-	},
+/obj/machinery/fax,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "bw" = (
@@ -921,6 +917,7 @@
 /area/ship/bridge)
 "gr" = (
 /obj/structure/closet/crate,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/science/robotics)
 "gv" = (
@@ -2273,6 +2270,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
 	},
+/obj/machinery/light_switch{
+	pixel_y = 20
+	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/engineering/communications)
 "rJ" = (
@@ -2703,6 +2703,7 @@
 "uV" = (
 /obj/structure/rack,
 /obj/item/mmi/posibrain,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/science/robotics)
 "vn" = (
@@ -2969,6 +2970,12 @@
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 5
 	},
+/obj/item/storage/backpack/satchel/explorer,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/under/rank/cargo/miner,
+/obj/item/clothing/shoes/workboots/mining,
+/obj/item/shovel,
+/obj/item/storage/bag/ore,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo/office)
 "xL" = (
@@ -2982,6 +2989,10 @@
 	pixel_y = 22
 	},
 /obj/machinery/light/directional/north,
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 20
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "xN" = (
@@ -3868,7 +3879,8 @@
 "EL" = (
 /obj/structure/table/reinforced,
 /obj/machinery/firealarm/directional/north,
-/obj/machinery/fax,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "ET" = (
@@ -4746,6 +4758,12 @@
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 1
 	},
+/obj/item/storage/backpack/satchel/explorer,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/under/rank/cargo/miner,
+/obj/item/clothing/shoes/workboots/mining,
+/obj/item/shovel,
+/obj/item/storage/bag/ore,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo/office)
 "Mm" = (
@@ -5139,6 +5157,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 10;
+	pixel_y = -17
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
@@ -5847,7 +5870,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
@@ -6233,6 +6256,11 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/carpet/stellar,
 /area/ship/bridge)
+"YG" = (
+/obj/structure/closet/crate,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plasteel/tech/grid,
+/area/ship/science)
 "YH" = (
 /obj/machinery/computer/crew/syndie{
 	dir = 8
@@ -7159,7 +7187,7 @@ DD
 "}
 (19,1,1) = {"
 PY
-mn
+YG
 Ea
 PY
 ek

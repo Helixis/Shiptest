@@ -5,8 +5,7 @@
 	"namelists": [
 		"NANOTRASEN",
 		"SPACE",
-		"MYTHOLOGICAL",
-		"WEAPONS"
+		"MYTHOLOGICAL"
 	],
 	"map_short_name": "Corporate-class",
 	"map_path": "_maps/shuttles/shiptestHISPANIA/independent_corporate.dmm",
