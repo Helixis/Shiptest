@@ -174,8 +174,8 @@ SUBSYSTEM_DEF(mapping)
 		shuttle_templates[S.file_name] = S
 
 //Hispania changes start
-#define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); continue; }
-#define CHECK_LIST_EXISTS(X) if(!islist(data[X])) { log_world("[##X] missing from json!"); continue; }
+#define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); return; }
+#define CHECK_LIST_EXISTS(X) if(!islist(data[X])) { log_world("[##X] missing from json!"); return; }
 
 /datum/controller/subsystem/mapping/proc/load_ship_template_individual(filename,mapfolder)
 	var/file = file("_maps/configs/" + filename)
