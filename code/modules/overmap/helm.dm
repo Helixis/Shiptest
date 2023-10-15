@@ -218,9 +218,9 @@
 		.["interdictingspeed"] = interdicting.get_speed()
 		.["interdictingdiff"] = abs(current_ship.get_speed() - interdicting.get_speed())
 	else
-	.["interdicting"] = 0
-	.["interdictingspeed"] = 0
-	.["interdictingdiff"] = 0
+		.["interdicting"] = 0
+		.["interdictingspeed"] = 0
+		.["interdictingdiff"] = 0
 
 	for(var/datum/weakref/engine in current_ship.shuttle_port.engine_list)
 		var/obj/machinery/power/shuttle/engine/real_engine = engine.resolve()
@@ -366,7 +366,7 @@
 		if(action == "undock")
 			if(current_ship.interdictor)
 				say("Cannot dock due to an active Interdiction Tether!")
-					return
+				return
 			current_ship.calculate_avg_fuel()
 			if(current_ship.avg_fuel_amnt < 25 && tgui_alert(usr, "Ship only has ~[round(current_ship.avg_fuel_amnt)]% fuel remaining! Are you sure you want to undock?", name, list("Yes", "No")) != "Yes")
 				return
