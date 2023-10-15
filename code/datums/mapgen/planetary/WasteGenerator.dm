@@ -433,8 +433,7 @@
 	mob_spawn_list = list( //Whoops! All hivebots!
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/strong = 80,
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged = 50,
-		/mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged/rapid = 50,
-
+		/mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged/rapid = 50
 	)
 	mob_spawn_chance = 30
 	feature_spawn_list = list(
