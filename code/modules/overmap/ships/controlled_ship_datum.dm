@@ -62,6 +62,12 @@
 	var/list/job_slots
 	///Time that next job slot change can occur
 	COOLDOWN_DECLARE(job_slot_adjustment_cooldown)
+	//HISPANIA
+	var/interdictor_victim = FALSE
+	var/interdictor
+	/// The cooldown for being targeted by or launching an interdiction
+	COOLDOWN_DECLARE(interdiction_cooldown)
+	//HISPANIA END
 
 /datum/overmap/ship/controlled/Rename(new_name, force = FALSE)
 	var/oldname = name
@@ -113,6 +119,7 @@
 	//SHOULD be called first
 	. = ..()
 	SSovermap.controlled_ships -= src
+	interdictor = null
 	helms.Cut()
 	LAZYCLEARLIST(owner_candidates)
 	if(!QDELETED(shuttle_port))
