@@ -181,16 +181,16 @@ SUBSYSTEM_DEF(mapping)
 	var/file = file("_maps/configs/" + filename)
 	if(!file)
 		log_world("Could not open map config: [filename]")
-		continue
+		return
 	file = file2text(file)
 	if(!file)
 		log_world("map config is not text: [filename]")
-		continue
+		return
 
 	var/list/data = json_decode(file)
 	if(!data)
 		log_world("map config is not json: [filename]")
-		continue
+		return
 
 	CHECK_STRING_EXISTS("map_name")
 	CHECK_STRING_EXISTS("map_path")
