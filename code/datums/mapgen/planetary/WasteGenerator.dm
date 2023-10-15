@@ -427,6 +427,7 @@
 		/obj/effect/spawner/lootdrop/maintenance/three = 10,
 		/obj/effect/spawner/lootdrop/maintenance/four = 20,
 		/obj/effect/spawner/lootdrop/waste/salvageable = 40,
+		/obj/effect/spawner/lootdrop/waste/artillery = 20 // hispania
 		/obj/structure/foamedmetal = 100
 	)
 	mob_spawn_list = list( //Whoops! All hivebots!
