@@ -45,6 +45,9 @@
 	id = "bridge_lockdown";
 	pixel_x = -10
 	},
+/obj/machinery/light_switch{
+	pixel_y = 20
+	},
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "au" = (
@@ -266,14 +269,7 @@
 "br" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
-/obj/item/megaphone/command{
-	pixel_x = 1;
-	pixel_y = 1
-	},
-/obj/item/pen,
-/obj/machinery/light_switch{
-	pixel_y = 20
-	},
+/obj/machinery/fax,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "bw" = (
@@ -3874,7 +3870,8 @@
 "EL" = (
 /obj/structure/table/reinforced,
 /obj/machinery/firealarm/directional/north,
-/obj/machinery/fax,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "ET" = (
@@ -5145,6 +5142,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 10;
+	pixel_y = -17
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
