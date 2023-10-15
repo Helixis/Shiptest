@@ -173,12 +173,11 @@ SUBSYSTEM_DEF(mapping)
 
 		shuttle_templates[S.file_name] = S
 
+//Hispania changes start
 #define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); continue; }
 #define CHECK_LIST_EXISTS(X) if(!islist(data[X])) { log_world("[##X] missing from json!"); continue; }
-/datum/controller/subsystem/mapping/proc/load_ship_templates()
-	maplist = list()
-	ship_purchase_list = list()
-	var/list/filelist = flist("_maps/configs/")
+
+/datum/controller/subsystem/mapping/proc/load_ship_template_individual(filename,mapfolder)
 	for(var/filename in filelist)
 		var/file = file("_maps/configs/" + filename)
 		if(!file)
@@ -261,8 +260,20 @@ SUBSYSTEM_DEF(mapping)
 
 		shuttle_templates[S.file_name] = S
 		map_templates[S.file_name] = S
+
+/datum/controller/subsystem/mapping/proc/load_ship_templates()
+	maplist = list()
+	ship_purchase_list = list()
+	var/list/filelist = flist("_maps/configs/")
+	var/list/filelistHISPANIA = flist("_maps/HISPANIAconfigs/")
+	for(var/filename in filelistHISPANIA)
+		load_ship_template_individual(filename,"_maps/HISPANIAconfigs/")
+	for(var/filename in filelist)
+		load_ship_template_individual(filename,"_maps/configs/")
+
 #undef CHECK_STRING_EXISTS
 #undef CHECK_LIST_EXISTS
+//Hispania changes end
 
 /datum/controller/subsystem/mapping/proc/preloadShelterTemplates()
 	for(var/item in subtypesof(/datum/map_template/shelter))
