@@ -173,11 +173,12 @@ SUBSYSTEM_DEF(mapping)
 
 		shuttle_templates[S.file_name] = S
 
+//Hispania changes start
 #define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); return; }
 #define CHECK_LIST_EXISTS(X) if(!islist(data[X])) { log_world("[##X] missing from json!"); return; }
 
 /datum/controller/subsystem/mapping/proc/load_ship_template_individual(filename,mapfolder)
-	var/file = file(mapfolder + filename)
+	var/file = file("_maps/configs/" + filename)
 	if(!file)
 		log_world("Could not open map config: [filename]")
 		return
@@ -220,7 +221,7 @@ SUBSYSTEM_DEF(mapping)
 		var/value = job_slot_list[job]
 		var/slots
 		if(isnum(value))
-			job_slot = SSjob.GetJob(job)
+			job_slot = GLOB.name_occupations[job]
 			slots = value
 		else if(islist(value))
 			var/datum/outfit/job_outfit = text2path(value["outfit"])
@@ -228,13 +229,14 @@ SUBSYSTEM_DEF(mapping)
 				stack_trace("Invalid job outfit! [value["outfit"]] on [S.name]'s config! Defaulting to assistant clothing.")
 				job_outfit = /datum/outfit/job/assistant
 			job_slot = new /datum/job(job, job_outfit)
+			job_slot.display_order = length(S.job_slots)
 			job_slot.wiki_page = value["wiki_page"]
 			job_slot.officer = value["officer"]
 			slots = value["slots"]
 
 		if(!job_slot || !slots)
 			stack_trace("Invalid job slot entry! [job]: [value] on [S.name]'s config! Excluding job.")
-			return
+			continue
 
 		S.job_slots[job_slot] = slots
 	if(isnum(data["limit"]))
@@ -244,28 +246,33 @@ SUBSYSTEM_DEF(mapping)
 	if(isnum(data["officer_time_coeff"]))
 		S.officer_time_coeff = data["officer_time_coeff"]
 
+	if(isnum(data["starting_funds"]))
+		S.starting_funds = data["starting_funds"]
+
 	if(isnum(data["enabled"]) && data["enabled"])
 		S.enabled = TRUE
 		ship_purchase_list[S.name] = S
 	if(isnum(data["roundstart"]) && data["roundstart"])
 		maplist[S.name] = S
+	if(isnum(data["space_spawn"]) && data["space_spawn"])
+		S.space_spawn = TRUE
 
 	shuttle_templates[S.file_name] = S
+	map_templates[S.file_name] = S
 
 /datum/controller/subsystem/mapping/proc/load_ship_templates()
 	maplist = list()
 	ship_purchase_list = list()
 	var/list/filelist = flist("_maps/configs/")
-	var/list/filelistHISPANIA = flist("_maps/HISPANIAconfigs/") //Cambios Hispania
-
+	var/list/filelistHISPANIA = flist("_maps/HISPANIAconfigs/")
 	for(var/filename in filelistHISPANIA)
 		load_ship_template_individual(filename,"_maps/HISPANIAconfigs/")
-
 	for(var/filename in filelist)
 		load_ship_template_individual(filename,"_maps/configs/")
-//Fin cambios hispania
+
 #undef CHECK_STRING_EXISTS
 #undef CHECK_LIST_EXISTS
+//Hispania changes end
 
 /datum/controller/subsystem/mapping/proc/preloadShelterTemplates()
 	for(var/item in subtypesof(/datum/map_template/shelter))
