@@ -523,9 +523,7 @@
 	pixel_x = 3
 	},
 /obj/item/ammo_box/c9mm/rubbershot,
-/obj/item/ammo_box/magazine/co9mm/rubbershot,
 /turf/open/floor/plating,
-/area/ship/crew)
 "lh" = (
 /obj/machinery/computer/rdconsole{
 	dir = 8
